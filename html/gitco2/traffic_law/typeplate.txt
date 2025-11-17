@@ -1,0 +1,278 @@
+createselect.grep:mgmt_trespasser.php:                    ' . CreateSelectExtended(MAIN_DB . ".Province", "1=1", "Title", "Search_Province", "Search_Province", "ShortTitle", "Title", $Search_Province, false, ($s_TypePlate!="F" ? false : true), 15) . '
+createselect.grep:mgmt_trespasser.php-20200728:                    ' . CreateSelectExtended(MAIN_DB . ".Province", "1=1", "Title", "Search_Province", "Search_Province", "ShortTitle", "Title", $Search_Province, false, ($s_TypePlate!="F" ? false : true), 15) . '
+createselect.txt:mgmt_trespasser.php:                    ' . CreateSelectExtended(MAIN_DB . ".Province", "1=1", "Title", "Search_Province", "Search_Province", "ShortTitle", "Title", $Search_Province, false, ($s_TypePlate!="F" ? false : true), 15) . '
+frm_createdynamic_fine_exe.php:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_createdynamic_fine_exe.php:if($s_TypePlate=="F"){
+frm_createdynamic_fine.php:if($s_TypePlate=='F'){
+frm_createdynamic_fine.php:if($s_TypePlate==""){
+frm_createdynamic_fine.php:	//$str_Where .= ($s_TypePlate=='N') ? " AND (PEC IS NULL OR PEC='')" : "";
+frm_createdynamic_fine.php:    //$str_Where .= ($s_TypePlate=='N' && $_SESSION['cityid']=='U480') ? " AND TaxCode != ''" : "";
+frm_createdynamic_fine.php:    //$str_Where .= ($s_TypePlate=='N' && $_SESSION['cityid']=='U480') ? " AND VehiclePlate!='FC843JM' AND VehiclePlate!='ET183PE'" : "";
+frm_createdynamic_fine.php:    //$str_Where .= ($s_TypePlate=='N' && $_SESSION['cityid']=='U480') ? " AND VehiclePlate!='DZ037RA'" : "";   //Martinez Perez Andres Enrique
+frm_createdynamic_fine.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_createdynamic_fine.php:			'. ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&ControllerId=".$n_ControllerId."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>') .'
+frm_createdynamic_reminder_exe.php:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_createdynamic_reminder_exe.php:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php-20200824_1600_dd:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_createdynamic_reminder_exe.php-20200824_1600_dd:if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php-20200825_1400:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_createdynamic_reminder_exe.php-20200825_1400:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php-20200825_1400:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php-20200914:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_createdynamic_reminder_exe.php-20200914:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php-20200914:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php-20200918_0853:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_createdynamic_reminder_exe.php-20200918_0853:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php-20200918_0853:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php-20200921:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_createdynamic_reminder_exe.php-20200921:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder_exe.php-20200921:    if($s_TypePlate=="F"){
+frm_createdynamic_reminder.php:if ($s_TypePlate == "F"){
+frm_createdynamic_reminder.php:if($s_TypePlate==""){
+frm_createdynamic_reminder.php:    if ($s_TypePlate == "N") {
+frm_createdynamic_reminder.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_createdynamic_reminder.php:			'. '<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status.'"><span class="glyphicon glyphicon-pencil"></span></a>'
+frm_createdynamic_reminder.php:			/*ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>')*/ .'
+frm_createdynamic_reminder.php-20200824_1600_dd:if ($s_TypePlate == "F"){
+frm_createdynamic_reminder.php-20200824_1600_dd:if($s_TypePlate==""){
+frm_createdynamic_reminder.php-20200824_1600_dd:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_createdynamic_reminder.php-20200824_1600_dd:			'. '<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>'
+frm_createdynamic_reminder.php-20200824_1600_dd:			/*ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>')*/ .'
+frm_createdynamic_reminder.php-20200914:if ($s_TypePlate == "F"){
+frm_createdynamic_reminder.php-20200914:if($s_TypePlate==""){
+frm_createdynamic_reminder.php-20200914:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_createdynamic_reminder.php-20200914:			'. '<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>'
+frm_createdynamic_reminder.php-20200914:			/*ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>')*/ .'
+frm_createdynamic_reminder.php-20200918_0853:if ($s_TypePlate == "F"){
+frm_createdynamic_reminder.php-20200918_0853:if($s_TypePlate==""){
+frm_createdynamic_reminder.php-20200918_0853:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_createdynamic_reminder.php-20200918_0853:			'. '<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>'
+frm_createdynamic_reminder.php-20200918_0853:			/*ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>')*/ .'
+frm_createdynamic_reminder.php-20200921:if ($s_TypePlate == "F"){
+frm_createdynamic_reminder.php-20200921:if($s_TypePlate==""){
+frm_createdynamic_reminder.php-20200921:    if ($s_TypePlate == "N") {
+frm_createdynamic_reminder.php-20200921:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_createdynamic_reminder.php-20200921:			'. '<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status.'"><span class="glyphicon glyphicon-pencil"></span></a>'
+frm_createdynamic_reminder.php-20200921:			/*ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>')*/ .'
+frm_create_fine_exe.php:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_create_fine_exe.php:if($s_TypePlate=="F"){
+_frm_create_fine.php:$s_TypePlate = CheckValue('TypePlate','s');
+_frm_create_fine.php:$s_SelPlateN = ($s_TypePlate=="N") ? " SELECTED " : "";
+_frm_create_fine.php:$s_SelPlateF = ($s_TypePlate=="F") ? " SELECTED " : "";
+_frm_create_fine.php:if($s_TypePlate==""){
+_frm_create_fine.php:	if($s_TypePlate=="N"){
+_frm_create_fine.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+_frm_create_fine.php:			'. ChkButton($aUserButton, 'viw','<a href="mgmt_violation_viw.php?Id='.$table_row['Id'].'&P='.$LinkPage."&#38;TypePlate=".$s_TypePlate."&ControllerId=".$n_ControllerId."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-eye-open" id="' . $table_row['Id'] . '"></span></a>') .'
+_frm_create_fine.php:			'. ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php?Id='.$table_row['Id'].'&P='.$LinkPage."&#38;TypePlate=".$s_TypePlate."&ControllerId=".$n_ControllerId."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil" id="' . $table_row['Id'] . '"></span></a>') .'
+frm_create_fine.php:if($s_TypePlate=='F'){
+frm_create_fine.php:if($s_TypePlate==""){
+frm_create_fine.php:	//$str_Where .= ($s_TypePlate=='N') ? " AND (PEC IS NULL OR PEC='')" : "";
+frm_create_fine.php:    //$str_Where .= ($s_TypePlate=='N' && $_SESSION['cityid']=='U480') ? " AND TaxCode != ''" : "";
+frm_create_fine.php:    //$str_Where .= ($s_TypePlate=='N' && $_SESSION['cityid']=='U480') ? " AND VehiclePlate!='FC843JM' AND VehiclePlate!='ET183PE'" : "";
+frm_create_fine.php:    //$str_Where .= ($s_TypePlate=='N' && $_SESSION['cityid']=='U480') ? " AND VehiclePlate!='DZ037RA'" : "";   //Martinez Perez Andres Enrique
+frm_create_fine.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_create_fine.php:			'. ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&ControllerId=".$n_ControllerId."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>') .'
+frm_create_pec_exe.php:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_create_pec_exe.php:if($s_TypePlate=="F"){
+frm_create_pec.php:if($s_TypePlate==""){
+frm_create_pec.php:    $str_Where .= ($s_TypePlate=='N') ? " AND PEC!=''" : "";
+frm_create_pec.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_create_pec.php:			'. ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&ControllerId=".$n_ControllerId."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>') .'
+frm_create_reminder_exe.php:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_create_reminder_exe.php:if($s_TypePlate=="F"){
+frm_create_reminder.php:if ($s_TypePlate == "F"){
+frm_create_reminder.php:if($s_TypePlate==""){
+frm_create_reminder.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_create_reminder.php:			'. ChkButton($aUserButton, 'upd','<a href="mgmt_violation_upd.php'.$str_GET_Parameter.'&Id='.$table_row['Id']."&#38;TypePlate=".$s_TypePlate."&Search_Status=".$Search_Status."&RecordLimit=".$n_RecordLimit.'"><span class="glyphicon glyphicon-pencil"></span></a>') .'
+_frm_protocol_fine.php:$s_TypePlate= CheckValue('TypePlate','s');
+frm_protocol_fine.php:$s_TypePlate= CheckValue('TypePlate','s');
+frm_reminderlist_exe.php:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_reminderlist_exe.php:    if($s_TypePlate=="F"){
+frm_reminderlist_exe.php:    if($s_TypePlate=="F"){
+frm_reminderlist_exe.php:    if($s_TypePlate=="F"){
+frm_reminderlist_exe.php-20200825_1400:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_reminderlist_exe.php-20200825_1400:    if($s_TypePlate=="F"){
+frm_reminderlist_exe.php-20200825_1400:    if($s_TypePlate=="F"){
+frm_reminderlist_exe.php-20200918_0853:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_reminderlist_exe.php-20200918_0853:    if($s_TypePlate=="F"){
+frm_reminderlist_exe.php-20200918_0853:    if($s_TypePlate=="F"){
+frm_reminderlist_exe.php-20200921:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_reminderlist_exe.php-20200921:    if($s_TypePlate=="F"){
+frm_reminderlist_exe.php-20200921:    if($s_TypePlate=="F"){
+frm_reminderlist_exe.php-20200921:    if($s_TypePlate=="F"){
+frm_reminderlist.php:            <input type="hidden" name="Filter_TypePlate" value="'.($s_TypePlate == "N" ? "Nazionali" : "Estere").'">
+frm_reminderlist.php:if($s_TypePlate==""){
+frm_reminderlist.php:    if ($s_TypePlate == "N") {
+frm_reminderlist.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_reminderlist.php-20200825_1400:if($s_TypePlate==""){
+frm_reminderlist.php-20200825_1400:    if ($s_TypePlate == "N") {
+frm_reminderlist.php-20200825_1400:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_reminderlist.php-20200914:if($s_TypePlate==""){
+frm_reminderlist.php-20200914:    if ($s_TypePlate == "N") {
+frm_reminderlist.php-20200914:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_reminderlist.php-20200918_0853:if($s_TypePlate==""){
+frm_reminderlist.php-20200918_0853:    if ($s_TypePlate == "N") {
+frm_reminderlist.php-20200918_0853:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_reminderlist.php-20200921:            <input type="hidden" name="Filter_TypePlate" value="'.($s_TypePlate == "N" ? "Nazionali" : "Estere").'">
+frm_reminderlist.php-20200921:if($s_TypePlate==""){
+frm_reminderlist.php-20200921:    if ($s_TypePlate == "N") {
+frm_reminderlist.php-20200921:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_senddynamic_reminder_exe.php:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_senddynamic_reminder_exe.php:    if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php:    if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php:    if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200824_1600_dd:$s_TypePlate = CheckValue('TypePlate','s');
+frm_senddynamic_reminder_exe.php-20200824_1600_dd:if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200824_1600_dd:header("location: ".$P."?TypePlate=".$s_TypePlate."&PrinterId=".$n_PrinterId);
+frm_senddynamic_reminder_exe.php-20200825_1400:$s_TypePlate = CheckValue('TypePlate','s');
+frm_senddynamic_reminder_exe.php-20200825_1400:if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200825_1400:header("location: ".$P."?PageTitle=Moduli/Invio solleciti dinamici&TypePlate=".$s_TypePlate."&PrinterId=".$n_PrinterId);
+frm_senddynamic_reminder_exe.php-20200914:$s_TypePlate = CheckValue('TypePlate','s');
+frm_senddynamic_reminder_exe.php-20200914:if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200914:header("location: ".$P.$PageTitle."&TypePlate=".$s_TypePlate."&PrinterId=".$n_PrinterId);
+frm_senddynamic_reminder_exe.php-20200918_0853:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_senddynamic_reminder_exe.php-20200918_0853:    if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200918_0853:    if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200918_0853:    if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200918_0853:header("location: ".$P.$PageTitle."&TypePlate=".$s_TypePlate."&PrinterId=".$n_PrinterId);
+frm_senddynamic_reminder_exe.php-20200921:$s_TypePlate        = CheckValue('TypePlate','s');
+frm_senddynamic_reminder_exe.php-20200921:    if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200921:    if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200921:    if($s_TypePlate=="F"){
+frm_senddynamic_reminder_exe.php-20200921:header("location: ".$P.$PageTitle."&TypePlate=".$s_TypePlate."&PrinterId=".$n_PrinterId);
+frm_senddynamic_reminder.php:if ($s_TypePlate == "F"){
+frm_senddynamic_reminder.php:if($s_TypePlate==""){
+frm_senddynamic_reminder.php:    if ($s_TypePlate == "N") {
+frm_senddynamic_reminder.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_senddynamic_reminder.php-20200825_1400:if($s_TypePlate==""){
+frm_senddynamic_reminder.php-20200825_1400:    if ($s_TypePlate == "N") {
+frm_senddynamic_reminder.php-20200825_1400:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_senddynamic_reminder.php-20200914:if($s_TypePlate==""){
+frm_senddynamic_reminder.php-20200914:    if ($s_TypePlate == "N") {
+frm_senddynamic_reminder.php-20200914:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_senddynamic_reminder.php-20200918_0853:if($s_TypePlate==""){
+frm_senddynamic_reminder.php-20200918_0853:    if ($s_TypePlate == "N") {
+frm_senddynamic_reminder.php-20200918_0853:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_senddynamic_reminder.php-20200921:if($s_TypePlate==""){
+frm_senddynamic_reminder.php-20200921:    if ($s_TypePlate == "N") {
+frm_senddynamic_reminder.php-20200921:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_send_fine_exe.php:$s_TypePlate= CheckValue('TypePlate','s');
+frm_send_fine_exe.php:if($s_TypePlate=="F"){
+frm_send_fine_exe.php:header("location: ".$P."?TypePlate=".$s_TypePlate);
+frm_send_fine.php:if($s_TypePlate==""){
+frm_send_fine.php:    if ($s_TypePlate == "N") {
+frm_send_fine.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_send_kindfine_exe.php:$s_TypePlate= CheckValue('TypePlate','s');
+frm_send_kindfine_exe.php:if($s_TypePlate=="F"){
+frm_send_kindfine_exe.php:header("location: ".$P."?TypePlate=".$s_TypePlate);
+frm_send_kindfine.php:if($s_TypePlate==""){
+frm_send_kindfine.php:    if ($s_TypePlate == "N") {
+frm_send_kindfine.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_send_reminder_exe.php:$s_TypePlate = CheckValue('TypePlate','s');
+frm_send_reminder_exe.php:if($s_TypePlate=="F"){
+frm_send_reminder_exe.php:header("location: ".$P."?TypePlate=".$s_TypePlate);
+frm_send_reminder.php:if($s_TypePlate==""){
+frm_send_reminder.php:    if ($s_TypePlate == "N") {
+frm_send_reminder.php:			<input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+frm_upload_licensepoint.php:    if($s_TypePlate==""){
+frm_upload_licensepoint.php:                <input type="hidden" name="TypePlate" value="'.$s_TypePlate.'">';
+mgmt_archive.php:if($s_TypePlate!="F"){
+mgmt_communication.php:if($s_TypePlate!="F"){
+mgmt_document.php:if($s_TypePlate!="F"){
+mgmt_fine_exp_exe.php:$s_TypePlate = CheckValue('TypePlate','s');
+mgmt_fine_exp_exe.php-20200826_1242_dd:$s_TypePlate = CheckValue('TypePlate','s');
+mgmt_fine_exp_exe.php-20200827_1605:$s_TypePlate = CheckValue('TypePlate','s');
+mgmt_fine_.php:if($s_TypePlate!="F"){
+mgmt_fine.php:if($s_TypePlate!="F"){
+mgmt_fine_upd_.php:        <input type="hidden" name="TypePlate" value="' . $s_TypePlate . '">
+mgmt_null.php:if($s_TypePlate!="F"){
+mgmt_presentation.php:if($s_TypePlate!="F"){
+mgmt_protocol.php:if($s_TypePlate!="F"){
+mgmt_regularviolation.php:if($s_TypePlate!="F"){
+mgmt_reminder.php:if($s_TypePlate!="F"){
+mgmt_report.php:if($s_TypePlate!="F"){
+mgmt_report_upd_OLD.php:        <input type="hidden" name="TypePlate" value="' . $s_TypePlate . '">
+mgmt_report_upd__.php:        <input type="hidden" name="TypePlate" value="' . $s_TypePlate . '">
+mgmt_trespasser.php:if($s_TypePlate!="F"){
+mgmt_trespasser.php:                    ' . CreateSelectExtended(MAIN_DB . ".Province", "1=1", "Title", "Search_Province", "Search_Province", "ShortTitle", "Title", $Search_Province, false, ($s_TypePlate!="F" ? false : true), 15) . '
+mgmt_trespasser.php:                    <select id="Search_CityTitle" class="form-control" name="Search_CityTitle"'.($s_TypePlate!="F" ? "" : " disabled").'>
+mgmt_trespasser.php-20200728:if($s_TypePlate!="F"){
+mgmt_trespasser.php-20200728:                    ' . CreateSelectExtended(MAIN_DB . ".Province", "1=1", "Title", "Search_Province", "Search_Province", "ShortTitle", "Title", $Search_Province, false, ($s_TypePlate!="F" ? false : true), 15) . '
+mgmt_trespasser.php-20200728:                    <select id="Search_CityTitle" class="form-control" name="Search_CityTitle"'.($s_TypePlate!="F" ? "" : " disabled").'>
+mgmt_validation.php:if($s_TypePlate!="F"){
+mgmt_violation_act.php:$s_TypePlate        = ($r_Fine['CountryId']=='Z000') ? "N" : "F";
+mgmt_violation_act.php:    			    <input type="hidden" name="TypePlate" value="'. $s_TypePlate .'" />				    
+mgmt_violation.php:if($s_TypePlate!="F"){
+mgmt_violationrent.php:if($s_TypePlate!="F"){
+mgmt_violation_upd.php:        <input type="hidden" name="TypePlate" value="' . $s_TypePlate . '">
+mgmt_warning.php:if($s_TypePlate!="F"){
+mgmt_warning_upd.php:        <input type="hidden" name="TypePlate" value="' . $s_TypePlate . '">
+portata_veicoli.php:$s_TypePlate= CheckValue('TypePlate','s');
+portata_veicoli.php:header("location: ".$P."?TypePlate=".$s_TypePlate);
+prc_126Bis_exe.php:    $s_TypePlate                    = CheckValue('TypePlate','s');
+prc_126Bis_exe.php:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_126Bis_exe.php:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_126Bis_exe.php:if($str_Table=="") header("location: prc_126Bis.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId);
+prc_126Bis.php:    if($s_TypePlate=="") {
+prc_126Bis.php:        $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_180_exe.php:    $s_TypePlate                    = CheckValue('TypePlate','s');
+prc_180_exe.php:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_180_exe.php:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_180_exe.php:if($str_Table=="") header("location: prc_180.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId);
+prc_180.php:    if($s_TypePlate=="") {
+prc_180.php:        $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment_exe.php:    $s_TypePlate                    = CheckValue('Filter_TypePlate','s'); //dice se lavoro su nazionale N o estero
+prc_payment_exe.php:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_payment_exe.php:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment_exe.php:        $pdf->MultiCell(25, 0, ($s_TypePlate == "N" ? "Nazionali" : "Estere"), 1, '', 0, 0, '', '', true);
+prc_payment_exe.php:    header("location: prc_payment.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromNotificationDate=".$Search_FromNotificationDate."&Search_ToNotificationDate=".$Search_ToNotificationDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId."&PrintOrderBy=".$PrintOrderBy."&ElaborationType=".$ElaborationType);
+prc_payment_exe.php-20200824_1948_dd:    $s_TypePlate                    = CheckValue('TypePlate','s');
+prc_payment_exe.php-20200824_1948_dd:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_payment_exe.php-20200824_1948_dd:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment_exe.php-20200824_1948_dd:if($str_Table=="") header("location: prc_payment.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId);
+prc_payment_exe.php-20200910_1515:    $s_TypePlate                    = CheckValue('TypePlate','s');
+prc_payment_exe.php-20200910_1515:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_payment_exe.php-20200910_1515:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment_exe.php-20200910_1515:if($str_Table=="") header("location: prc_payment.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId);
+prc_payment_exe.php_20200911_1520:    $s_TypePlate                    = CheckValue('TypePlate','s'); //dice se lavoro su nazionale N o estero
+prc_payment_exe.php_20200911_1520:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_payment_exe.php_20200911_1520:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment_exe.php_20200911_1520://if($str_Table=="") header("location: prc_payment.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId);
+prc_payment_exe.php-20200914:    $s_TypePlate                    = CheckValue('TypePlate','s'); //dice se lavoro su nazionale N o estero
+prc_payment_exe.php-20200914:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_payment_exe.php-20200914:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment_exe.php-20200914://if($str_Table=="") header("location: prc_payment.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId);
+prc_payment_exe.php-20200918_0853:    $s_TypePlate                    = CheckValue('TypePlate','s'); //dice se lavoro su nazionale N o estero
+prc_payment_exe.php-20200918_0853:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_payment_exe.php-20200918_0853:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment_exe.php-20200918_0853://if($str_Table=="") header("location: prc_payment.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId);
+prc_payment_exe.php-20200918_1655:    $s_TypePlate                    = CheckValue('TypePlate','s'); //dice se lavoro su nazionale N o estero
+prc_payment_exe.php-20200918_1655:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_payment_exe.php-20200918_1655:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment_exe.php-20200918_1655:        $pdf->MultiCell(25, 0, $s_TypePlate, 1, '', 0, 0, '', '', true);
+prc_payment_exe.php-20200918_1655:    header("location: prc_payment.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromNotificationDate=".$Search_FromNotificationDate."&Search_ToNotificationDate=".$Search_ToNotificationDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId."&PrintOrderBy=".$PrintOrderBy."&ElaborationType=".$ElaborationType);
+prc_payment_exe.php-20200921:    $s_TypePlate                    = CheckValue('TypePlate','s'); //dice se lavoro su nazionale N o estero
+prc_payment_exe.php-20200921:    $str_ProcessingTable = ($s_TypePlate=="N") ? "National" : "Foreign";
+prc_payment_exe.php-20200921:    $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment_exe.php-20200921:        $pdf->MultiCell(25, 0, $s_TypePlate, 1, '', 0, 0, '', '', true);
+prc_payment_exe.php-20200921:    header("location: prc_payment.php?btn_search=1&TypePlate=".$s_TypePlate."&Search_FromFineDate=".$Search_FromFineDate."&Search_ToFineDate=".$Search_ToFineDate."&Search_FromNotificationDate=".$Search_FromNotificationDate."&Search_ToNotificationDate=".$Search_ToNotificationDate."&Search_FromProtocolId=".$Search_FromProtocolId."&Search_ToProtocolId=".$Search_ToProtocolId."&PrintOrderBy=".$PrintOrderBy."&ElaborationType=".$ElaborationType);
+prc_payment.php:            <input type="hidden" name="Filter_TypePlate" value="'.$s_TypePlate.'">
+prc_payment.php:    if($s_TypePlate=="") {
+prc_payment.php:        $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment.php-20200910_1515:    if($s_TypePlate=="") {
+prc_payment.php-20200910_1515:        $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment.php-20200914:    if($s_TypePlate=="") {
+prc_payment.php-20200914:        $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment.php-20200918_0853:    if($s_TypePlate=="") {
+prc_payment.php-20200918_0853:        $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment.php-20200918_1655:    if($s_TypePlate=="") {
+prc_payment.php-20200918_1655:        $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prc_payment.php-20200921:    if($s_TypePlate=="") {
+prc_payment.php-20200921:        $str_WhereCountry = ($s_TypePlate=="N") ? " AND CountryId='Z000'" : " AND CountryId!='Z000'";
+prn_communication_exe.php:$s_TypePlate = CheckValue('TypePlate','s');
+prn_communication_exe.php:$str_CurrentPage .="&TypePlate=".$s_TypePlate."&RecordLimit=".$n_RecordLimit;
+prn_presentation_exe.php:$s_TypePlate = CheckValue('TypePlate','s');
+prn_presentation_exe.php:$str_CurrentPage .="&TypePlate=".$s_TypePlate."&RecordLimit=".$n_RecordLimit;
+prn_upload_licensepoint_exe.php:$s_TypePlate = CheckValue('TypePlate','s');
+prn_upload_licensepoint_exe.php:$str_CurrentPage .="&TypePlate=".$s_TypePlate."&RecordLimit=".$n_RecordLimit;

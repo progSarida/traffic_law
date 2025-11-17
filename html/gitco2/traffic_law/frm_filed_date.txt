@@ -1,0 +1,264 @@
+frm_createdynamic_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" id="Search_FromFineDate" style="width:9rem">
+frm_createdynamic_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" id="Search_ToFineDate" style="width:9rem">
+frm_createdynamic_fine.php:                <input type="text" class="form-control frm_field_date frm_field_required" name="CreationDate" id="CreationDate" value="'.$CreationDate.'" style="width:12rem">
+frm_createdynamic_reminder.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" id="Search_FromFineDate" style="width:9rem">
+frm_createdynamic_reminder.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" id="Search_ToFineDate" style="width:9rem">
+frm_createdynamic_reminder.php:                <input type="text" class="form-control frm_field_date frm_field_required" name="CreationDate" id="CreationDate" value="'.$CreationDate.'" style="width:12rem">
+frm_create_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" id="Search_FromFineDate" style="width:9rem">
+frm_create_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" id="Search_ToFineDate" style="width:9rem">
+frm_create_fine.php:                <input type="text" class="form-control frm_field_date frm_field_required" name="CreationDate" id="CreationDate" value="'.$CreationDate.'" style="width:12rem">
+frm_create_pec.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" id="Search_FromFineDate" style="width:9rem">
+frm_create_pec.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" id="Search_ToFineDate" style="width:9rem">
+frm_create_pec.php:                <input type="text" class="form-control frm_field_date frm_field_required" name="CreationDate" id="CreationDate" value="'.$CreationDate.'" style="width:12rem">
+frm_create_reminder.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" id="Search_FromFineDate" style="width:9rem">
+frm_create_reminder.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" id="Search_ToFineDate" style="width:9rem">
+frm_create_reminder.php:                <input type="text" class="form-control frm_field_date frm_field_required" name="CreationDate" id="CreationDate" value="'.$CreationDate.'" style="width:12rem">
+frm_reclaim_payment.php:                            <input type="text" class="form-control frm_field_date" name="PaymentDate" id="PaymentDate" style="width:10rem">	
+frm_reclaim_payment.php:                            <input class="form-control frm_field_date" type="text" name="FineDate" id="FineDate" style="width:10rem">	
+frm_upload_licensepoint.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+frm_upload_licensepoint.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+mgmt_communication_add.php:                            <input class="form-control frm_field_date frm_field_required" type="text" name="CommunicationDate"  style="width:12rem" value="" />
+mgmt_communication_add.php:                            <input class="form-control frm_field_date" type="text" name="LicenseDate"  style="width:12rem" value="' . $LicenseDate . '" />
+mgmt_communication_add.php:                                <input class="form-control frm_field_date" type="text" name="LicenseDateDriver"  style="width:12rem" value="" />
+mgmt_communication_add.php:							<input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:12rem">
+mgmt_communication_add.php:                            <input class="form-control frm_field_date" type="text" name="LicenseDate"  style="width:8rem">
+mgmt_communication_upd.php:                            <input class="form-control frm_field_date frm_field_required" type="text" name="CommunicationDate"  style="width:12rem" value="'.$CommunicationDate.'" />
+mgmt_communication_upd.php:                            <input class="form-control frm_field_date" type="text" name="LicenseDate"  style="width:12rem" value="' . $LicenseDate . '" />
+mgmt_communication_upd.php:                                <input class="form-control frm_field_date" type="text" name="LicenseDateDriver"  style="width:12rem" value="'.$LicenseDateDriver.'" />
+mgmt_communication_upd.php:							<input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:12rem">
+mgmt_communication_upd.php:                            <input class="form-control frm_field_date" type="text" name="LicenseDate"  style="width:8rem">
+mgmt_dispute.php:                        <input class="form-control frm_field_date" name="FromHearingDate" type="text" style="width:9rem" value="'.$FromHearingDate.'">
+mgmt_dispute.php:                        <input class="form-control frm_field_date" name="ToHearingDate" type="text" style="width:9rem" value="'.$ToHearingDate.'">
+mgmt_dispute_upd.php:                            <input class="form-control frm_field_date" type="text" name="DateNotification" id="DateNotification" value="'.DateOutDB($r_DisputeDate['DateNotification']).'" style="width:20rem">
+mgmt_dispute_upd.php:                    <input class="form-control frm_field_date" type="text" name="DateMeasure" id="DateMeasure" class="ws-date" style="width:9rem">
+mgmt_dispute_upd.php:                    <input class="form-control frm_field_date" type="text" name="DateAction" id="DateAction" class="ws-date" style="width:9rem">
+mgmt_dispute_upd.php:                    <input class="form-control frm_field_date" type="text" name="DateNotification" id="DateNotification" class="ws-date" style="width:10rem">
+mgmt_dispute_upd.php:                    <input class="form-control frm_field_date" type="text" name="DateHearing" id="DateHearing" class="ws-date" style="width:9rem">
+mgmt_dispute_upd.php:                <input class="form-control frm_field_date" type="text" name="DateSend" id="DateSend" class="ws-date" style="width:9rem">
+mgmt_dispute_upd.php:                <input class="form-control frm_field_date" type="text" name="DateReceive" id="DateReceive" class="ws-date" style="width:9rem">
+mgmt_dispute_upd.php:                <input class="form-control frm_field_date" type="text" name="DateFile" id="DateFile" class="ws-date" style="width:9rem">
+mgmt_dispute_upd.php:                <input class="form-control frm_field_date" type="text" name="DateMeasure" id="DateMeasure" class="ws-date" style="width:9rem">
+mgmt_dispute_upd.php:                <input class="form-control frm_field_date" type="text" name="DateProtocolEntity" id="DateProtocolEntity" class="ws-date" style="width:9rem">
+mgmt_dispute_upd.php:                <input class="form-control frm_field_date" type="text" name="DateProtocol" id="DateProtocol" class="ws-date" style="width:9rem">
+mgmt_dispute_upd.php:                <input class="form-control frm_field_date" type="text" name="DateHearing" id="DateHearing" class="ws-date" style="width:9rem">
+mgmt_fine_exp.php:                        <input type="text" class="form-control frm_field_date frm_field_required" name="ArchiveDate" id="ArchiveDate" style="width:12rem">
+mgmt_fine_exp.php:					        Data identificazione dati <input type="text" class="form-control frm_field_date frm_field_required" name="ReceiveDate">
+mgmt_fine_.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:9rem">
+mgmt_fine_.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:9rem">
+mgmt_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:9rem">
+mgmt_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:9rem">
+mgmt_fine_upd_.php:                <input type="text" class="form-control frm_field_date" name="NotificationDate_'.$TrespasserTyepId.'" id="NotificationDate_'.$TrespasserTyepId.'" style="width:10rem" value="'.$str_FineNotificationDate.'">
+mgmt_fine_upd_.php:                        <input type="text" class="form-control frm_field_date frm_field_required" name="FineDate" id="FineDate" value="' . DateOutDB($table_row['FineDate']) . '" style="width:9rem">
+mgmt_fine_upd_.php:                frm_field_date: {
+mgmt_fine_upd_.php:                    selector: '.frm_field_date',
+mgmt_fine_upd.php:                        html += '<div class="col-sm-3 BoxRowCaption"><input type="text" id="rate_date_'+i+'" name="rate_date_'+i+'" class="form-control frm_field_date" value="'+thisDate+'"></div>';
+mgmt_fine_upd.php-030720:                        html += '<div class="col-sm-3 BoxRowCaption"><input type="text" id="rate_date_'+i+'" name="rate_date_'+i+'" class="form-control frm_field_date" value="'+thisDate+'"></div>';
+mgmt_flow_act.php:        				<input class="form-control frm_field_date frm_field_required" type="text" id="Date" name="Date" value="'. DateOutDB($r_Row['Date']) .'" style="width:9rem">
+mgmt_flow_act.php:                frm_field_date: {
+mgmt_flow_act.php:                    selector: '.frm_field_date',
+mgmt_flow.php:                <input class="form-control frm_field_date" name="Search_StepDate" type="text" style="width:9rem" value="'.$Search_StepDate.'">
+mgmt_flow_upd.php:                        <input class="form-control frm_field_date" type="text" id="UploadDate" name="UploadDate" value="'.DateOutDB($r_Row['UploadDate']).'" style="width:9rem" '. $a_ReadOnly["UploadDate"] .'>
+mgmt_flow_upd.php:                        <input class="form-control frm_field_date" type="text" id="ProcessingDate" name="ProcessingDate" value="'.DateOutDB($r_Row['ProcessingDate']).'" style="width:9rem" '. $a_ReadOnly["ProcessingDate"] .'>
+mgmt_flow_upd.php:                        <input class="form-control frm_field_date" type="text" id="PaymentDate" name="PaymentDate" value="'.DateOutDB($r_Row['PaymentDate']).'" style="width:9rem" '. $a_ReadOnly["PaymentDate"] .'>
+mgmt_flow_upd.php:                        <input class="form-control frm_field_date" type="text" id="SendDate" name="SendDate" value="'.DateOutDB($r_Row['SendDate']).'" style="width:9rem" '. $a_ReadOnly["SendDate"] .'>
+mgmt_flow_upd.php:                frm_field_date: {
+mgmt_flow_upd.php:                    selector: '.frm_field_date',
+mgmt_licensepoint_add.php:            <input class="form-control frm_field_date frm_field_required" type="text" name="DecurtationDate" id="DecurtationDate" style="width:10rem">	
+mgmt_notification_add.php:                <input class="form-control frm_field_date frm_field_required" type="text" name="SendDate" value="'.$str_SendDate.'" style="width:10rem;" />
+mgmt_notification_add.php:                <input class="form-control frm_field_date" type="text" name="NotificationDate" style="width:10rem;" />
+mgmt_notification_add.php:                    frm_field_date: {
+mgmt_notification_add.php:                        selector: '.frm_field_date',
+mgmt_notification_viw.php:                <input class="form-control frm_field_date frm_field_required" type="text" name="SendDate" value="'.DateOutDB($r_Notification['SendDate']).'" style="width:10rem;" />
+mgmt_notification_viw.php:                <input class="form-control frm_field_date" type="text" name="NotificationDate" value="'.$NotificationDate.'" style="width:10rem;" />
+mgmt_notification_viw.php:                frm_field_date: {
+mgmt_notification_viw.php:                    selector: '.frm_field_date',
+mgmt_null.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+mgmt_null.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+mgmt_payment_act.php:            <input class="form-control frm_field_date" name="Search_FromPaymentDate" type="text" style="width:12rem" value="'.$Search_FromPaymentDate.'">
+mgmt_payment_act.php:            <input class="form-control frm_field_date" name="Search_ToPaymentDate" type="text" style="width:12rem" value="'.$Search_ToPaymentDate.'">
+mgmt_payment_add.php:            <input class="form-control frm_field_date frm_field_required" type="text" name="PaymentDate" id="PaymentDate" style="width:10rem">	
+mgmt_payment.php:                <input class="form-control frm_field_date" name="Search_FromPaymentDate" type="text" style="width:12rem" value="'.$Search_FromPaymentDate.'">
+mgmt_payment.php:                <input class="form-control frm_field_date" name="Search_ToPaymentDate" type="text" style="width:12rem" value="'.$Search_ToPaymentDate.'">
+mgmt_presentation_upd.php:                            <input class="form-control frm_field_date frm_field_required" type="text" id="PresentationDate" name="PresentationDate"  style="width:12rem" />
+mgmt_regularviolation.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+mgmt_regularviolation.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+mgmt_reminder.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:9rem">
+mgmt_reminder.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:9rem">
+mgmt_report_add_bollettario.php:                frm_field_date:{
+mgmt_report_add_bollettario.php:                    selector: '#f_ins_trespasser .frm_field_date',
+mgmt_report_add_LATEST.php:                frm_field_date:{
+mgmt_report_add_LATEST.php:                    selector: '#f_ins_trespasser .frm_field_date',
+mgmt_report_add_.php:                        <input type="text" class="form-control frm_field_date" name="NotificationDate_11" id="NotificationDate_11" style="width:10rem">
+mgmt_report_add_.php:                            <input type="text" class="form-control frm_field_date" name="NotificationDate_16" id="NotificationDate_16" style="width:10rem">
+mgmt_report_add_.php:                                <input type="text" class="form-control frm_field_date" name="NotificationDate_10" id="NotificationDate_10" style="width:10rem">
+mgmt_report_add_.php:                            <input type="text" class="form-control frm_field_date" name="NotificationDate_15" id="NotificationDate_15" style="width:10rem">
+mgmt_report.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:9rem">
+mgmt_report.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:9rem">
+mgmt_report_upd_LATEST.php:                <input type="text" class="form-control frm_field_date" name="NewNotificationDate_'.$TrespasserTyepId.'" id="NewNotificationDate_'.$TrespasserTyepId.'" style="width:10rem" value="'.$str_FineNotificationDate.'">
+mgmt_report_upd_LATEST.php:                frm_field_date:{
+mgmt_report_upd_LATEST.php:                    selector: '#f_ins_trespasser .frm_field_date',
+mgmt_report_upd_OLD.php:                <input type="text" class="form-control frm_field_date" name="NotificationDate_'.$TrespasserTyepId.'" id="NotificationDate_'.$TrespasserTyepId.'" style="width:10rem" value="'.$str_FineNotificationDate.'">
+mgmt_report_upd_OLD.php:                <input class="form-control frm_field_date frm_field_required" type="text" id="payment_date">
+mgmt_report_upd_OLD.php:                        <input type="text" class="form-control frm_field_date frm_field_required" name="FineDate" id="FineDate" value="' . DateOutDB($table_row['FineDate']) . '" style="width:9rem">
+mgmt_report_upd_OLD.php:                        <input type="text" class="form-control frm_field_date" name="NotificationDate_11" id="NotificationDate_11" style="width:10rem">
+mgmt_report_upd_OLD.php:                            <input type="text" class="form-control frm_field_date" name="NotificationDate_16" id="NotificationDate_16" style="width:10rem">
+mgmt_report_upd_OLD.php:                                <input type="text" class="form-control frm_field_date" name="NotificationDate_10" id="NotificationDate_10" style="width:10rem">
+mgmt_report_upd_OLD.php:                            <input type="text" class="form-control frm_field_date" name="NotificationDate_15" id="NotificationDate_15" style="width:10rem">
+mgmt_report_upd_OLD.php:                        <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:12rem">
+mgmt_report_upd_OLD.php:                        <input class="form-control frm_field_date" type="text" name="LicenseDate"  style="width:12rem">
+mgmt_report_upd_OLD.php:                    html += '<div class="col-sm-3 BoxRowCaption"><input type="text" id="rate_date_'+i+'" name="rate_date_'+i+'" class="form-control frm_field_date" value="'+thisDate+'"></div>';
+mgmt_report_upd_OLD.php:                frm_field_date: {
+mgmt_report_upd_OLD.php:                    selector: '.frm_field_date',
+mgmt_report_upd__.php:                <input type="text" class="form-control frm_field_date" name="NotificationDate_'.$TrespasserTyepId.'" id="NotificationDate_'.$TrespasserTyepId.'" style="width:10rem" value="'.$str_FineNotificationDate.'">
+mgmt_report_upd__.php:                        <input type="text" class="form-control frm_field_date frm_field_required" name="FineDate" id="FineDate" value="' . DateOutDB($r_Fine['FineDate']) . '" style="width:9rem">
+mgmt_report_upd__.php:                        <input type="text" class="form-control frm_field_date" name="NotificationDate_11" id="NotificationDate_11" style="width:10rem">
+mgmt_report_upd__.php:                            <input type="text" class="form-control frm_field_date" name="NotificationDate_16" id="NotificationDate_16" style="width:10rem">
+mgmt_report_upd__.php:                                <input type="text" class="form-control frm_field_date" name="NotificationDate_10" id="NotificationDate_10" style="width:10rem">
+mgmt_report_upd__.php:                            <input type="text" class="form-control frm_field_date" name="NotificationDate_15" id="NotificationDate_15" style="width:10rem">
+mgmt_report_upd__.php:                        <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:12rem">
+mgmt_report_upd__.php:                        <input class="form-control frm_field_date" type="text" name="LicenseDate"  style="width:12rem">
+mgmt_report_upd__.php:                frm_field_date: {
+mgmt_report_upd__.php:                    selector: '.frm_field_date',
+mgmt_report_upd.php:                <input type="text" class="form-control frm_field_date" name="NewNotificationDate_'.$TrespasserTyepId.'" id="NewNotificationDate_'.$TrespasserTyepId.'" style="width:10rem" value="'.$str_FineNotificationDate.'">
+mgmt_report_upd.php:                <input type="text" class="form-control frm_field_date frm_field_required" name="NewReceiveDate" id="NewReceiveDate" style="width:10rem" value="'.DateOutDB($r_FineTrespasser['ReceiveDate']).'">
+mgmt_report_upd.php-20200703:                <input type="text" class="form-control frm_field_date" name="NewNotificationDate_'.$TrespasserTyepId.'" id="NewNotificationDate_'.$TrespasserTyepId.'" style="width:10rem" value="'.$str_FineNotificationDate.'">
+mgmt_report_upd.php-20200703:                <input type="text" class="form-control frm_field_date frm_field_required" name="NewReceiveDate" id="NewReceiveDate" style="width:10rem" value="'.DateOutDB($r_FineTrespasser['ReceiveDate']).'">
+mgmt_trespasser_add.php:                <input class="form-control frm_field_date" type="text" id="Forwarding_ValidUntil'.$n_ForwardingId.'" name="Forwarding_ValidUntil[]">
+mgmt_trespasser_add.php:                <input class="form-control frm_field_date" type="text" id="Domicile_ValidUntil'.$n_DomicileId.'" name="Domicile_ValidUntil[]">
+mgmt_trespasser_add.php:                <input class="form-control frm_field_date" type="text" id="Dwelling_ValidUntil'.$n_DwellingId.'" name="Dwelling_ValidUntil[]">
+mgmt_trespasser_add.php:                                <input class="form-control frm_field_date" type="text" name="DeathDate">
+mgmt_trespasser_add.php:                            <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate">
+mgmt_trespasser_add.php:                            <input class="form-control frm_field_date" type="text" name="LicenseDate">
+mgmt_trespasser_add.php:                            <input class="form-control frm_field_date" type="text" name="DocumentValidFrom">
+mgmt_trespasser_add.php:                            <input class="form-control frm_field_date" type="text" name="DocumentValidTo">
+mgmt_trespasser_add.php:            frm_field_date:{
+mgmt_trespasser_add.php:                selector: '.frm_field_date',
+mgmt_trespasser_add.php-20200716-0950-dd:                <input class="form-control frm_field_date" type="text" id="Forwarding_ValidUntil'.$n_ForwardingId.'" name="Forwarding_ValidUntil[]">
+mgmt_trespasser_add.php-20200716-0950-dd:                <input class="form-control frm_field_date" type="text" id="Domicile_ValidUntil'.$n_DomicileId.'" name="Domicile_ValidUntil[]">
+mgmt_trespasser_add.php-20200716-0950-dd:                <input class="form-control frm_field_date" type="text" id="Dwelling_ValidUntil'.$n_DwellingId.'" name="Dwelling_ValidUntil[]">
+mgmt_trespasser_add.php-20200716-0950-dd:                                <input class="form-control frm_field_date" type="text" name="DeathDate">
+mgmt_trespasser_add.php-20200716-0950-dd:                            <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate">
+mgmt_trespasser_add.php-20200716-0950-dd:                            <input class="form-control frm_field_date" type="text" name="LicenseDate">
+mgmt_trespasser_add.php-20200716-0950-dd:                            <input class="form-control frm_field_date" type="text" name="DocumentValidFrom">
+mgmt_trespasser_add.php-20200716-0950-dd:                            <input class="form-control frm_field_date" type="text" name="DocumentValidTo">
+mgmt_trespasser_add.php-20200716-0950-dd:            frm_field_date:{
+mgmt_trespasser_add.php-20200716-0950-dd:                selector: '.frm_field_date',
+mgmt_trespasser_add.php-300620:                <input class="form-control frm_field_date" type="text" id="Forwarding_ValidUntil'.$n_ForwardingId.'" name="Forwarding_ValidUntil[]">
+mgmt_trespasser_add.php-300620:                <input class="form-control frm_field_date" type="text" id="Domicile_ValidUntil'.$n_DomicileId.'" name="Domicile_ValidUntil[]">
+mgmt_trespasser_add.php-300620:                <input class="form-control frm_field_date" type="text" id="Dwelling_ValidUntil'.$n_DwellingId.'" name="Dwelling_ValidUntil[]">
+mgmt_trespasser_add.php-300620:                                <input class="form-control frm_field_date" type="text" name="DeathDate">
+mgmt_trespasser_add.php-300620:                            <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate">
+mgmt_trespasser_add.php-300620:                            <input class="form-control frm_field_date" type="text" name="LicenseDate">
+mgmt_trespasser_add.php-300620:                            <input class="form-control frm_field_date" type="text" name="DocumentValidFrom">
+mgmt_trespasser_add.php-300620:                            <input class="form-control frm_field_date" type="text" name="DocumentValidTo">
+mgmt_trespasser_add.php-300620:            frm_field_date:{
+mgmt_trespasser_add.php-300620:                selector: '.frm_field_date',
+mgmt_trespasser_add_TESTDATALIST.php:                <input class="form-control frm_field_date" type="text" id="Forwarding_ValidUntil'.$n_ForwardingId.'" name="Forwarding_ValidUntil[]">
+mgmt_trespasser_add_TESTDATALIST.php:                <input class="form-control frm_field_date" type="text" id="Domicile_ValidUntil'.$n_DomicileId.'" name="Domicile_ValidUntil[]">
+mgmt_trespasser_add_TESTDATALIST.php:                <input class="form-control frm_field_date" type="text" id="Dwelling_ValidUntil'.$n_DwellingId.'" name="Dwelling_ValidUntil[]">
+mgmt_trespasser_add_TESTDATALIST.php:                                <input class="form-control frm_field_date" type="text" name="DeathDate">
+mgmt_trespasser_add_TESTDATALIST.php:                            <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate">
+mgmt_trespasser_add_TESTDATALIST.php:                            <input class="form-control frm_field_date" type="text" name="LicenseDate">
+mgmt_trespasser_add_TESTDATALIST.php:                            <input class="form-control frm_field_date" type="text" name="DocumentValidFrom">
+mgmt_trespasser_add_TESTDATALIST.php:                            <input class="form-control frm_field_date" type="text" name="DocumentValidTo">
+mgmt_trespasser_add_TESTDATALIST.php:            frm_field_date:{
+mgmt_trespasser_add_TESTDATALIST.php:                selector: '.frm_field_date',
+mgmt_trespasser_old.php:                                <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:12rem">
+mgmt_trespasser_old.php:                                <input class="form-control frm_field_date" type="text" name="LicenseDate"  style="width:8rem">
+mgmt_trespasser_upd.php:                         <input type="text" class="form-control frm_field_date frm_field_required" name="DataSourceDate" id="DataSourceDate" value="' . date("d/m/Y") . '" style="width:9rem">
+mgmt_trespasser_upd.php:            frm_field_date:{
+mgmt_trespasser_upd.php:                selector: '.frm_field_date',
+mgmt_trespasser_upd.php-20200716-0955-dd:                         <input type="text" class="form-control frm_field_date frm_field_required" name="DataSourceDate" id="DataSourceDate" value="' . date("d/m/Y") . '" style="width:9rem">
+mgmt_trespasser_upd.php-20200716-0955-dd:            frm_field_date:{
+mgmt_trespasser_upd.php-20200716-0955-dd:                selector: '.frm_field_date',
+mgmt_trespasser_upd.php-300620:                         <input type="text" class="form-control frm_field_date frm_field_required" name="DataSourceDate" id="DataSourceDate" value="' . date("d/m/Y") . '" style="width:9rem">
+mgmt_trespasser_upd.php-300620:            frm_field_date:{
+mgmt_trespasser_upd.php-300620:                selector: '.frm_field_date',
+mgmt_validation.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+mgmt_validation.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+mgmt_validation_upd.php:                        <input type="text" class="form-control frm_field_date frm_field_required" name="FineDate" id="FineDate" value="' . DateOutDB($table_row['FineDate']) . '" style="width:9rem">
+mgmt_validation_upd.php:                    frm_field_date: {
+mgmt_validation_upd.php:                        selector: '.frm_field_date',
+mgmt_violation_act.php:            <input type="text" class="form-control frm_field_date" name="InsuranceDate" id="InsuranceDate" value="'.$InsuranceDate.'" style="width:9rem">
+mgmt_violation_add.php:                            <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:20rem">
+mgmt_violation.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+mgmt_violation.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+mgmt_violationrent_add.php:                        <input class="form-control frm_field_date frm_field_required" type="text" name="ReceiveDate" style="width:15rem;">	
+mgmt_violationrent_add.php:                        <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:12rem">
+mgmt_violationrent_add.php:                        <input class="form-control frm_field_date" type="text" name="LicenseDate"  style="width:12rem">
+mgmt_violationrent.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+mgmt_violationrent.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+mgmt_violation_trespasser.php:$obj_Field->WriteColCtn(3,  '<input class="form-control frm_field_date" type="text" name="ReceiveDate" style="width:15rem;">');
+mgmt_violation_trespasser.php:                <input type="text" class="form-control frm_field_date" name="ReceiveDate" style="width:12rem;">	
+mgmt_violation_trespasser.php:                        <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:12rem">
+mgmt_violation_trespasser.php:                        <input class="form-control frm_field_date" type="text" name="LicenseDate"  style="width:12rem">
+mgmt_violation_trespasser.php:                    frm_field_date:{
+mgmt_violation_trespasser.php:                        selector: '.frm_field_date',
+mgmt_violation_upd.php:                        <input type="text" class="form-control frm_field_date frm_field_required" name="FineDate" id="FineDate" value="' . DateOutDB($table_row['FineDate']) . '" style="width:9rem">
+mgmt_violation_upd.php:                frm_field_date: {
+mgmt_violation_upd.php:                    selector: '.frm_field_date',
+mgmt_warning_add.php:                    <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:20rem">
+mgmt_warning.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:9rem">
+mgmt_warning.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:9rem">
+mgmt_warning_upd.php:                        <input type="text" class="form-control frm_field_date frm_field_required" name="FineDate" id="FineDate" value="' . DateOutDB($table_row['FineDate']) . '" style="width:9rem">
+mgmt_warning_upd.php:                frm_field_date: {
+mgmt_warning_upd.php:                    selector: '.frm_field_date',
+prc_126Bis.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+prc_126Bis.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+prc_180.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+prc_180.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+prc_mctc.php:                    <input class="form-control frm_field_date" type="text" name="BornDate" id="BornDate" style="width:20rem">
+prc_mctc.php:                    <input class="form-control frm_field_date" type="text" name="VehicleLastRevisionDate" id="VehicleLastRevisionDate" style="width:20rem">
+prc_payment.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+prc_payment.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+prn_assessment.php:              <input class="form-control frm_field_date" name="PrintDate" type="text" style="width:9rem" value="' . $d_PrintDate . '">
+prn_assessment.php:            <input class="form-control frm_field_date" name="PrintDate" type="text" style="width:9rem" value="' . $d_PrintDate . '" readonly>
+prn_assessment.php:                <input class="form-control frm_field_date" name="Search_FromFineDate" type="text" style="width:9rem" value="' . $Search_FromFineDate . '">
+prn_assessment.php:                <input class="form-control frm_field_date" name="Search_ToFineDate" type="text" style="width:9rem" value="' . $Search_ToFineDate . '">
+prn_assessment.php:                <input class="form-control frm_field_date" name="Search_FromNotificationDate" type="text" style="width:9rem" value="' . $Search_FromNotificationDate . '">
+prn_assessment.php:                <input class="form-control frm_field_date" name="Search_ToNotificationDate" type="text" style="width:9rem" value="' . $Search_ToNotificationDate . '">
+prn_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+prn_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+prn_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromRegDate.'" name="Search_FromRegDate" style="width:12rem">
+prn_fine.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToRegDate.'" name="Search_ToRegDate" style="width:12rem">
+prn_mctcrequest.php:                    <input class="form-control frm_field_date" name="FromFineDate" id="FromFineDate" type="text" style="width:9rem" value="'.$FromFineDate.'">
+prn_mctcrequest.php:                    <input class="form-control frm_field_date" name="ToFineDate" id="ToFineDate" type="text" style="width:9rem" value="'.$ToFineDate.'">
+prn_payment.php:              <input class="form-control frm_field_date" name="PrintDate" type="text" style="width:9rem" value="'.$d_PrintDate.'">
+prn_payment.php:            <input class="form-control frm_field_date" name="PrintDate" type="text" style="width:9rem" value="'.$d_PrintDate.'" readonly>
+prn_payment.php:                <input class="form-control frm_field_date frm_field_required" name="FromPaymentDate" type="text" style="width:9rem" value="'.$FromPaymentDate.'">
+prn_payment.php:                <input class="form-control frm_field_date frm_field_required" name="ToPaymentDate" type="text" style="width:9rem" value="'.$ToPaymentDate.'">
+prn_payment.php:                <input class="form-control frm_field_date" name="FromRegDate" type="text" style="width:9rem" value="'.$FromRegDate.'">
+prn_payment.php:                <input class="form-control frm_field_date" name="ToRegDate" type="text" style="width:9rem" value="'.$ToRegDate.'">
+prn_payment.php:                <input class="form-control frm_field_date" name="FromFineDate" type="text" style="width:9rem" value="'.$FromFineDate.'">
+prn_payment.php:                <input class="form-control frm_field_date" name="ToFineDate" type="text" style="width:9rem" value="'.$ToFineDate.'">
+prn_registry_.php:              <input class="form-control frm_field_date" name="PrintDate" type="text" style="width:9rem" value="'.$d_PrintDate.'">
+prn_registry_.php:            <input class="form-control frm_field_date" name="PrintDate" type="text" style="width:9rem" value="'.$d_PrintDate.'" readonly>
+prn_registry_.php:                <input class="form-control frm_field_date" name="Search_FromFineDate" type="text" style="width:9rem" value="'.$Search_FromFineDate.'">
+prn_registry_.php:                <input class="form-control frm_field_date" name="Search_ToFineDate" type="text" style="width:9rem" value="'.$Search_ToFineDate.'">
+prn_registry_.php:                <input class="form-control frm_field_date" name="Search_FromNotificationDate" type="text" style="width:9rem" value="'.$Search_FromNotificationDate.'">
+prn_registry_.php:                <input class="form-control frm_field_date" name="Search_ToNotificationDate" type="text" style="width:9rem" value="'.$Search_ToNotificationDate.'">
+prn_registry.php:              <input class="form-control frm_field_date" name="PrintDate" type="text" style="width:9rem" value="'.$d_PrintDate.'">
+prn_registry.php:            <input class="form-control frm_field_date" name="PrintDate" type="text" style="width:9rem" value="'.$d_PrintDate.'" readonly>
+prn_registry.php:                <input class="form-control frm_field_date" name="Search_FromFineDate" type="text" style="width:9rem" value="'.$Search_FromFineDate.'">
+prn_registry.php:                <input class="form-control frm_field_date" name="Search_ToFineDate" type="text" style="width:9rem" value="'.$Search_ToFineDate.'">
+prn_registry.php:                <input class="form-control frm_field_date" name="Search_FromNotificationDate" type="text" style="width:9rem" value="'.$Search_FromNotificationDate.'">
+prn_registry.php:                <input class="form-control frm_field_date" name="Search_ToNotificationDate" type="text" style="width:9rem" value="'.$Search_ToNotificationDate.'">
+prn_trafat.php:            <input class="form-control frm_field_date" name="FromDate" type="text" style="width:9rem" value="'.date("01/01/".$_SESSION['year']).'">
+prn_trafat.php:            <input class="form-control frm_field_date" name="ToDate" type="text" style="width:9rem" value="'.date("31/12/".$_SESSION['year']).'">
+prn_trafat.php:            <input class="form-control frm_field_date" name="FromDate" type="text" style="width:9rem" value="'.$FromDate.'">
+prn_trafat.php:            <input class="form-control frm_field_date" name="ToDate" type="text" style="width:9rem" value="'.$ToDate.'">
+prn_trespasser.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_FromFineDate.'" name="Search_FromFineDate" style="width:12rem">
+prn_trespasser.php:                <input class="form-control frm_field_date" type="text" value="'.$Search_ToFineDate.'" name="Search_ToFineDate" style="width:12rem">
+stat_postalized_fine.php:                <input class="form-control frm_field_date" name="FromFineDate" type="text" style="width:9rem" value="'.$FromFineDate.'">
+stat_postalized_fine.php:                <input class="form-control frm_field_date" name="ToFineDate" type="text" style="width:9rem" value="'.$ToFineDate.'">
+tbl_customer_add.php:        $("input[type=text].frm_field_date").keyup(function (e) {
+tbl_customer_dati_upd.php:        $("input[type=text].frm_field_date").keyup(function (e) {
+tbl_customer_dati_viw.php:        $("input[type=text].frm_field_date").keyup(function (e) {
+tbl_customer_ente_upd.php:        $("input[type=text].frm_field_date").keyup(function (e) {
+tbl_customer_upd_.php:        $("input[type=text].frm_field_date").keyup(function (e) {
+tbl_detector_add.php:                <input type="text" name="FromDate[0]" class="form-control frm_field_date">
+tbl_detector_add.php:                <input type="text" name="ToDate[0]" class="form-control frm_field_date">
+tbl_detector_upd.php:                <input type="text" name="FromDate[0]" class="form-control frm_field_date">
+tbl_detector_upd.php:                <input type="text" name="ToDate[0]" class="form-control frm_field_date">
+tbl_detector_upd.php:                    <input type="text" name="FromDate['. $r_DetectorRatification['Id'] .']" class="form-control frm_field_required frm_field_date" value="'. DateOutDB($r_DetectorRatification['FromDate']) .'">
+tbl_detector_upd.php:                    <input type="text" name="ToDate['. $r_DetectorRatification['Id'] .']" class="form-control frm_field_date" value="'. $str_ToDate .'">

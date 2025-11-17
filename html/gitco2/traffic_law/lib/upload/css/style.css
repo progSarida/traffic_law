@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+}
+a, a:visited {
+    outline:none;
+    color:#389dc1;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+section, footer, header, aside{
+    display: block;
+}
+
+
+#upload{
+    background-color: #287296;
+
+    /*background-image:-webkit-linear-gradient(top, #4E91FF, #20b4dd);*/
+    /*background-image:-moz-linear-gradient(top, #4E91FF, #20b4dd);*/
+    /*background-image:linear-gradient(top, #4E91FF, #20b4dd);*/
+
+    width:80%;
+    padding:15px;
+    border-radius:3px;
+
+    margin: 5px auto auto;
+    box-shadow: 0 0 10px #1d3c4b;
+}
+
+#drop{
+    background-color: #9ECEE7;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+    border: 10px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    /*border-image: url('../img/border-image.png') 25 repeat;*/
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size:16px;
+    font-weight:bold;
+    box-shadow: 0 0 10px #9ECEE7;
+}
+
+#drop a{
+    background-color: #287296;
+    padding:12px 26px;
+    color:#fff;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    display:inline-block;
+    margin-top:12px;
+    line-height:1;
+}
+
+#drop a:hover{
+    background-color: #3d8eb4;
+}
+
+#drop input{
+    display:none;
+}
+
+#upload ul{
+    list-style:none;
+    margin:0 0;
+    /*border-top:1px solid #2b2e31;*/
+    /*border-bottom:1px solid #3d4043;*/
+}
+
+#upload ul li{
+
+    /*background-color:#333639;*/
+
+    /*background-image:-webkit-linear-gradient(top, #a7ddce, #303335);*/
+    /*background-image:-moz-linear-gradient(top, #a7ddce, #303335);*/
+    /*background-image:linear-gradient(top, #a7ddce, #303335);*/
+
+    /*border-top:1px solid #3d4043;*/
+    /*border-bottom:1px solid #2b2e31;*/
+    padding:15px;
+    height: 30px;
+
+    position: relative;
+}
+
+#upload ul li input{
+    display: none;
+}
+
+#upload ul li p{
+
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EEE;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+
+#upload ul li i{
+    margin-left: 5px;
+    color:#7f7f7f;
+}
+
+#upload ul li canvas{
+    top: 15px;
+    left: 32px;
+    position: absolute;
+    display:none;
+}
+
+#upload ul li span{
+    width: 15px;
+    height: 12px;
+    background: url('../img/icons.png') no-repeat;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    cursor: pointer;
+}
+
+#upload ul li.working span{
+    height: 16px;
+    background-position: 0 -12px;
+}
+
+#upload ul li.error p{
+    color:red;
+}
+
+
+/*----------------------------
+    The Demo Footer
+-----------------------------*/
+
+
+footer{
+    background-color: #080808;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0,0,0,0.4);
+    height: 40px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
+}
+
+footer h2{
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    top:0;
+    left: 50%;
+    bottom:0;
+    margin-left: -420px;
+    padding:13px 20px 0;
+    border:1px solid #000;
+    border-width:0 1px;
+    background-color: rgba(82, 221, 220, 0.6);
+    box-shadow:0 0 5px #000 inset;
+    line-height: 1;
+    margin-top: 0;
+}
+
+footer h2 a{
+    color: #EEEEEE !important;
+    text-decoration:none !important;
+}
+
+footer h2 i{
+    font-style:normal;
+    color:#888;
+}
+
+#tzine-download{
+    opacity:0.9;
+    background-color:#257691;
+    font-size:11px;
+    text-align:center;
+    text-transform:uppercase;
+    width:150px;
+    height:28px;
+    line-height:28px;
+    text-decoration:none !important;
+
+    display: inline-block;
+    border-radius: 2px;
+    color: #fff !Important;
+    font-weight: bold;
+    box-shadow: 0 -1px 2px #1e5e74 inset;
+
+    border-top:1px solid #26849c;
+
+    text-shadow:1px 1px 1px #1e6176;
+    margin-top:6px;
+}
+
+#tzine-download:hover{
+    opacity:1;
+}
+
+#tzine-actions{
+    position:absolute;
+    top:0;
+    width:500px;
+    right:50%;
+    margin-right:-420px;
+    text-align:right;
+}
+
+#tzine-actions iframe{
+    display: inline-block;
+    height: 21px;
+    width: 95px;
+    position: relative;
+    float: left;
+    margin-top: 11px;
+}

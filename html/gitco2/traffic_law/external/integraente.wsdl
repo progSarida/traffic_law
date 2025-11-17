@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	targetNamespace="http://source.webservice.integraente.payer.seda.com" 
+	xmlns:tns="http://source.webservice.integraente.payer.seda.com"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:sd="http://dati.webservice.integraente.payer.seda.com" 
+	xmlns:srv="http://srv.webservice.integraente.payer.seda.com"
+	name="IntegraEnte">
+	
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://source.webservice.integraente.payer.seda.com">
+			<xsd:import namespace="http://dati.webservice.integraente.payer.seda.com" schemaLocation="xsd/integraente.xsd" />
+			<xsd:import namespace="http://srv.webservice.integraente.payer.seda.com" schemaLocation="xsd/Srv.xsd" />
+		</xsd:schema>
+	</wsdl:types>	
+	
+			
+	<wsdl:message name="RecuperaDatiBollettinoRequest">
+		<wsdl:part element="sd:RecuperaDatiBollettinoRequest" name="in"/>
+	</wsdl:message>
+	<wsdl:message name="RecuperaDatiBollettinoResponse">
+		<wsdl:part element="sd:RecuperaDatiBollettinoResponse" name="out"/>
+	</wsdl:message>		
+	<wsdl:message name="IntegraEnteFault">
+		<wsdl:part name="fault" element="srv:Fault"></wsdl:part>
+	</wsdl:message>	
+	
+	
+	<wsdl:portType name="IntegraEntePgInterface">
+		<wsdl:operation name="recuperaDatiBollettino">
+			<wsdl:input message="tns:RecuperaDatiBollettinoRequest" />
+			<wsdl:output message="tns:RecuperaDatiBollettinoResponse" />
+			<wsdl:fault name="IntegraEnteFaultException" message="tns:IntegraEnteFault"></wsdl:fault>
+		</wsdl:operation>		
+	</wsdl:portType>
+	<wsdl:binding name="IntegraEntePgSOAPBinding" type="tns:IntegraEntePgInterface">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="recuperaDatiBollettino">
+			<soap:operation soapAction="" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="IntegraEnteFaultException">
+				<soap:fault name="IntegraEnteFaultException" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>	
+	</wsdl:binding>			
+	
+	
+	<wsdl:service name="IntegraEntePgService">
+		<wsdl:port binding="tns:IntegraEntePgSOAPBinding" name="IntegraentePort">
+			<soap:address location="http://localhost:8080/IntegraenteService/integraente" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

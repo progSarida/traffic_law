@@ -1,0 +1,2340 @@
+SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='H452' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='H452' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='H452' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='H452' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='H452' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='H452' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='H452' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='H452' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='H452' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='H452' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='H452' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='H452' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='H452' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='imp_pcprint.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='H452' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='H452' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='imp_pcprint.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='H452' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='H452' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='imp_pcprint.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='H452' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='H452' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='imp_pcprint.php';SELECT * FROM Controller WHERE CityId='H452'SELECT * FROM Detector WHERE CityId='H452' AND Code='14:40:23'SELECT * FROM Detector WHERE CityId='H452' AND Code='005529'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM V_Article WHERE Disabled=0 AND CityId='H452' AND Year=2020 AND Article=142 AND Paragraph=8SELECT * FROM Fine WHERE CityId='H452' AND FineDate='2020-03-07' AND FineTime='14:40:23' AND REPLACE(VehiclePlate,'  ','')='EH06168'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM Reason WHERE ReasonTypeId=1 AND Disabled=0 AND CityId='H452'SELECT * FROM Detector WHERE CityId='H452' AND Code='14:45:24'SELECT * FROM Detector WHERE CityId='H452' AND Code='005529'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM V_Article WHERE Disabled=0 AND CityId='H452' AND Year=2020 AND Article=142 AND Paragraph=8SELECT * FROM Fine WHERE CityId='H452' AND FineDate='2020-03-07' AND FineTime='14:45:24' AND REPLACE(VehiclePlate,'  ','')='ED30588'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM Reason WHERE ReasonTypeId=1 AND Disabled=0 AND CityId='H452'SELECT * FROM Detector WHERE CityId='H452' AND Code='14:45:46'SELECT * FROM Detector WHERE CityId='H452' AND Code='005529'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM V_Article WHERE Disabled=0 AND CityId='H452' AND Year=2020 AND Article=142 AND Paragraph=8SELECT * FROM Fine WHERE CityId='H452' AND FineDate='2020-03-07' AND FineTime='14:45:46' AND REPLACE(VehiclePlate,'  ','')='EM99566'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM Reason WHERE ReasonTypeId=1 AND Disabled=0 AND CityId='H452'SELECT * FROM Detector WHERE CityId='H452' AND Code='15:04:21'SELECT * FROM Detector WHERE CityId='H452' AND Code='005529'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM V_Article WHERE Disabled=0 AND CityId='H452' AND Year=2020 AND Article=142 AND Paragraph=8SELECT * FROM Fine WHERE CityId='H452' AND FineDate='2020-03-07' AND FineTime='15:04:21' AND REPLACE(VehiclePlate,'  ','')='-'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM Reason WHERE ReasonTypeId=1 AND Disabled=0 AND CityId='H452'SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.TitleSELECT * FROM V_mgmt_FineTrespasser WHERE 1=1 AND VehiclePlate LIKE '%xx171xx%'  AND Locality='A658' AND RuleTypeId=1 AND CityId='A658' AND ProtocolYear =2019 ORDER BY ProtocolYear DESC, ProtocolId DESC LIMIT 0,25SELECT * FROM mgmt_FineHistory_Trespasser WHERE FineId=402769SELECT * FROM mgmt_FineHistory_Trespasser WHERE FineId=402768SELECT * FROM V_mgmt_FineTrespasser WHERE 1=1 AND VehiclePlate LIKE '%xx171xx%'  AND Locality='A658' AND RuleTypeId=1 AND CityId='A658' AND ProtocolYear =2019
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.TitleSELECT * FROM V_mgmt_FineTrespasser WHERE 1=1 AND VehiclePlate LIKE '%xx171xx%'  AND Locality='A658' AND RuleTypeId=1 AND CityId='A658' AND ProtocolYear =2019 ORDER BY ProtocolYear DESC, ProtocolId DESC LIMIT 0,25SELECT * FROM mgmt_FineHistory_Trespasser WHERE FineId=402769SELECT * FROM mgmt_FineHistory_Trespasser WHERE FineId=402768SELECT * FROM V_mgmt_FineTrespasser WHERE 1=1 AND VehiclePlate LIKE '%xx171xx%'  AND Locality='A658' AND RuleTypeId=1 AND CityId='A658' AND ProtocolYear =2019
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402768SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 699 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 699 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402768 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402768SELECT * FROM V_FineTrespasser WHERE FineId=402768 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402768SELECT * FROM V_AdditionalArticle WHERE FineId=402768 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402768SELECT * FROM FineOwner WHERE FineId=402768SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402768 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402768 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402768 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402768SELECT * FROM V_FineNotification WHERE FineId=402768SELECT * FROM FineDocumentation WHERE FineId=402768 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402768 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402768SELECT * FROM FineReminder WHERE FineId=402768 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402768 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402768SELECT * FROM FineNotification WHERE FineId=402768
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402768SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 699 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 699 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402768 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402768SELECT * FROM V_FineTrespasser WHERE FineId=402768 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402768SELECT * FROM V_AdditionalArticle WHERE FineId=402768 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402768SELECT * FROM FineOwner WHERE FineId=402768SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402768 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402768 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402768 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402768SELECT * FROM V_FineNotification WHERE FineId=402768SELECT * FROM FineDocumentation WHERE FineId=402768 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402768 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402768SELECT * FROM FineReminder WHERE FineId=402768 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402768 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402768SELECT * FROM FineNotification WHERE FineId=402768
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402768SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 699 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 699 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402768 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402768SELECT * FROM V_FineTrespasser WHERE FineId=402768 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402768SELECT * FROM V_AdditionalArticle WHERE FineId=402768 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402768SELECT * FROM FineOwner WHERE FineId=402768SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402768 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402768 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402768 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402768SELECT * FROM V_FineNotification WHERE FineId=402768SELECT * FROM FineDocumentation WHERE FineId=402768 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402768 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402768SELECT * FROM FineReminder WHERE FineId=402768 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402768 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402768SELECT * FROM FineNotification WHERE FineId=402768
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT F.CityId, C.ManagerCity,  COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3 GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3  GROUP BY F.CityId, C.ManagerCitySELECT F.CityId, C.ManagerCity, COUNT(*) TOT FROM `Flow` F JOIN `Customer` C ON F.CityId= C.CityId WHERE PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3  GROUP BY F.CityId, C.ManagerCity
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.TitleSELECT * FROM V_mgmt_FineTrespasser WHERE 1=1 AND VehiclePlate LIKE '%xx171xx%'  AND Locality='A658' AND RuleTypeId=1 AND CityId='A658' AND ProtocolYear =2019 ORDER BY ProtocolYear DESC, ProtocolId DESC LIMIT 0,25SELECT * FROM mgmt_FineHistory_Trespasser WHERE FineId=402769SELECT * FROM mgmt_FineHistory_Trespasser WHERE FineId=402768SELECT * FROM V_mgmt_FineTrespasser WHERE 1=1 AND VehiclePlate LIKE '%xx171xx%'  AND Locality='A658' AND RuleTypeId=1 AND CityId='A658' AND ProtocolYear =2019
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine.php';SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658'SELECT * FROM Result WHERE 1=1SELECT Id From Fine WHERE ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC SELECT * FROM ViolationType WHERE 1=1 ORDER BY IdSELECT * FROM RuleType WHERE CityId='A658' ORDER BY IdSELECT DISTINCT F.CountryId, C.Title FROM Fine F JOIN Country C ON F.CountryId=C.Id WHERE CountryId!='Z000' ORDER BY C.Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='H452' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='H452' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='tbl_article.php';SELECT * FROM Customer WHERE 1=1 ORDER BY CityIdSELECT * FROM Rule WHERE 1=1 ORDER BY TitleSELECT * FROM V_ArticleCity WHERE 1=1 ORDER BY Id Desc LIMIT 0,25SELECT * FROM ArticleTariff WHERE ArticleId=1583 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1582 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1581 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1580 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1579 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1578 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1577 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1576 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1575 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1574 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1573 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1572 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1571 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1570 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1569 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1568 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1567 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1555 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1554 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1553 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1552 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1551 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1550 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1549 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1544 ORDER BY Year DESCSELECT * FROM V_ArticleCity WHERE 1=1 ORDER BY Id
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='H452' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='H452' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='H452' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='tbl_article.php';SELECT * FROM Customer WHERE 1=1 ORDER BY CityIdSELECT * FROM Rule WHERE 1=1 ORDER BY TitleSELECT * FROM V_ArticleCity WHERE 1=1 AND CityId='H452' ORDER BY Id Desc LIMIT 0,25SELECT * FROM ArticleTariff WHERE ArticleId=1570 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1569 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1568 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1567 ORDER BY Year DESCSELECT * FROM V_ArticleCity WHERE 1=1 AND CityId='H452' ORDER BY Id
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='H452' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='H452' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='H452' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='tbl_article_add.php';SELECT * FROM RuleType WHERE CityId='H452'SELECT * FROM RuleType WHERE CityId='H452' ORDER BY Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='H452' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='index.php';SELECT COUNT(*) TOT, Max(ProtocolId) ProtocolId FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT COUNT(*) TOT FROM V_FinePayment WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36SELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId<=10 OR StatusTypeId>=90) AND StatusTypeId!=0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT StatusTypeId, COUNT(StatusTypeId) TOT FROM Fine WHERE CityId='A658' AND ProtocolYear=2019 AND StatusTypeId!=33 AND StatusTypeId!=36 AND (StatusTypeId>=15 AND StatusTypeId<90) AND ProtocolId>0 GROUP BY StatusTypeId ORDER BY StatusTypeIdSELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND CreationDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),CreationDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND UploadDate is not null AND ProcessingDate is null AND DATEDIFF(CURDATE(),UploadDate)>5SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND ProcessingDate is not null AND UploadDate is null AND DATEDIFF(CURDATE(),ProcessingDate)>3SELECT COUNT(*) TOT FROM `Flow` WHERE CityId='A658' AND PaymentDate is not null AND SendDate is null AND DATEDIFF(CURDATE(),PaymentDate)>3
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='imp_pcprint.php';SELECT * FROM Controller WHERE CityId='A658'SELECT * FROM Detector WHERE CityId='A658' AND Code='14:40:23'SELECT * FROM Detector WHERE CityId='A658' AND Code='005529'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM V_Article WHERE Disabled=0 AND CityId='A658' AND Year=2020 AND Article=142 AND Paragraph=8SELECT * FROM Fine WHERE CityId='A658' AND FineDate='2020-03-07' AND FineTime='14:40:23' AND REPLACE(VehiclePlate,'  ','')='EH06168'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM Reason WHERE ReasonTypeId=1 AND Disabled=0 AND CityId='A658'SELECT * FROM Detector WHERE CityId='A658' AND Code='14:45:24'SELECT * FROM Detector WHERE CityId='A658' AND Code='005529'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM V_Article WHERE Disabled=0 AND CityId='A658' AND Year=2020 AND Article=142 AND Paragraph=8SELECT * FROM Fine WHERE CityId='A658' AND FineDate='2020-03-07' AND FineTime='14:45:24' AND REPLACE(VehiclePlate,'  ','')='ED30588'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM Reason WHERE ReasonTypeId=1 AND Disabled=0 AND CityId='A658'SELECT * FROM Detector WHERE CityId='A658' AND Code='14:45:46'SELECT * FROM Detector WHERE CityId='A658' AND Code='005529'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM V_Article WHERE Disabled=0 AND CityId='A658' AND Year=2020 AND Article=142 AND Paragraph=8SELECT * FROM Fine WHERE CityId='A658' AND FineDate='2020-03-07' AND FineTime='14:45:46' AND REPLACE(VehiclePlate,'  ','')='EM99566'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM Reason WHERE ReasonTypeId=1 AND Disabled=0 AND CityId='A658'SELECT * FROM Detector WHERE CityId='A658' AND Code='15:04:21'SELECT * FROM Detector WHERE CityId='A658' AND Code='005529'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM V_Article WHERE Disabled=0 AND CityId='A658' AND Year=2020 AND Article=142 AND Paragraph=8SELECT * FROM Fine WHERE CityId='A658' AND FineDate='2020-03-07' AND FineTime='15:04:21' AND REPLACE(VehiclePlate,'  ','')='-'SELECT * FROM sarida.City WHERE Title='Roccavignale'SELECT * FROM Reason WHERE ReasonTypeId=1 AND Disabled=0 AND CityId='A658'SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='tbl_article.php';SELECT * FROM Customer WHERE 1=1 ORDER BY CityIdSELECT * FROM Rule WHERE 1=1 ORDER BY TitleSELECT * FROM V_ArticleCity WHERE 1=1 ORDER BY Id Desc LIMIT 0,25SELECT * FROM ArticleTariff WHERE ArticleId=1583 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1582 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1581 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1580 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1579 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1578 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1577 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1576 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1575 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1574 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1573 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1572 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1571 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1570 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1569 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1568 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1567 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1555 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1554 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1553 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1552 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1551 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1550 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1549 ORDER BY Year DESCSELECT * FROM ArticleTariff WHERE ArticleId=1544 ORDER BY Year DESCSELECT * FROM V_ArticleCity WHERE 1=1 ORDER BY Id
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='tbl_article_add.php';SELECT * FROM RuleType WHERE CityId='A658'SELECT * FROM RuleType WHERE CityId='A658' ORDER BY Title
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='tbl_article_add.php';SELECT * FROM RuleType WHERE CityId='A658'SELECT * FROM RuleType WHERE CityId='A658' ORDER BY TitleSELECT * FROM Customer WHERE 1=1 ORDER BY ManagerNameSELECT * FROM ViolationType WHERE RuleTypeId=1 ORDER BY IdSELECT * FROM AdditionalSanction WHERE 1=1 ORDER BY Id
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    
+    SELECT * FROM V_Customer WHERE CreationType=1 AND CityId='A658' AND ToDate IS NULLSELECT * FROM sarida.V_UserApplication WHERE UserId=31 AND MainMenuId=3SELECT * FROM Mail WHERE ReadStatus=0 AND UserId=31SELECT * FROM Mail WHERE UserId=31SELECT CityId, CityTitle FROM sarida.V_UserCity WHERE UserId=31 AND MainMenuId=3 GROUP BY CityId, CityTitle;SELECT CityYear FROM sarida.V_UserCity WHERE CityId='A658' AND UserId=31 ORDER BY CityYear DESC;SELECT * FROM sarida.V_UserPage WHERE MainMenuId=3 AND UserId=31 AND LinkPage='mgmt_fine_viw.php';SELECT * FROM V_Fine WHERE Id=402769SELECT FineId AS NextId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId > 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId LIMIT 1SELECT FineId AS PreviousId
+           FROM V_mgmt_Fine
+          WHERE ProtocolId < 700 AND StatusTypeId>10 AND ProtocolId>0 AND CityId='A658' AND ProtocolYear=2019 ORDER BY ProtocolId DESC LIMIT 1SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeIdSELECT * FROM V_Trespasser WHERE Id=215445SELECT * FROM Country WHERE Id=''SELECT Title FROM traffic_law.Language WHERE Id=1
+  SELECT C.Name, C.Code
+  FROM Controller C JOIN FineAdditionalController FAC
+  ON C.Id = FAC.ControllerId
+
+  WHERE FAC.FineId=402769SELECT * FROM V_FineTrespasser WHERE FineId=402769 ORDER BY TrespasserTypeId
+        SELECT
+			FA.Fee,
+			FA.MaxFee,
+            FA.LicensePoint AS TotalPoints,
+
+			ArT.ReducedPayment,
+			ArT.LicensePoint,
+            ArT.YoungLicensePoint,
+
+			FH.NotificationTypeId,
+			FH.NotificationFee,
+			FH.ResearchFee,
+			FH.DeliveryDate,
+			FH.ResultId
+        FROM Fine F
+        JOIN FineArticle FA ON F.Id = FA.FineId
+        JOIN ArticleTariff ArT ON FA.ArticleId = ArT.ArticleId AND ArT.Year = F.ProtocolYear
+        LEFT JOIN FineHistory FH ON FA.FineId = FH.FineId
+
+        WHERE FA.FineId=402769SELECT * FROM V_AdditionalArticle WHERE FineId=402769 ORDER BY ArticleOrderSELECT * FROM FineOwner WHERE FineId=402769SELECT * FROM FineOwner WHERE FineId=402769SELECT AdditionalSanction.TitleIta, LicensePoint, YoungLicensePoint FROM ArticleTariff JOIN AdditionalSanction on ArticleTariff.AdditionalSanctionId = AdditionalSanction.Id
+    WHERE ArticleTariff.ArticleId='3' AND ArticleTariff.Year='2019'SELECT * FROM FineDocumentation WHERE FineId=402769 AND DocumentationTypeId=1 ORDER BY IdSELECT FD.Id AS Id, Documentation, Note, FineId, FD.DocumentationTypeId AS DocumentationTypeId, Title, FD.Attachment  FROM FineDocumentation as FD INNER JOIN DocumentationType as DT on FD.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT FP.Id AS Id, Documentation, Note, FineId, FP.DocumentationTypeId AS DocumentationTypeId, Title, FP.Attachment  FROM FinePresentation as FP INNER JOIN DocumentationType as DT on FP.DocumentationTypeId = DT.Id  WHERE FineId=402769 UNION SELECT DD.Id AS Id, Documentation, '' AS Note, FineId, 60 AS DocumentationTypeId, 'Ricorso' AS Title, DD.Attachment  FROM DisputeDocumentation as DD  WHERE FineId=402769SELECT * FROM V_FineNotification WHERE FineId=402769SELECT * FROM FineDocumentation WHERE FineId=402769 AND (DocumentationTypeId=10 OR DocumentationTypeId=11)SELECT * FROM FineHistory WHERE FineId=402769 AND NotificationTypeId=6SELECT * FROM FinePayment WHERE FineId=402769SELECT * FROM FineReminder WHERE FineId=402769 ORDER BY IdSELECT * FROM V_FineDispute WHERE FineId=402769 ORDER BY GradeTypeIdSELECT * FROM FineRefund WHERE FineId=402769SELECT * FROM FineNotification WHERE FineId=402769
+      SELECT
+        F.ProtocolId,
+        F.ProtocolYear,
+
+        T.CompanyName,
+        T.Surname,
+        T.Name,
+        
+        Cus.ManagerCity,
+        
+        D.GradeTypeId,
+        D.OfficeCity,
+        
+        DD.DateHearing,
+        DD.TimeHearing,
+        
+        O.TitleIta OfficeTitle
+        
+        
+        FROM Fine F
+            JOIN FineTrespasser FT ON FT.FineId = F.Id AND (FT.TrespasserTypeId=11 OR FT.TrespasserTypeId=1 OR FT.TrespasserTypeId=2)
+            JOIN Trespasser T ON FT.TrespasserId= T.Id
+            JOIN FineDispute FD ON F.Id = FD.FineId
+            JOIN Dispute D ON FD.DisputeId=D.Id
+            JOIN DisputeDate DD ON DD.DisputeId=D.Id
+            JOIN Office O ON O.Id = D.OfficeId
+            JOIN Customer Cus ON Cus.CityId=F.CityId
+        
+        
+        
+        WHERE D.DateMerit IS NULL AND DD.DisputeResultId=0 AND DD.DateHearing IS NOT NULL
+        AND F.CityId='A658' AND DD.DateHearing>='2020-07-13'
+        ORDER BY DD.DateHearing DESC
+    

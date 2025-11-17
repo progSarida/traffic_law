@@ -1,0 +1,1115 @@
+<?php
+require_once ('cost-sarida-gitco.php');
+
+define('INIPEC_NS', 'http://www.w3.org/2004/08/xop/include');
+
+// Parametri url pagamenti qrcode
+define("PAGOPAPAYMENT_LIGURIA_PROD", "https://nodopagamenti.regione.liguria.it/portale/nodopagamenti/pagamento-diretto-immediato");
+define("PAGOPAPAYMENT_LIGURIA_COLL", "https://nodopagamenti-test.regione.liguria.it/portale/nodopagamenti/rest/pagamentodiretto/inviarichiesta");
+define("PAGOPAPAYMENT_LOMBARDIA_PROD", "https://pagamentinlombardia.servizirl.it");
+define("PAGOPAPAYMENT_LOMBARDIA_COLL", "https://pagamentinlombardia-pre.lispa.it");
+define("PAGOPAPAYMENT_SONDRIO_PROD", ""); // TODO da definire
+define("PAGOPAPAYMENT_SONDRIO_COLL", ""); // TODO da definire
+define("PAGOPAPAYMENT_VENETO_PROD", "https://mypay.regione.veneto.it/pa/services/PagamentiTelematiciDovutiPagati");
+define("PAGOPAPAYMENT_VENETO_COLL", "https://paygov.collaudo.regione.veneto.it/pa/services/PagamentiTelematiciDovutiPagati");
+define("PAGOPAPAYMENT_ENTRANEXT_PROD", "");
+define("PAGOPAPAYMENT_ENTRANEXT_COLL", "");
+
+const COMMUNICATIONSTATUSOPTIONS=array("Tutte","Non presentata","Presentata","Presentata oltre i termini","Presentata non decurtata","Decurtata");
+const ORIGINALFINENOTIFICATIONSTATUS = array("","In attesa","Notificato","Non notificato");
+const CERT_EXTENSION=".crt";
+// Parametri autenticazione Email
+define("MAIL_CONNECTIONSECURITY_TYPES", serialize(array(
+  'notls' => 'NESSUNA',
+  'ssl' => 'SSL/TLS',
+  'tls' => 'STARTTLS')));
+define("MAIL_INCOMINGPROTOCOL_TYPES", serialize(array(
+  'imap' => 'IMAP',
+  'pop3' => 'POP3')));
+define("MAIL_OUTGOINGPROTOCOL_TYPES", serialize(array(
+  'smtp' => 'SMTP')));
+define("MAIL_AUTH_PROPERTIES", serialize(array(
+  'plain' => 'PLAIN',
+  'gssapi' => 'GSSAPI',
+)));
+
+const ACTIONS=array(
+    "view"=>array("button"=>"viw","icon"=>"glyphicon glyphicon-eye-open","tooltip"=>"Visualizza"),
+    "update"=>array("button"=>"upd","icon"=>"glyphicon glyphicon-pencil","tooltip"=>"Modifica"),
+    "addTrespasser"=>array("button"=>"act","icon"=>"fa fa-user-plus","tooltip"=>"Aggiungi trasgressore"),
+    "updateTrespasser"=>array("button"=>"act","icon"=>"fa fa-user-times","tooltip"=>"Modifica trasgressore"),
+    "violationAct"=>array("button"=>"act","icon"=>"fa fa-files-o","tooltip"=>"Modifica atto"),
+    "control"=>array("button"=>"upd","icon"=>"fa fa-check","tooltip"=>"Validazione"),
+    "delete"=>array("button"=>"del","icon"=>"glyphicon glyphicon-minus-sign","tooltip"=>"Cancella"),
+    "archive"=>array("button"=>"exp","icon"=>"glyphicon glyphicon-remove-sign","tooltip"=>"Archivia")
+);
+
+if(PRODUCTION){
+    define("PAGOPA_URL", "https://gitco.ovunque-si.it/traffic_law/imp_pagopa_exe.php"); //urlPost per pagamenti PagoPA liguria produzione
+    define('INIPEC_URL', 'https://fpecws.infocamere.it/fpec/ServizioFornituraPec?wsdl'); //INIPEC produzione
+} else {
+    define("PAGOPA_URL", ""); //urlPost per pagamenti PagoPA liguria collaudo
+    define('INIPEC_URL', 'https://fpecwscl.infocamere.it/fpec/ServizioFornituraPec?wsdl'); //INIPEC collaudo
+}
+
+define("DB_NAME", 'traffic_law');
+
+define("MAIN_DB", 'sarida');
+define("MENU_ID", 3);
+
+define("SAFO_GATEWAY", '52.166.145.121');
+
+define("PAGE_NUMBER", 25);
+define("IMG_LANGUAGE", serialize(array(
+  '',
+  'f_ita.png',
+  'f_eng.png',
+  'f_ger.png',
+  'f_spa.png',
+  'f_fre.png',
+  'f_rom.png',
+  'f_por.png',
+  'f_hol.png',
+  'f_pol.png',
+  'f_alb.png',
+  'f_den.png')));
+
+define("LANGUAGE", serialize(array(
+  '',
+  'Ita',
+  'Eng',
+  'Ger',
+  'Spa',
+  'Fre',
+  'Rom',
+  'Por',
+  'Hol',
+  'Pol',
+  'Alb',
+  'Den')));
+
+define("LANGUAGE_KEYS", serialize(array(
+  'Italiano' => 'Ita',
+  'Inglese' => 'Eng',
+  'Tedesco' => 'Ger',
+  'Spagnolo' => 'Spa',
+  'Francese' => 'Fre',
+  'Rumeno' => 'Rom',
+  'Portoghese' => 'Por',
+  'Olandese' => 'Hol',
+  'Polacco' => 'Pol',
+  'Albanese' => 'Alb',
+  'Danese' => 'Den')));
+
+define("RENT", serialize(array(
+  '',
+  'Locatario/Noleggiante',
+  'Lessee',
+  'Mieter',
+  'Arrendador',
+  'Loueur',
+  'Chirias',
+  'Locatario',
+  'Huurder',
+  'Najemca',
+  'Qiramarres',
+  'Lejer')));
+
+define("ADDITIONAL_NIGHT", serialize(array(
+  "",
+  ". Ai sensi dell'articolo 195 comma 2 bis CDS la sanzione e' aumentata di un terzo quando la violazione e' commessa dopo le ore 22.00 e prima delle ore 7.00 (sanzione notturna)",
+  ". According to Article 195 c. 2 bis the amount of the fine is increased of one-third when the violation has been committed after 22.00 and before 07.00  (night sanction)",
+  ". Nach der Artikel 195 c. 2 bis  der Betrag wird um ein Drittel erhoeht wenn die Uebertretung nach 22.00 Uhr und bevor 07.00 begehen wird. (naechtliche Uebertretung)",
+  ". De conformidad con el articulo 195, parrafo 2 bis del Codigo de circulacion, la sancion se incrementa en un tercio cuando el delito se comete despues de las 22.y antes de las 7 (penalidad nocturna)",
+  ". En vertu de l'article 195, paragraphe 2 bis code la route, la peine est augmentee d'un tiers lorsque l'infraction est commise apres 22  heures et avant 7  heures (peine de nuit)",
+  ". Conform articolului 195 c. 2 bis cuantumul amenzii este majorat cu o treime atunci când încălcarea a fost comisă după ora 22.00 și înainte de ora 07.00 (sancțiune pe timp de noapte)",
+  ". De acordo com o Artigo 195 c. 2 bis o montante da multa é aumentado de um terço quando a violação tiver sido cometida depois das 22.00 e antes das 07.00 (sanção nocturna)",
+  ". Volgens artikel 195 c. 2 bis het bedrag van de boete wordt verhoogd met een derde als de overtreding is gepleegd na 22.00 uur en vóór 07.00 uur (nachtelijke sanctie)",
+  ". Zgodnie z art. 195 c. 2 bis kwota grzywny zostaje zwiększona o jedną trzecią, gdy naruszenie zostało popełnione po godzinie 22.00 i przed godziną 07.00 (nocna sankcja)",
+  ". Sipas nenit 195 c. 2 bis shuma e gjobës është rritur me një të tretën kur shkelja është kryer pas orës 22.00 dhe para orës 07.00 (sanksioni i natës)",
+  ". I henhold til artikel 195 c. 2a bødebeløbet øges med en tredjedel, når overtrædelsen er begået efter kl. 22.00 og før kl. 07.00 (natret)")));
+
+define("ADDITIONAL_MASS", serialize(array(
+  "",
+  ". Se la violazione e' commessa alla guida di uno dei veicoli indicati alle voci b, e, f, g, h, i, l di cui all'art. 142 comma 3 la sanzione e' raddoppiata",
+  ". If the violation has been committed with one of the vehicle specified at article 142 c. 3 point b, e, f, g, h, I, l, the amount of the fine will be doubled",
+  ". Wenn die Uebertretung mit einem angegebenen Fahrzeug im Artikel 142 c.3 punkt e, f, g, h, i, l, begehen wird, wird den Betrag verdoppeln",
+  ". Si la infraccion se comete a la conduccion de uno de los vehiculos indicados en los articulos b, e, f, g, h, i, a que se refiere el art. 142 parrafo 3 codigo de circulacion, la pena se duplica",
+  ". Si la violation est commise a la conduite d'un des vehicules indiques aux points b, e, f, g, h, i, l vises à l'art. 142 paragraphe 3 code de la route, la peine est doublee",
+  ". Dacă încălcarea a fost comisă cu unul dintre vehiculele menționate la articolul 142c. 3 puncte b, e, f, g, h, I, l, cuantumul amenzii se va dubla",
+  ". Se a violação foi cometida com um dos veículos especificados no artigo 142 c. 3 ponto b, e, f, g, h, eu, l, o valor da multa será dobrado",
+  ". Als de overtreding is gepleegd met een van de voertuigen vermeld in artikel 142 c. 3 punten b, e, f, g, h, I, l, het bedrag van de boete wordt verdubbeld",
+  ". Jeżeli naruszenie zostało popełnione z jednym z pojazdów określonych w artykule 142 c. 3 pkt b, e, f, g, h, I, l, kwota grzywny zostanie podwojona",
+  ". Nëse shkelja është kryer me një nga mjetet e përcaktuara në nenin 142 c. 3 pika b, e, f, g, h, I, l, shuma e gjobës do të dyfishohet",
+  ". Hvis overtrædelsen er begået med et af køretøjet angivet i artikel 142c. 3 point b, e, f, g, h, I, l, vil bøden blive fordoblet")));
+
+define("ADDITIONAL_NIGHT_CITYID", serialize(array(
+    'D711' =>array(
+    "",
+    "Ai sensi dell'articolo 195 comma 2 bis CDS la sanzione e' aumentata di un terzo quando la violazione e' commessa dopo le ore 22.00 e prima delle ore 7.00 (sanzione notturna).",
+    "According to Article 195 c. 2 bis the amount of the fine is increased of one-third when the violation has been committed after 22.00 and before 07.00  (night sanction).",
+    "Nach der Artikel 195 c. 2 bis  der Betrag wird um ein Drittel erhoeht wenn die Uebertretung nach 22.00 Uhr und bevor 07.00 begehen wird. (naechtliche Uebertretung).",
+    "De conformidad con el articulo 195, parrafo 2 bis del Codigo de circulacion, la sancion se incrementa en un tercio cuando el delito se comete despues de las 22.y antes de las 7 (penalidad nocturna).",
+    "En vertu de l'article 195, paragraphe 2 bis code la route, la peine est augmentee d'un tiers lorsque l'infraction est commise apres 22  heures et avant 7  heures (peine de nuit).",
+    "Conform articolului 195 c. 2 bis cuantumul amenzii este majorat cu o treime atunci când încălcarea a fost comisă după ora 22.00 și înainte de ora 07.00 (sancțiune pe timp de noapte).",
+    "De acordo com o Artigo 195 c. 2 bis o montante da multa é aumentado de um terço quando a violação tiver sido cometida depois das 22.00 e antes das 07.00 (sanção nocturna).",
+    "Volgens artikel 195 c. 2 bis het bedrag van de boete wordt verhoogd met een derde als de overtreding is gepleegd na 22.00 uur en vóór 07.00 uur (nachtelijke sanctie).",
+    "Zgodnie z art. 195 c. 2 bis kwota grzywny zostaje zwiększona o jedną trzecią, gdy naruszenie zostało popełnione po godzinie 22.00 i przed godziną 07.00 (nocna sankcja).",
+    "Sipas nenit 195 c. 2 bis shuma e gjobës është rritur me një të tretën kur shkelja është kryer pas orës 22.00 dhe para orës 07.00 (sanksioni i natës).",
+    "I henhold til artikel 195 c. 2a bødebeløbet øges med en tredjedel, når overtrædelsen er begået efter kl. 22.00 og før kl. 07.00 (natret)."))) );
+
+define("ADDITIONAL_MASS_CITYID", serialize(array(
+    'D711' =>array(
+    "",
+    "Se la violazione e' commessa alla guida di uno dei veicoli indicati alle voci b, e, f, g, h, i, l di cui all'art. 142 comma 3 la sanzione e' raddoppiata.",
+    "If the violation has been committed with one of the vehicle specified at article 142 c. 3 point b, e, f, g, h, I, l, the amount of the fine will be doubled.",
+    "Wenn die Uebertretung mit einem angegebenen Fahrzeug im Artikel 142 c.3 punkt e, f, g, h, i, l, begehen wird, wird den Betrag verdoppeln.",
+    "Si la infraccion se comete a la conduccion de uno de los vehiculos indicados en los articulos b, e, f, g, h, i, a que se refiere el art. 142 parrafo 3 codigo de circulacion, la pena se duplica.",
+    "Si la violation est commise a la conduite d'un des vehicules indiques aux points b, e, f, g, h, i, l vises à l'art. 142 paragraphe 3 code de la route, la peine est doublee.",
+    "Dacă încălcarea a fost comisă cu unul dintre vehiculele menționate la articolul 142c. 3 puncte b, e, f, g, h, I, l, cuantumul amenzii se va dubla.",
+    "Se a violação foi cometida com um dos veículos especificados no artigo 142 c. 3 ponto b, e, f, g, h, eu, l, o valor da multa será dobrado.",
+    "Als de overtreding is gepleegd met een van de voertuigen vermeld in artikel 142 c. 3 punten b, e, f, g, h, I, l, het bedrag van de boete wordt verdubbeld.",
+    "Jeżeli naruszenie zostało popełnione z jednym z pojazdów określonych w artykule 142 c. 3 pkt b, e, f, g, h, I, l, kwota grzywny zostanie podwojona.",
+    "Nëse shkelja është kryer me një nga mjetet e përcaktuara në nenin 142 c. 3 pika b, e, f, g, h, I, l, shuma e gjobës do të dyfishohet.",
+    "Hvis overtrædelsen er begået med et af køretøjet angivet i artikel 142c. 3 point b, e, f, g, h, I, l, vil bøden blive fordoblet."))));
+
+
+define("REMINDER", serialize(array(
+  'Missed' => array(
+    '',
+    'risulta omesso',
+    'Missed payment',
+    'Nicht bezahlt',
+    'Pago no hecho',
+    'Paiement non fait',
+    'Plata nu a fost facuta',
+    'Pagamento nao feito',
+    'Betaling niet gedaan',
+    'Platnosc nie zostala wykonana',
+    'Pagesa nuk eshte bere',
+    'Betaling ikke faerdig'),
+
+  'LowerPayment' => array(
+    '',
+    'di euro {Amount} eseguito in data {PaymentDate} risulta effettuato entro {DayNumber} giorni dalla notifica ma per un importo inferiore al dovuto di euro {DifferenceFee}',
+    'of Euro {Amount} made {PaymentDate} has been made within {DayNumber} days from the notification but the amount is lower than the sum due of euro {DifferenceFee}',
+    'von Euro {Amount} uberwiesen {PaymentDate} gezahlt innerhalb von {DayNumber} Tagen nach der Mitteilung aber der Betrag ist niedriger als der Betrag der Forderung von Euro {DifferenceFee}',
+    'de Euros {Amount} hecho el dia {PaymentDate} hecho dentro {DayNumber} dias de la notificacion pero por una cantidad menor a la suma debida de euros {DifferenceFee}',
+    'de Euro {Amount} fait le jour {PaymentDate} a ete faite dans {DayNumber} jours suivant la notification mais le montant est inferieur au montant du en euros {DifferenceFee}',
+    'Euro {Amount} a facut ziua {PaymentDate} a fost facuta in interiorul {DayNumber} zile de la notificare, dar suma este mai mica decat suma datorata in euro{DifferenceFee}',
+    'do Euro {Amount} feito o dia {PaymentDate} foi feito dentro de {DayNumber} dias a contar da notificacao, mas o montante e inferior ao montante devido do euro {DifferenceFee}',
+    'van Euro {Amount} maakte de dag {PaymentDate} is gemaakt binnenin {DayNumber} dagen na de kennisgeving, maar het bedrag is lager dan het verschuldigde bedrag van de euro {DifferenceFee}',
+    'Euro {Amount} zrobilem dzien {PaymentDate} zostal wykonany w {DayNumber} dni od powiadomienia, ale kwota jest nizsza niz suma nalezna od euro {DifferenceFee}',
+    'e Euros {Amount} e beri diten {PaymentDate} eshte bere brenda {DayNumber} dite nga njoftimi, por shuma eshte me e ulet se shuma e duhur e euros {DifferenceFee}',
+    'af Euro {Amount} lavet dagen {PaymentDate} er blevet lavet indenfor {DayNumber} dage fra notifikationen, men belobet er lavere end summen pa grund af euro {DifferenceFee}'),
+
+  'AfterDay' => array(
+    '',
+    'di euro {Amount} eseguito in data {PaymentDate} risulta effettuato oltre {DayNumber} giorni dalla notifica del verbale e pertanto (la SV/Codesta Ditta) avrebbe dovuto pagare euro {DifferenceFee}',
+    'of euro {Amount} made {PaymentDate} has been made more than {DayNumber} days after the notification of the fine an for this reason you should have paid euro {DifferenceFee}',
+    'von Euro {Amount} uberwiesen {PaymentDate} gezahlt nach {DayNumber} Tagen nach der Mitteilung und Sie bezahlen sollten Euro {DifferenceFee}',
+    'de euros {Amount} hecho el dia {PaymentDate} hecho mas que {DayNumber} dias de la notificacion y por este motivo deberias haber pagado euros {DifferenceFee}',
+    'de euro {Amount} fait le jour {PaymentDate} a ete faite plus que {DayNumber} jours suivant la notification un pour cette raison, vous devriez avoir paye l euro {DifferenceFee}',
+    'Euro {Amount} a facut ziua {PaymentDate} a fost facut mai mult decat {DayNumber} zile dupa notificarea amenzii si din acest motiv ar fi trebuit sa platiti euro {DifferenceFee}',
+    'do euro {Amount} feito o dia {PaymentDate} foi feito mais de {DayNumber} dias apos a notificacao da multa e por esse motivo voce deve ter pago euro {DifferenceFee}',
+    'van euro {Amount} maakte de dag {PaymentDate} gedaan over dan {DayNumber} dagen na de kennisgeving van de boete en om deze reden had u de euro moeten betalen {DifferenceFee}',
+    'Euro {Amount} zrobilem dzien {PaymentDate} zostalo zrobione wiecej niz {DayNumber} dni po powiadomieniu o grzywnie iz tego powodu nalezalo zaplacic euro {DifferenceFee}',
+    'e euros {Amount} e beri diten {PaymentDate} eshte bere me shume se {DayNumber} dite pas njoftimit te gjobes dhe per kete arsye ju duhet te keni paguar euro {DifferenceFee}',
+    'af euro {Amount} lavet dagen {PaymentDate} er blevet lavet mere end {DayNumber} dage efter meddelelsen om boden, og derfor bor du have betalt euro {DifferenceFee}'))));
+
+define("INCOMPLETE_COMMUNICATION", serialize(array(
+    1 => 'Il proprietario del veicolo ha comunicato che non è in grado di trasmettere i dati del soggetto al quale egli aveva affidato la conduzione del proprio veicolo nonostante questo sia un suo onere',
+    2 => 'L\'azienda ha comunicato che non è stata in grado di trasmettere i dati del soggetto al quale aveva affidato la condizione del proprio veicolo nonostante questo sia un suo onere',
+    3 => 'Non sono stati comunicati i dati della patente di guida del trasgressore',
+    4 => 'Non è stato allegato un documento di riconoscimento in corso di validità',
+    5 => 'Non è stata resa la comunicazione nella forma di autocertificazione',
+)));
+
+define("FINE_PROCEDURE_TYPES", serialize(array(
+    'Payment' => 1,
+    'ReminderAdditionalFee' => 2,
+    '126Bis' => 3,
+    'PresentationDocument' => 4, //180/8
+    'LicensePoint' => 5,
+    'Injunction' => 6)));
+
+define("PAGE_GLOBAL", serialize(array(
+  '',
+  'prn_payment.php')));
+
+define("LAN", "Ita");
+
+define("FINE_TOLERANCE", 5);
+define("FINE_TOLERANCE_PERC", 5);
+
+define("FINE_PARTIAL", 0.7);
+define("FINE_MAX", 0.5);
+define("FINE_NIGHT", 3);
+define("FINE_MASS", 2);
+
+define("FINE_INSURANCE_REDUCED", 0.5);
+
+define("FINE_HOUR_START_DAY", 7);
+define("FINE_MINUTE_START_DAY", 0);
+define("FINE_HOUR_END_DAY", 22);
+define("FINE_MINUTE_END_DAY", 0);
+
+define("FINE_DAILY_SLOT_START","07:00:00");
+define("FINE_DAILY_SLOT_END","22:00:59");
+
+define("MASS", 3.5);
+
+define("FINE_DAY_LIMIT", 60);
+define("DISPUTE_DAY_LIMIT", 60);
+define("FINE_DAY_LIMIT_REDUCTION", 5);
+//define("FINE_DAY_LIMIT_240", 240);
+define("PRESCRIPTION_YEARS", "5 years");
+define("FINE_DAY_LIMIT_SEMESTRAL", 180);
+define("FINE_MONTH_LIMIT_SEMESTRAL", 6);
+define("PRESCRIPTION_FOREIGN_DAYS", "270 days");
+define("PRESCRIPTION_COVID_DAYS", "542 days");
+define("D_COVID_I", date_format(date_create("2020-03-08"),'Y-m-d') );
+define("D_COVID_F", date_format(date_create("2021-08-31"),'Y-m-d') );
+define("LIMITE_MAGGIORAZIONE", 0.6);
+
+define("RICORSO_INATTESA", 0);
+define("RICORSO_RINVIATO", 1);
+define("RICORSO_RESPINTO", 2);
+define("RICORSO_INAMMISSIBILE", 3);
+define("RICORSO_ACCOLTO", 4);
+
+define("NOTIFICATIONDAYS_NATIONAL", 90);
+define("NOTIFICATIONDAYS_FOREIGN", 360);
+
+define("DATE_FROM_MERIT", 215); // giorni dalla sentenza del ricorso
+
+define("GENERIC_DOCUMENT_MAX_FILE_SIZE", 2);
+define("ART126_DOCUMENT_MAX_FILE_SIZE", 3);
+define("GENERIC_DOCUMENT_TYPES", serialize(array(
+    12,40,41,42,43,44,45,46,47,48,49,50
+)));
+define("GENERIC_DOCUMENT_ALLOWED_TYPES", serialize(array(
+    12,20,25,26,27,28,30,40,41,42,43,44,45,46,47,48,49,50
+)));
+define("GENERIC_DOCUMENT_EXT", serialize(array(
+    '.jpeg' => 'image/jpeg',
+    '.jpg' => 'image/jpeg',
+    '.pdf' => 'application/pdf'
+)));
+
+define("EXT",
+  serialize(
+    array(
+      // '.3dm' => 'x-world/x-3dmf',
+      // '.3dmf' => 'x-world/x-3dmf',
+      // '.a' => 'application/octet-stream',
+      // '.aab' => 'application/x-authorware-bin',
+      // '.aam' => 'application/x-authorware-map',
+      // '.aas' => 'application/x-authorware-seg',
+      // '.abc' => 'text/vnd.abc',
+      // '.acgi' => 'text/html',
+      // '.afl' => 'video/animaflex',
+      // '.ai' => 'application/postscript',
+      // '.aif' => 'audio/aiff',
+      // '.aif' => 'audio/x-aiff',
+      // '.aifc' => 'audio/aiff',
+      // '.aifc' => 'audio/x-aiff',
+      // '.aiff' => 'audio/aiff',
+      // '.aiff' => 'audio/x-aiff',
+      // '.aim' => 'application/x-aim',
+      // '.aip' => 'text/x-audiosoft-intra',
+      // '.ani' => 'application/x-navi-animation',
+      // '.aos' => 'application/x-nokia-9000-communicator-add-on-software',
+      // '.aps' => 'application/mime',
+      // '.arc' => 'application/octet-stream',
+      // '.arj' => 'application/arj',
+      // '.arj' => 'application/octet-stream',
+      // '.art' => 'image/x-jg',
+      // '.asf' => 'video/x-ms-asf',
+      // '.asm' => 'text/x-asm',
+      // '.asp' => 'text/asp',
+      // '.asx' => 'application/x-mplayer2',
+      // '.asx' => 'video/x-ms-asf',
+      // '.asx' => 'video/x-ms-asf-plugin',
+      // '.au' => 'audio/basic',
+      // '.au' => 'audio/x-au',
+      // '.avi' => 'application/x-troff-msvideo',
+      // '.avi' => 'video/avi',
+      // '.avi' => 'video/msvideo',
+      // '.avi' => 'video/x-msvideo',
+      // '.avs' => 'video/avs-video',
+      // '.bcpio' => 'application/x-bcpio',
+      // '.bin' => 'application/mac-binary',
+      // '.bin' => 'application/macbinary',
+      // '.bin' => 'application/octet-stream',
+      // '.bin' => 'application/x-binary',
+      // '.bin' => 'application/x-macbinary',
+      // '.bm' => 'image/bmp',
+      // '.bmp' => 'image/bmp',
+      // '.bmp' => 'image/x-windows-bmp',
+      // '.boo' => 'application/book',
+      // '.book' => 'application/book',
+      // '.boz' => 'application/x-bzip2',
+      // '.bsh' => 'application/x-bsh',
+      // '.bz' => 'application/x-bzip',
+      // '.bz2' => 'application/x-bzip2',
+      // '.c' => 'text/plain',
+      // '.c++' => 'text/plain',
+      // '.cat' => 'application/vnd.ms-pki.seccat',
+      // '.cc' => 'text/plain',
+      // '.cc' => 'text/x-c',
+      // '.ccad' => 'application/clariscad',
+      // '.cco' => 'application/x-cocoa',
+      // '.cdf' => 'application/cdf',
+      // '.cdf' => 'application/x-cdf',
+      // '.cdf' => 'application/x-netcdf',
+      // '.cer' => 'application/pkix-cert',
+      // '.cer' => 'application/x-x509-ca-cert',
+      // '.cha' => 'application/x-chat',
+      // '.chat' => 'application/x-chat',
+      // '.class' => 'application/java',
+      // '.class' => 'application/java-byte-code',
+      // '.class' => 'application/x-java-class',
+      // '.com' => 'application/octet-stream',
+      // '.com' => 'text/plain',
+      // '.conf' => 'text/plain',
+      // '.cpio' => 'application/x-cpio',
+      // '.cpp' => 'text/x-c',
+      // '.cpt' => 'application/mac-compactpro',
+      // '.cpt' => 'application/x-compactpro',
+      // '.cpt' => 'application/x-cpt',
+      // '.crl' => 'application/pkcs-crl',
+      // '.crl' => 'application/pkix-crl',
+      // '.crt' => 'application/pkix-cert',
+      // '.crt' => 'application/x-x509-ca-cert',
+      // '.crt' => 'application/x-x509-user-cert',
+      // '.csh' => 'application/x-csh',
+      // '.csh' => 'text/x-script.csh',
+      // '.css' => 'application/x-pointplus',
+      // '.css' => 'text/css',
+      // '.cxx' => 'text/plain',
+      // '.dcr' => 'application/x-director',
+      // '.deepv' => 'application/x-deepv',
+      // '.def' => 'text/plain',
+      // '.der' => 'application/x-x509-ca-cert',
+      // '.dif' => 'video/x-dv',
+      // '.dir' => 'application/x-director',
+      // '.dl' => 'video/dl',
+      // '.dl' => 'video/x-dl',
+      // '.doc' => 'application/msword',
+      // '.dot' => 'application/msword',
+      // '.dp' => 'application/commonground',
+      // '.drw' => 'application/drafting',
+      // '.dump' => 'application/octet-stream',
+      // '.dv' => 'video/x-dv',
+      // '.dvi' => 'application/x-dvi',
+      // '.dwf' => 'drawing/x-dwf (old)',
+      // '.dwf' => 'model/vnd.dwf',
+      // '.dwg' => 'application/acad',
+      // '.dwg' => 'image/vnd.dwg',
+      // '.dwg' => 'image/x-dwg',
+      // '.dxf' => 'application/dxf',
+      // '.dxf' => 'image/vnd.dwg',
+      // '.dxf' => 'image/x-dwg',
+      // '.dxr' => 'application/x-director',
+      // '.el' => 'text/x-script.elisp',
+      // '.elc' => 'application/x-bytecode.elisp (compiled elisp)',
+      // '.elc' => 'application/x-elc',
+      // '.env' => 'application/x-envoy',
+      // '.eps' => 'application/postscript',
+      // '.es' => 'application/x-esrehber',
+      // '.etx' => 'text/x-setext',
+      // '.evy' => 'application/envoy',
+      // '.evy' => 'application/x-envoy',
+      // '.exe' => 'application/octet-stream',
+      // '.f' => 'text/plain',
+      // '.f' => 'text/x-fortran',
+      // '.f77' => 'text/x-fortran',
+      // '.f90' => 'text/plain',
+      // '.f90' => 'text/x-fortran',
+      // '.fdf' => 'application/vnd.fdf',
+      // '.fif' => 'application/fractals',
+      // '.fif' => 'image/fif',
+      // '.fli' => 'video/fli',
+      // '.fli' => 'video/x-fli',
+      // '.flo' => 'image/florian',
+      // '.flx' => 'text/vnd.fmi.flexstor',
+      // '.fmf' => 'video/x-atomic3d-feature',
+      // '.for' => 'text/plain',
+      // '.for' => 'text/x-fortran',
+      // '.fpx' => 'image/vnd.fpx',
+      // '.fpx' => 'image/vnd.net-fpx',
+      // '.frl' => 'application/freeloader',
+      // '.funk' => 'audio/make',
+      // '.g' => 'text/plain',
+      // '.g3' => 'image/g3fax',
+      // '.gif' => 'image/gif',
+      // '.gl' => 'video/gl',
+      // '.gl' => 'video/x-gl',
+      // '.gsd' => 'audio/x-gsm',
+      // '.gsm' => 'audio/x-gsm',
+      // '.gsp' => 'application/x-gsp',
+      // '.gss' => 'application/x-gss',
+      // '.gtar' => 'application/x-gtar',
+      // '.gz' => 'application/x-compressed',
+      // '.gz' => 'application/x-gzip',
+      // '.gzip' => 'application/x-gzip',
+      // '.gzip' => 'multipart/x-gzip',
+      // '.h' => 'text/plain',
+      // '.h' => 'text/x-h',
+      // '.hdf' => 'application/x-hdf',
+      // '.help' => 'application/x-helpfile',
+      // '.hgl' => 'application/vnd.hp-hpgl',
+      // '.hh' => 'text/plain',
+      // '.hh' => 'text/x-h',
+      // '.hlb' => 'text/x-script',
+      // '.hlp' => 'application/hlp',
+      // '.hlp' => 'application/x-helpfile',
+      // '.hlp' => 'application/x-winhelp',
+      // '.hpg' => 'application/vnd.hp-hpgl',
+      // '.hpgl' => 'application/vnd.hp-hpgl',
+      // '.hqx' => 'application/binhex',
+      // '.hqx' => 'application/binhex4',
+      // '.hqx' => 'application/mac-binhex',
+      // '.hqx' => 'application/mac-binhex40',
+      // '.hqx' => 'application/x-binhex40',
+      // '.hqx' => 'application/x-mac-binhex40',
+      // '.hta' => 'application/hta',
+      // '.htc' => 'text/x-component',
+      // '.htm' => 'text/html',
+      // '.html' => 'text/html',
+      // '.htmls' => 'text/html',
+      // '.htt' => 'text/webviewhtml',
+      // '.htx' => 'text/html',
+      // '.ice' => 'x-conference/x-cooltalk',
+      // '.ico' => 'image/x-icon',
+      // '.idc' => 'text/plain',
+      // '.ief' => 'image/ief',
+      // '.iefs' => 'image/ief',
+      // '.iges' => 'application/iges',
+      // '.iges' => 'model/iges',
+      // '.igs' => 'application/iges',
+      // '.igs' => 'model/iges',
+      // '.ima' => 'application/x-ima',
+      // '.imap' => 'application/x-httpd-imap',
+      // '.inf' => 'application/inf',
+      // '.ins' => 'application/x-internett-signup',
+      // '.ip' => 'application/x-ip2',
+      // '.isu' => 'video/x-isvideo',
+      // '.it' => 'audio/it',
+      // '.iv' => 'application/x-inventor',
+      // '.ivr' => 'i-world/i-vrml',
+      // '.ivy' => 'application/x-livescreen',
+      // '.jam' => 'audio/x-jam',
+      // '.jav' => 'text/plain',
+      // '.jav' => 'text/x-java-source',
+      // '.java' => 'text/plain',
+      // '.java' => 'text/x-java-source',
+      // '.jcm' => 'application/x-java-commerce',
+      // '.jfif' => 'image/jpeg',
+      // '.jfif' => 'image/pjpeg',
+      // '.jfif-tbnl' => 'image/jpeg',
+      // '.jpe' => 'image/jpeg',
+      // '.jpe' => 'image/pjpeg',
+      // '.jpeg' => 'image/jpeg',
+      // '.jpeg' => 'image/pjpeg',
+      '.jpg' => 'image/jpeg',
+      // '.jpg' => 'image/pjpeg',
+      // '.jps' => 'image/x-jps',
+      // '.js' => 'application/x-javascript',
+      // '.jut' => 'image/jutvision',
+      // '.kar' => 'audio/midi',
+      // '.kar' => 'music/x-karaoke',
+      // '.ksh' => 'application/x-ksh',
+      // '.ksh' => 'text/x-script.ksh',
+      // '.la' => 'audio/nspaudio',
+      // '.la' => 'audio/x-nspaudio',
+      // '.lam' => 'audio/x-liveaudio',
+      // '.latex' => 'application/x-latex',
+      // '.lha' => 'application/lha',
+      // '.lha' => 'application/octet-stream',
+      // '.lha' => 'application/x-lha',
+      // '.lhx' => 'application/octet-stream',
+      // '.list' => 'text/plain',
+      // '.lma' => 'audio/nspaudio',
+      // '.lma' => 'audio/x-nspaudio',
+      // '.log' => 'text/plain',
+      // '.lsp' => 'application/x-lisp',
+      // '.lsp' => 'text/x-script.lisp',
+      // '.lst' => 'text/plain',
+      // '.lsx' => 'text/x-la-asf',
+      // '.ltx' => 'application/x-latex',
+      // '.lzh' => 'application/octet-stream',
+      // '.lzh' => 'application/x-lzh',
+      // '.lzx' => 'application/lzx',
+      // '.lzx' => 'application/octet-stream',
+      // '.lzx' => 'application/x-lzx',
+      // '.m' => 'text/plain',
+      // '.m' => 'text/x-m',
+      // '.m1v' => 'video/mpeg',
+      // '.m2a' => 'audio/mpeg',
+      // '.m2v' => 'video/mpeg',
+      // '.m3u' => 'audio/x-mpequrl',
+      // '.man' => 'application/x-troff-man',
+      // '.map' => 'application/x-navimap',
+      // '.mar' => 'text/plain',
+      // '.mbd' => 'application/mbedlet',
+      // '.mc' => 'application/x-magic-cap-package-1.0',
+      // '.mcd' => 'application/mcad',
+      // '.mcd' => 'application/x-mathcad',
+      // '.mcf' => 'image/vasa',
+      // '.mcf' => 'text/mcf',
+      // '.mcp' => 'application/netmc',
+      // '.me' => 'application/x-troff-me',
+      // '.mht' => 'message/rfc822',
+      // '.mhtml' => 'message/rfc822',
+      // '.mid' => 'application/x-midi',
+      // '.mid' => 'audio/midi',
+      // '.mid' => 'audio/x-mid',
+      // '.mid' => 'audio/x-midi',
+      // '.mid' => 'music/crescendo',
+      // '.mid' => 'x-music/x-midi',
+      // '.midi' => 'application/x-midi',
+      // '.midi' => 'audio/midi',
+      // '.midi' => 'audio/x-mid',
+      // '.midi' => 'audio/x-midi',
+      // '.midi' => 'music/crescendo',
+      // '.midi' => 'x-music/x-midi',
+      // '.mif' => 'application/x-frame',
+      // '.mif' => 'application/x-mif',
+      // '.mime' => 'message/rfc822',
+      // '.mime' => 'www/mime',
+      // '.mjf' => 'audio/x-vnd.audioexplosion.mjuicemediafile',
+      // '.mjpg' => 'video/x-motion-jpeg',
+      // '.mm' => 'application/base64',
+      // '.mm' => 'application/x-meme',
+      // '.mme' => 'application/base64',
+      // '.mod' => 'audio/mod',
+      // '.mod' => 'audio/x-mod',
+      // '.moov' => 'video/quicktime',
+      // '.mov' => 'video/quicktime',
+      // '.movie' => 'video/x-sgi-movie',
+      // '.mp2' => 'audio/mpeg',
+      // '.mp2' => 'audio/x-mpeg',
+      // '.mp2' => 'video/mpeg',
+      // '.mp2' => 'video/x-mpeg',
+      // '.mp2' => 'video/x-mpeq2a',
+      // '.mp3' => 'audio/mpeg3',
+      // '.mp3' => 'audio/x-mpeg-3',
+      // '.mp3' => 'video/mpeg',
+      // '.mp3' => 'video/x-mpeg',
+      // '.mpa' => 'audio/mpeg',
+      // '.mpa' => 'video/mpeg',
+      // '.mpc' => 'application/x-project',
+      // '.mpe' => 'video/mpeg',
+      // '.mpeg' => 'video/mpeg',
+      // '.mpg' => 'audio/mpeg',
+      // '.mpg' => 'video/mpeg',
+      // '.mpga' => 'audio/mpeg',
+      // '.mpp' => 'application/vnd.ms-project',
+      // '.mpt' => 'application/x-project',
+      // '.mpv' => 'application/x-project',
+      // '.mpx' => 'application/x-project',
+      // '.mrc' => 'application/marc',
+      // '.ms' => 'application/x-troff-ms',
+      // '.mv' => 'video/x-sgi-movie',
+      // '.my' => 'audio/make',
+      // '.mzz' => 'application/x-vnd.audioexplosion.mzz',
+      // '.nap' => 'image/naplps',
+      // '.naplps' => 'image/naplps',
+      // '.nc' => 'application/x-netcdf',
+      // '.ncm' => 'application/vnd.nokia.configuration-message',
+      // '.nif' => 'image/x-niff',
+      // '.niff' => 'image/x-niff',
+      // '.nix' => 'application/x-mix-transfer',
+      // '.nsc' => 'application/x-conference',
+      // '.nvd' => 'application/x-navidoc',
+      // '.o' => 'application/octet-stream',
+      // '.oda' => 'application/oda',
+      // '.omc' => 'application/x-omc',
+      // '.omcd' => 'application/x-omcdatamaker',
+      // '.omcr' => 'application/x-omcregerator',
+      // '.p' => 'text/x-pascal',
+      // '.p10' => 'application/pkcs10',
+      // '.p10' => 'application/x-pkcs10',
+      // '.p12' => 'application/pkcs-12',
+      // '.p12' => 'application/x-pkcs12',
+      // '.p7a' => 'application/x-pkcs7-signature',
+      // '.p7c' => 'application/pkcs7-mime',
+      // '.p7c' => 'application/x-pkcs7-mime',
+      // '.p7m' => 'application/pkcs7-mime',
+      // '.p7m' => 'application/x-pkcs7-mime',
+      // '.p7r' => 'application/x-pkcs7-certreqresp',
+      // '.p7s' => 'application/pkcs7-signature',
+      // '.part' => 'application/pro_eng',
+      // '.pas' => 'text/pascal',
+      // '.pbm' => 'image/x-portable-bitmap',
+      // '.pcl' => 'application/vnd.hp-pcl',
+      // '.pcl' => 'application/x-pcl',
+      // '.pct' => 'image/x-pict',
+      // '.pcx' => 'image/x-pcx',
+      // '.pdb' => 'chemical/x-pdb',
+      '.pdf' => 'application/pdf' // '.pfunk' => 'audio/make',
+                                  // '.pgm' => 'image/x-portable-greymap',
+                                  // '.pic' => 'image/pict',
+                                  // '.pict' => 'image/pict',
+                                  // '.pkg' => 'application/x-newton-compatible-pkg',
+                                  // '.pko' => 'application/vnd.ms-pki.pko',
+                                  // '.pl' => 'text/plain',
+                                  // '.pl' => 'text/x-script.perl',
+                                  // '.plx' => 'application/x-pixclscript',
+                                  // '.pm' => 'image/x-xpixmap',
+                                  // '.pm' => 'text/x-script.perl-module',
+                                  // '.pm4' => 'application/x-pagemaker',
+                                  // '.pm5' => 'application/x-pagemaker',
+                                  // '.png' => 'image/png',
+                                  // '.pnm' => 'application/x-portable-anymap',
+                                  // '.pnm' => 'image/x-portable-anymap',
+                                  // '.pot' => 'application/mspowerpoint',
+                                  // '.pot' => 'application/vnd.ms-powerpoint',
+                                  // '.pov' => 'model/x-pov',
+                                  // '.ppa' => 'application/vnd.ms-powerpoint',
+                                  // '.ppm' => 'image/x-portable-pixmap',
+                                  // '.pps' => 'application/mspowerpoint',
+                                  // '.pps' => 'application/vnd.ms-powerpoint',
+                                  // '.ppt' => 'application/mspowerpoint',
+                                  // '.ppt' => 'application/powerpoint',
+                                  // '.ppt' => 'application/vnd.ms-powerpoint',
+                                  // '.ppt' => 'application/x-mspowerpoint',
+                                  // '.ppz' => 'application/mspowerpoint',
+                                  // '.pre' => 'application/x-freelance',
+                                  // '.prt' => 'application/pro_eng',
+                                  // '.ps' => 'application/postscript',
+                                  // '.psd' => 'application/octet-stream',
+                                  // '.pvu' => 'paleovu/x-pv',
+                                  // '.pwz' => 'application/vnd.ms-powerpoint',
+                                  // '.py' => 'text/x-script.phyton',
+                                  // '.pyc' => 'applicaiton/x-bytecode.python',
+                                  // '.qcp' => 'audio/vnd.qcelp',
+                                  // '.qd3' => 'x-world/x-3dmf',
+                                  // '.qd3d' => 'x-world/x-3dmf',
+                                  // '.qif' => 'image/x-quicktime',
+                                  // '.qt' => 'video/quicktime',
+                                  // '.qtc' => 'video/x-qtc',
+                                  // '.qti' => 'image/x-quicktime',
+                                  // '.qtif' => 'image/x-quicktime',
+                                  // '.ra' => 'audio/x-pn-realaudio',
+                                  // '.ra' => 'audio/x-pn-realaudio-plugin',
+                                  // '.ra' => 'audio/x-realaudio',
+                                  // '.ram' => 'audio/x-pn-realaudio',
+                                  // '.ras' => 'application/x-cmu-raster',
+                                  // '.ras' => 'image/cmu-raster',
+                                  // '.ras' => 'image/x-cmu-raster',
+                                  // '.rast' => 'image/cmu-raster',
+                                  // '.rexx' => 'text/x-script.rexx',
+                                  // '.rf' => 'image/vnd.rn-realflash',
+                                  // '.rgb' => 'image/x-rgb',
+                                  // '.rm' => 'application/vnd.rn-realmedia',
+                                  // '.rm' => 'audio/x-pn-realaudio',
+                                  // '.rmi' => 'audio/mid',
+                                  // '.rmm' => 'audio/x-pn-realaudio',
+                                  // '.rmp' => 'audio/x-pn-realaudio',
+                                  // '.rmp' => 'audio/x-pn-realaudio-plugin',
+                                  // '.rng' => 'application/ringing-tones',
+                                  // '.rng' => 'application/vnd.nokia.ringing-tone',
+                                  // '.rnx' => 'application/vnd.rn-realplayer',
+                                  // '.roff' => 'application/x-troff',
+                                  // '.rp' => 'image/vnd.rn-realpix',
+                                  // '.rpm' => 'audio/x-pn-realaudio-plugin',
+                                  // '.rt' => 'text/richtext',
+                                  // '.rt' => 'text/vnd.rn-realtext',
+                                  // '.rtf' => 'application/rtf',
+                                  // '.rtf' => 'application/x-rtf',
+                                  // '.rtf' => 'text/richtext',
+                                  // '.rtx' => 'application/rtf',
+                                  // '.rtx' => 'text/richtext',
+                                  // '.rv' => 'video/vnd.rn-realvideo',
+                                  // '.s' => 'text/x-asm',
+                                  // '.s3m' => 'audio/s3m',
+                                  // '.saveme' => 'aapplication/octet-stream',
+                                  // '.sbk' => 'application/x-tbook',
+                                  // '.scm' => 'application/x-lotusscreencam',
+                                  // '.scm' => 'text/x-script.guile',
+                                  // '.scm' => 'text/x-script.scheme',
+                                  // '.scm' => 'video/x-scm',
+                                  // '.sdml' => 'text/plain',
+                                  // '.sdp' => 'application/sdp',
+                                  // '.sdp' => 'application/x-sdp',
+                                  // '.sdr' => 'application/sounder',
+                                  // '.sea' => 'application/sea',
+                                  // '.sea' => 'application/x-sea',
+                                  // '.set' => 'application/set',
+                                  // '.sgm' => 'text/sgml',
+                                  // '.sgm' => 'text/x-sgml',
+                                  // '.sgml' => 'text/sgml',
+                                  // '.sgml' => 'text/x-sgml',
+                                  // '.sh' => 'application/x-bsh',
+                                  // '.sh' => 'application/x-sh',
+                                  // '.sh' => 'application/x-shar',
+                                  // '.sh' => 'text/x-script.sh',
+                                  // '.shar' => 'application/x-bsh',
+                                  // '.shar' => 'application/x-shar',
+                                  // '.shtml' => 'text/html',
+                                  // '.shtml' => 'text/x-server-parsed-html',
+                                  // '.sid' => 'audio/x-psid',
+                                  // '.sit' => 'application/x-sit',
+                                  // '.sit' => 'application/x-stuffit',
+                                  // '.skd' => 'application/x-koan',
+                                  // '.skm' => 'application/x-koan',
+                                  // '.skp' => 'application/x-koan',
+                                  // '.skt' => 'application/x-koan',
+                                  // '.sl' => 'application/x-seelogo',
+                                  // '.smi' => 'application/smil',
+                                  // '.smil' => 'application/smil',
+                                  // '.snd' => 'audio/basic',
+                                  // '.snd' => 'audio/x-adpcm',
+                                  // '.sol' => 'application/solids',
+                                  // '.spc' => 'application/x-pkcs7-certificates',
+                                  // '.spc' => 'text/x-speech',
+                                  // '.spl' => 'application/futuresplash',
+                                  // '.spr' => 'application/x-sprite',
+                                  // '.sprite' => 'application/x-sprite',
+                                  // '.src' => 'application/x-wais-source',
+                                  // '.ssi' => 'text/x-server-parsed-html',
+                                  // '.ssm' => 'application/streamingmedia',
+                                  // '.sst' => 'application/vnd.ms-pki.certstore',
+                                  // '.step' => 'application/step',
+                                  // '.stl' => 'application/sla',
+                                  // '.stl' => 'application/vnd.ms-pki.stl',
+                                  // '.stl' => 'application/x-navistyle',
+                                  // '.stp' => 'application/step',
+                                  // '.sv4cpio' =>'application/x-sv4cpio',
+                                  // '.sv4crc' => 'application/x-sv4crc',
+                                  // '.svf' => 'image/vnd.dwg',
+                                  // '.svf' => 'image/x-dwg',
+                                  // '.svr' => 'application/x-world',
+                                  // '.svr' => 'x-world/x-svr',
+                                  // '.swf' => 'application/x-shockwave-flash',
+                                  // '.t' => 'application/x-troff',
+                                  // '.talk' => 'text/x-speech',
+                                  // '.tar' => 'application/x-tar',
+                                  // '.tbk' => 'application/toolbook',
+                                  // '.tbk' => 'application/x-tbook',
+                                  // '.tcl' => 'application/x-tcl',
+                                  // '.tcl' => 'text/x-script.tcl',
+                                  // '.tcsh' => 'text/x-script.tcsh',
+                                  // '.tex' => 'application/x-tex',
+                                  // '.texi' => 'application/x-texinfo',
+                                  // '.texinfo' =>' lication/x-texinfo',
+                                  // '.text' => 'application/plain',
+                                  // '.text' => 'text/plain',
+                                  // '.tgz' => 'application/gnutar',
+                                  // '.tgz' => 'application/x-compressed',
+                                  // '.tif' => 'image/tiff',
+                                  // '.tif' => 'image/x-tiff',
+                                  // '.tiff' => 'image/tiff',
+                                  // '.tiff' => 'image/x-tiff',
+                                  // '.tr' => 'application/x-troff',
+                                  // '.tsi' => 'audio/tsp-audio',
+                                  // '.tsp' => 'application/dsptype',
+                                  // '.tsp' => 'audio/tsplayer',
+                                  // '.tsv' => 'text/tab-separated-values',
+                                  // '.turbot' => 'image/florian',
+                                  // '.txt' => 'text/plain',
+                                  // '.uil' => 'text/x-uil',
+                                  // '.uni' => 'text/uri-list',
+                                  // '.unis' => 'text/uri-list',
+                                  // '.unv' => 'application/i-deas',
+                                  // '.uri' => 'text/uri-list',
+                                  // '.uris' => 'text/uri-list',
+                                  // '.ustar' => 'application/x-ustar',
+                                  // '.ustar' => 'multipart/x-ustar',
+                                  // '.uu' => 'application/octet-stream',
+                                  // '.uu' => 'text/x-uuencode',
+                                  // '.uue' => 'text/x-uuencode',
+                                  // '.vcd' => 'application/x-cdlink',
+                                  // '.vcs' => 'text/x-vcalendar',
+                                  // '.vda' => 'application/vda',
+                                  // '.vdo' => 'video/vdo',
+                                  // '.vew' => 'application/groupwise',
+                                  // '.viv' => 'video/vivo',
+                                  // '.viv' => 'video/vnd.vivo',
+                                  // '.vivo' => 'video/vivo',
+                                  // '.vivo' => 'video/vnd.vivo',
+                                  // '.vmd' => 'application/vocaltec-media-desc',
+                                  // '.vmf' => 'application/vocaltec-media-file',
+                                  // '.voc' => 'audio/voc',
+                                  // '.voc' => 'audio/x-voc',
+                                  // '.vos' => 'video/vosaic',
+                                  // '.vox' => 'audio/voxware',
+                                  // '.vqe' => 'audio/x-twinvq-plugin',
+                                  // '.vqf' => 'audio/x-twinvq',
+                                  // '.vql' => 'audio/x-twinvq-plugin',
+                                  // '.vrml' => 'application/x-vrml',
+                                  // '.vrml' => 'model/vrml',
+                                  // '.vrml' => 'x-world/x-vrml',
+                                  // '.vrt' => 'x-world/x-vrt',
+                                  // '.vsd' => 'application/x-visio',
+                                  // '.vst' => 'application/x-visio',
+                                  // '.vsw' => 'application/x-visio',
+                                  // '.w60' => 'application/wordperfect6.0',
+                                  // '.w61' => 'application/wordperfect6.1',
+                                  // '.w6w' => 'application/msword',
+                                  // '.wav' => 'audio/wav',
+                                  // '.wav' => 'audio/x-wav',
+                                  // '.wb1' => 'application/x-qpro',
+                                  // '.wbmp' => 'image/vnd.wap.wbmp',
+                                  // '.web' => 'application/vnd.xara',
+                                  // '.wiz' => 'application/msword',
+                                  // '.wk1' => 'application/x-123',
+                                  // '.wmf' => 'windows/metafile',
+                                  // '.wml' => 'text/vnd.wap.wml',
+                                  // '.wmlc' => 'application/vnd.wap.wmlc',
+                                  // '.wmls' => 'text/vnd.wap.wmlscript',
+                                  // '.wmlsc' => 'application/vnd.wap.wmlscriptc',
+                                  // '.word' => 'application/msword',
+                                  // '.wp' => 'application/wordperfect',
+                                  // '.wp5' => 'application/wordperfect',
+                                  // '.wp5' => 'application/wordperfect6.0',
+                                  // '.wp6' => 'application/wordperfect',
+                                  // '.wpd' => 'application/wordperfect',
+                                  // '.wpd' => 'application/x-wpwin',
+                                  // '.wq1' => 'application/x-lotus',
+                                  // '.wri' => 'application/mswrite',
+                                  // '.wri' => 'application/x-wri',
+                                  // '.wrl' => 'application/x-world',
+                                  // '.wrl' => 'model/vrml',
+                                  // '.wrl' => 'x-world/x-vrml',
+                                  // '.wrz' => 'model/vrml',
+                                  // '.wrz' => 'x-world/x-vrml',
+                                  // '.wsc' => 'text/scriplet',
+                                  // '.wsrc' => 'application/x-wais-source',
+                                  // '.wtk' => 'application/x-wintalk',
+                                  // '.xbm' => 'image/x-xbitmap',
+                                  // '.xbm' => 'image/x-xbm',
+                                  // '.xbm' => 'image/xbm',
+                                  // '.xdr' => 'video/x-amt-demorun',
+                                  // '.xgz' => 'xgl/drawing',
+                                  // '.xif' => 'image/vnd.xiff',
+                                  // '.xl' => 'application/excel',
+                                  // '.xla' => 'application/excel',
+                                  // '.xla' => 'application/x-excel',
+                                  // '.xla' => 'application/x-msexcel',
+                                  // '.xlb' => 'application/excel',
+                                  // '.xlb' => 'application/vnd.ms-excel',
+                                  // '.xlb' => 'application/x-excel',
+                                  // '.xlc' => 'application/excel',
+                                  // '.xlc' => 'application/vnd.ms-excel',
+                                  // '.xlc' => 'application/x-excel',
+                                  // '.xld' => 'application/excel',
+                                  // '.xld' => 'application/x-excel',
+                                  // '.xlk' => 'application/excel',
+                                  // '.xlk' => 'application/x-excel',
+                                  // '.xll' => 'application/excel',
+                                  // '.xll' => 'application/vnd.ms-excel',
+                                  // '.xll' => 'application/x-excel',
+                                  // '.xlm' => 'application/excel',
+                                  // '.xlm' => 'application/vnd.ms-excel',
+                                  // '.xlm' => 'application/x-excel',
+                                  // '.xls' => 'application/excel',
+                                  // '.xls' => 'application/vnd.ms-excel',
+                                  // '.xls' => 'application/x-excel',
+                                  // '.xls' => 'application/x-msexcel',
+                                  // '.xlt' => 'application/excel',
+                                  // '.xlt' => 'application/x-excel',
+                                  // '.xlv' => 'application/excel',
+                                  // '.xlv' => 'application/x-excel',
+                                  // '.xlw' => 'application/excel',
+                                  // '.xlw' => 'application/vnd.ms-excel',
+                                  // '.xlw' => 'application/x-excel',
+                                  // '.xlw' => 'application/x-msexcel',
+                                  // '.xm' => 'audio/xm',
+                                  // '.xml' => 'application/xml',
+                                  // '.xml' => 'text/xml',
+                                  // '.xmz' => 'xgl/movie',
+                                  // '.xpix' => 'application/x-vnd.ls-xpix',
+                                  // '.xpm' => 'image/x-xpixmap',
+                                  // '.xpm' => 'image/xpm',
+                                  // '.x-png' => 'image/png',
+                                  // '.xsr' => 'video/x-amt-showrun',
+                                  // '.xwd' => 'image/x-xwd',
+                                  // '.xwd' => 'image/x-xwindowdump',
+                                  // '.xyz' => 'chemical/x-pdb',
+                                  // '.z' => 'application/x-compress',
+                                  // '.z' => 'application/x-compressed',
+                                  // '.zip' => 'application/x-compressed',
+                                  // '.zip' => 'application/x-zip-compressed',
+                                  // '.zip' => 'application/zip',
+                                  // '.zip' => 'multipart/x-zip',
+                                  // '.zoo' => 'application/octet-stream',
+                                  // '.zsh' => 'text/x-script.zsh)'
+    )));
+
+define("TRESPASSER_CONTACT_INFO", "Agli effetti dell'invio della corrispondenza al destinatario si precisa che quando inserito, l'indirizzo indicato nella pagina relativa ai recapiti prevale su quello indicato nella pagina relativa alla residenza. A sua volta l'indirizzo indicato nella pagina del domicilio prevale su quello indicato nella pagina relativa ai recapiti ed infine l'indirizzo indicato nella pagina relativa alla dimora prevale su quello indicato nella pagina relativa al domicilio.");
+define("LEGALFORM_INDIVIDUALCOMPANY", serialize(array(
+    20,
+    21,
+    22,
+    23,
+    24,
+    36)));
+
+define('LICENSE_POINT_REDUCTION_CODE_TOOLTIP', 'Articolo: 2 o 3 cifre <br>Comma: 1 o 2 caratteri <br>Ipotesi: 2 caratteri<br>Esempio: (123 1 1R)');
+define('LICENSE_POINT_REDUCTION_CODE_REGEXP1', '^[0-9]{2,3}$');
+define('LICENSE_POINT_REDUCTION_CODE_REGEXP2', '^[0-9A-Za-z]{1,2}$');
+define('LICENSE_POINT_REDUCTION_CODE_REGEXP3', '^[0-9A-Za-z]{2}$');
+
+define("REMINDER_NATIONAL_CITIES", serialize(array(
+  'D925')));
+
+define("REMINDER_LIST", "LIST");
+define("REMINDER_LIST_EMITTED", "LIST_EMITTED");
+define("REMINDER_REPRINT", "REPRINT");
+define("REMINDER_CREATE", "CREATE");
+define("REMINDER_CREATE_DOC", "CREATE_DOC");
+
+// FTP
+// Le funzioni nel campo function sono definite in inc/function_printerFTP.php
+define("PRINTER_FTP_CONFIG", serialize(array(
+    //MERCURIO
+    2 => array(
+        'Type' => 'FTP',
+        'Function' => 'flowMercurio',
+        'Host' => 'ftp.mercurioservice.it',
+        'Port' => null,
+        'Username' => 'sarida',
+        'Password' => '1ftp4sarida',
+        'Path' => array(
+            'SOLLECITI' => '/FLUSSI_SARIDA/SOLLECITI',
+            'VERBALI' => '/FLUSSI_SARIDA/VERBALI',
+            'N_NOTIFICHE' => '/Recupero_Immagini/AG',
+            'N_NOTIFICHE_IMPORTATE' => '/Recupero_Immagini/AG/NOTIFICHE IMPORTATE/TRAFFIC_LAW',
+            'F_NOTIFICHE' => '/Recupero_Immagini/AR_EE',
+            'F_NOTIFICHE_IMPORTATE' => '/Recupero_Immagini/AG/NOTIFICHE IMPORTATE',
+        )
+    ),
+    //PUBBLIMAIL
+    4 => array(
+        'Type' => 'SFTP',
+        'Function' => 'flowPubblimail',
+        'Host' => 'sftp.pubblimail.it',
+        'Port' => 22,
+        'Username' => 'sarida',
+        'Password' => 'V&rb4li21',
+        'Path' => array()
+    ),
+    //KOINE
+    //TODO Bug 2392
+//     5 => array(
+//         'Type' => 'SFTP',
+//         'Function' => 'flowKoine',
+//         'Host' => 'ftp.sicomunica.it',
+//         'Port' => 113,
+//         'Username' => 'saridsftp',
+//         'Password' => 'cCgf4oQvurT8gLjP',
+//         'Path' => array(
+//             'VERBALI' => PRODUCTION ? '/in' : '/test',
+//             'SOLLECITI' => PRODUCTION ? '/in' : '/test',
+//             'RISCONTRO' => '/out'
+//         )
+//     ),
+    //VELOCE
+    8 => array(
+        'Type' => 'SFTP',
+        'Function' => 'flowPubblimail', //uso la stessa di Pubblimail perché Velocity non ha particolarità
+        'Host' => 'sftp.veloceindustry.it',
+        'Port' => 2222,
+        'Username' => 'SaridaSrl',
+        'Password' => 'XZry8G',
+        'Path' => array()
+    ), 
+)));
+
+define("NAZIONALE", 1);
+define("STRANIERO", 2);
+
+define("ELABORA_MAGGIORAZIONE_NOTTURNA", false);
+define("ELABORA_MAGGIORAZIONE_MASSA_ECCESSO", false);
+
+// TODO mettere id di traffic_law.document_type per sollecito estero
+define("FOREIGN_DOCUMENT_TYPE", serialize(array(
+  5,
+  10,
+  16)));
+define("ENTE_BASE", 'XXXX');
+define("ENTE_BASE_TESTI_DINAMICI", '');
+
+define("EXPIRATION_PERIOD", "3 years");
+
+define("FINE_SEND_TYPE", serialize(array(
+    1 => 'Raccomandata AG',
+    2 => 'PEC')));
+
+define("BUILDHEADER_TYPES", serialize(array(
+    "NATIONAL_FINE" => 1,
+    "FOREIGN_FINE" => 2,
+    "PEC" => 3,
+    "REMINDER" => 4
+)));
+
+define("USEADDITIONALSANCTION_NON_PREVISTA", "non_prevista");
+define("USEADDITIONALSANCTION_FISSA", "fissa");
+define("USEADDITIONALSANCTION_VARIABILE", "variabile");
+
+define("ARTICLETARIFF_USEADDITIONALSANCTION", serialize(array(
+    USEADDITIONALSANCTION_NON_PREVISTA => 'Non prevista',
+    USEADDITIONALSANCTION_FISSA => 'Fissa',
+    USEADDITIONALSANCTION_VARIABILE => 'Variabile')));
+
+//Enti che prevedono la vecchia procedura di crea invito bonario (frm_send_kindfine)
+define("OLD_SENDKINDFINE_CITIES", serialize(array(
+    'D925', 'B038')));
+
+define("PERCORSO_VPN", "/var/www/archivio/vpn_mctc.sh");
+
+define("SENDDYNAMICFINE_LIMIT", 600);
+
+define("FLOW_LOCKED_PAGE", 'flow');
+define("CREATE_LOCKED_PAGE", 'create');
+define("CREATE_REMINDER_LOCKED_PAGE", 'create_reminder');
+define("CREATE_REMINDER_DOCUMENT_LOCKED_PAGE", 'create_reminder_document');
+
+define("RATEIZZAZIONE_APERTA", 0);
+define("RATEIZZAZIONE_CHIUSA", 1);
+define("RATEIZZAZIONE_ESITO_ACCOLTA", 1);
+define("RATEIZZAZIONE_ESITO_RESPINTA", 0);
+define("RATEIZZAZIONE_REDDITO_SINGOLO_MAX", 10628.16);
+define("RATEIZZAZIONE_IMPORTO_AGG_FAMILIARI", 1032.91);
+define("RATEIZZAZIONE_METODO_LIBERA", 0);
+define("RATEIZZAZIONE_METODO_IMP_LEGISLATIVO", 1);
+define("RATEIZZAZIONE_METODI", serialize(array(
+    RATEIZZAZIONE_METODO_LIBERA => "Libero",
+    RATEIZZAZIONE_METODO_IMP_LEGISLATIVO => "Da impianto legislativo"
+)));
+
+define("FASCIA_DIURNA", 1);
+define("FASCIA_NOTTURNA", 2);
+
+const STATUSTYPEID_VERBALI_STATI_FINALI = array(27,28,30,32,33,34,35,36,37,40,90,91);
+
+define("RULETYPE_CDS", 1);
+define("RULETYPE_ANPIL", 5);
+
+define("RESULTIDS_FOR_VALIDATEDADDRESS", serialize(array(
+    2,
+    21
+))); 
+
+define("TIPO_SOTTOTESTI_FISSI_NAZ", 201);
+define("TIPO_SOTTOTESTI_FISSI_EST", 202);
+
+//Durata periodo neopatentato
+define("NOVICE_DRIVER_YEARS", 3);
+
+//Messaggi base elaborazione procedure articoli speciali
+define("BASIC_MESSAGE_126BIS_ELABORATION", "Già elaborato il verbale di accertamento di violazione all'art. 126-bis");
+define("BASIC_MESSAGE_180_ELABORATION", "Già elaborato il verbale di accertamento di violazione all'art. 180/8");
+
+//Casistiche da "Ulteriori dati"
+define("MORE_DATA",serialize(array(1 => "Elaborare il sollecito di pagamento/ingiunzione in caso di infedele/tardivo/omesso pagamento",
+    2 => "Mantieni la sanzione al minimo edittale",
+    3 => "Elaborare il verbale art. 126 Bis in caso di omessa comunicazione dei dati del trasgressore",
+    4 => "Elaborare il verbale art. 180 in caso di omessa trasmissione della documentazione richiesta",
+    5 => "Procedi con la decurtazione punti della patente di guida del trasgressore comunicato",
+    6 => "Procedi con l'iscrizione a ruolo - l'estrazione delle partite non pagate in tutto o in parte o pagate in ritardo"))
+    );

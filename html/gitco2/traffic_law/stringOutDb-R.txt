@@ -1,0 +1,246 @@
+admin_finequery.php:        	<div class="table_caption_H col-sm-1">' . StringOutDB($table_row['VehiclePlate']) .'</div>
+admin_finequery.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($table_row['CompanyName'] .' '.$table_row['Surname'] .' '.$table_row['Name']) .'</div>
+frm_reminderlist.php:            $str_out .= '<div class="table_caption_H col-sm-2">' . StringOutDB($table_row['CompanyName'] .' '.$table_row['Surname'] .' '.$table_row['Name']) . '</div>';
+frm_send_request.php:						'.$Cont.' <input type="checkbox" name="checkbox[]" value="' . StringOutDB($table_row['VehiclePlate']) . '" checked />
+frm_send_request.php:        $str_out.= '<div class="table_caption_H col-sm-2">' . StringOutDB($table_row['VehiclePlate']) .'<i class="'.$aVehicleTypeId[$table_row['VehicleTypeId']].'" style="color:#337AB7;position:absolute;right:2px;top:2px;"></i></div>';
+mgmt_communication.php:        	<div class="table_caption_H col-sm-1">' . StringOutDB($r_Fine['VehiclePlate']) .'</div>
+mgmt_communication.php:        	<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser).'</div>
+mgmt_document_add.php:                            ' . StringOutDB($r_Fine['VehiclePlate']) .'
+mgmt_document.php:        	<div class="table_caption_H col-sm-2">' . StringOutDB($r_Fine['VehiclePlate']) .'</div>
+mgmt_document_upd.php:                        ' . StringOutDB($r_Fine['VehiclePlate']) .'
+mgmt_document_upd.php:                                            ' . StringOutDB($str_Trespasser) . '
+mgmt_document_viw.php:                        ' . StringOutDB($r_Fine['VehiclePlate']) .'
+mgmt_document_viw.php:                                            ' . StringOutDB($str_Trespasser) . '
+mgmt_fine_exp_exe.php:$PreviousNote = StringOutDB(CheckValue('PreviousNote','s'));
+mgmt_fine_exp.php:        				'.$table_row['ControllerCode'].' - '.StringOutDB($table_row['ControllerName']).'
+mgmt_fine_exp.php:        				<span id="span_ReasonDescription" style="height:6rem;width:40rem;font-size:1.1rem;">' . StringOutDB($str_ReasonDescription) . '</span>
+mgmt_fine_.php:        	<div class="table_caption_H col-sm-1"'.$str_Style.'>' . StringOutDB($r_FineList['VehiclePlate']) .'</div>
+mgmt_fine_.php:			<div class="table_caption_H col-sm-3"'.$str_Style.'>' . StringOutDB($str_Trespasser) .'</div>
+mgmt_fine.php:            $str_FineData = $a_FineTypeId[$r_Fine['FineTypeId']].' '. DateOutDB($r_Fine['FineDate']) .' - ' . TimeOutDB($r_Fine['FineTime']).' <span style="position:absolute; right:0.5rem;">'.StringOutDB($r_Fine['VehiclePlate']).' '.$str_VehicleType.'</span>';
+mgmt_fine.php:			<div class="table_caption_H col-sm-2">' . StringOutDB($str_Trespasser1) .'</div>
+mgmt_fine.php:			<div class="table_caption_H col-sm-2">' . StringOutDB($str_Trespasser2) .'</div>
+mgmt_fine_upd_.php:        				        <option value="'.$table_row['ReasonId'].'">'.StringOutDB($str_ReasonDescription).'</option>
+mgmt_fine_upd_.php:        				<input type="text" class="form-control frm_field_string" name="Reason_Text" id="Reason_Text" value="' . StringOutDB($str_ReasonDescription) . '"> 
+mgmt_fine_upd_.php:        				<input type="text" class="form-control frm_field_string frm_field_required" name="VehiclePlate" id="VehiclePlate" style="width:10rem; text-transform:uppercase" value="' . StringOutDB($table_row['VehiclePlate']) . '">
+mgmt_fine_upd_.php:        				<input type="text" class="find_list form-control frm_field_string frm_field_required" name="FineAddress" id="Address" value="' . StringOutDB($table_row['Address']) . '">	
+mgmt_foreigncity_del.php:                    '.StringOutDB($r_ForeignCity['CountryTitle']).'
+mgmt_foreigncity_del.php:                    '.StringOutDB($r_ForeignCity['Title']).'
+mgmt_foreigncity_del.php:                    '.StringOutDB($r_ForeignCity['Zip']).'
+mgmt_foreigncity_del.php:                    '.StringOutDB($r_ForeignCity['LandTitle']).'
+mgmt_foreigncity.php:                                        ? '<option selected value='.$r_Land['Id'].'>'.StringOutDB($r_Land['Title']).'</option>'
+mgmt_foreigncity.php:                                        : '<option value='.$r_Land['Id'].'>'.StringOutDB($r_Land['Title']).'</option>';
+mgmt_foreigncity_upd.php:            ? '<option selected value='.$r_Land['Id'].'>'.StringOutDB($r_Land['Title']).'</option>'
+mgmt_foreigncity_upd.php:            : '<option value='.$r_Land['Id'].'>'.StringOutDB($r_Land['Title']).'</option>';
+mgmt_foreigncity_upd.php:                '.StringOutDB($r_ForeignCity['CountryTitle']).'
+mgmt_foreigncity_upd.php:                <input value="'.StringOutDB($r_ForeignCity['Title']).'" type="text" class="form-control frm_field_required frm_field_string text-uppercase" name="Title" id="Title">
+mgmt_foreigncity_upd.php:                <input value="'.StringOutDB($r_ForeignCity['Zip']).'" type="text" class="form-control frm_field_string" value="'.$Search_ZIP.'" name="Zip" id="Zip">
+mgmt_foreigncity_viw.php:                '.StringOutDB($r_ForeignCity['CountryTitle']).'
+mgmt_foreigncity_viw.php:                '.StringOutDB($r_ForeignCity['Title']).'
+mgmt_foreigncity_viw.php:                '.StringOutDB($r_ForeignCity['Zip']).'
+mgmt_foreigncity_viw.php:                '.StringOutDB($r_ForeignCity['LandTitle']).'
+mgmt_keyword_upd.php:                '.StringOutDB($r_city['ManagerCity']).'
+mgmt_keyword_upd.php:                '.StringOutDB($r_rule['Title']).'
+mgmt_keyword_upd.php:               '.StringOutDB($r_lang['Title']).'
+mgmt_keyword_upd.php:               '.StringOutDB($r_type['Title']).'
+mgmt_keyword_upd.php:                <input name="Title" value="'.StringOutDB($r_Keyword['Title']).'" type="text" class="form-control frm_field_string">
+mgmt_keyword_upd.php:                <textarea name="Description" class="form-control frm_field_string frm_field_required" style="width:40rem;height:4rem">'.StringOutDB($r_Keyword['Description']).'</textarea>
+mgmt_keyword_upd.php:                <textarea name="Notes" class="form-control frm_field_string" style="width:40rem;height:4rem">'.StringOutDB($r_Keyword['Notes']).'</textarea>
+mgmt_keyword_viw.php:                '.StringOutDB($r_city['ManagerCity']).'
+mgmt_keyword_viw.php:                '.StringOutDB($r_rule['Title']).'
+mgmt_keyword_viw.php:               '.StringOutDB($r_lang['Title']).'
+mgmt_keyword_viw.php:               '.StringOutDB($r_type['Title']).'
+mgmt_keyword_viw.php:                '.StringOutDB($r_Keyword['Title']).'
+mgmt_keyword_viw.php:                '.StringOutDB($r_Keyword['Description']).'
+mgmt_keyword_viw.php:                '.StringOutDB($r_Keyword['Notes']).'
+mgmt_land_upd_exe.php:$rs_CheckLand = $rs->Select('sarida.Land', 'Title="'.$Title.'" AND CountryId="'.$CountryId.'" And Title<>"'.StringOutDB($r_Land['Title']).'"');
+mgmt_payment.php:            $VehiclePlate = StringOutDB($table_row['VehiclePlate']);
+mgmt_presentation.php:        	<div class="table_caption_H col-sm-1">' . StringOutDB($r_Fine['VehiclePlate']) .'</div>
+mgmt_presentation.php:        	<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser).'</div>
+mgmt_regularviolation.php:        $str_FineData = $a_FineTypeId[$r_Violation['FineTypeId']].' '. DateOutDB($r_Violation['FineDate']) .' - ' . TimeOutDB($r_Violation['FineTime']).' <span style="position:absolute; right:0.5rem;">'.StringOutDB($r_Violation['VehiclePlate']).' '.$str_VehicleType.'</span>';
+mgmt_regularviolation.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser1) .'</div>
+mgmt_regularviolation.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser2) .'</div>
+mgmt_reminder.php:        	<div class="table_caption_H col-sm-1">' . StringOutDB($table_row['VehiclePlate']) .'</div>
+mgmt_reminder.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($table_row['CompanyName'] .' '.$table_row['Surname'] .' '.$table_row['Name']) .'</div>
+mgmt_report.php:        $str_FineData = $a_FineTypeId[$r_Report['FineTypeId']].' '. DateOutDB($r_Report['FineDate']) .' - ' . TimeOutDB($r_Report['FineTime']).' <span style="position:absolute; right:0.5rem;">'.StringOutDB($r_Report['VehiclePlate']).' '.$str_VehicleType.'</span>';
+mgmt_report.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser1) .'</div>
+mgmt_report.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser2) .'</div>
+mgmt_report_upd_OLD.php:        				        <option value="'.$table_row['ReasonId'].'">'.StringOutDB($str_ReasonDescription).'</option>';
+mgmt_report_upd_OLD.php:        				<input type="text" class="form-control frm_field_string" name="Reason_Text" id="Reason_Text" value="' . StringOutDB($str_ReasonDescription) . '"> 
+mgmt_report_upd_OLD.php:        				<input type="text" class="find_list form-control frm_field_string frm_field_required" name="FineAddress" id="Address" value="' . StringOutDB($table_row['Address']) . '">	
+mgmt_report_upd_OLD.php:        				<input type="text" class="form-control frm_field_string frm_field_required" name="VehiclePlate" id="VehiclePlate" style="width:10rem; text-transform:uppercase" value="' . StringOutDB($table_row['VehiclePlate']) . '">
+mgmt_report_upd__.php:        				<input type="text" class="find_list form-control frm_field_string frm_field_required" name="FineAddress" id="Address" value="' . StringOutDB($r_Fine['Address']) . '">	
+mgmt_report_upd__.php:        				<input type="text" class="form-control frm_field_string frm_field_required" name="VehiclePlate" id="VehiclePlate" style="width:10rem; text-transform:uppercase" value="' . StringOutDB($r_Fine['VehiclePlate']) . '">
+mgmt_rule_upd.php:    $str_PrintHeader = StringOutDB($r_Rule["PrintHeader$a_Lan[$i]"]);
+mgmt_rule_upd.php:    $str_PrintObject = StringOutDB($r_Rule["PrintObject$a_Lan[$i]"]);
+mgmt_rule_viw.php:    $str_PrintHeader = StringOutDB($r_Rule["PrintHeader$a_Lan[$i]"]);
+mgmt_rule_viw.php:    $str_PrintObject = StringOutDB($r_Rule["PrintObject$a_Lan[$i]"]);
+mgmt_trespasser_del.php:                    '.StringOutDB($r_TrespasserHistory['Address']).'
+mgmt_trespasser_del.php:                    '.StringOutDB($r_TrespasserHistory['City']).' '.$r_TrespasserHistory['Province'].' '.StringOutDB($r_TrespasserHistory['CountryTitle']).'
+mgmt_trespasser_del.php:                            '.StringOutDB($r_ForwardingHistory['Address']).'
+mgmt_trespasser_del.php:                            '.StringOutDB($r_ForwardingHistory['City']).' '.$r_ForwardingHistory['Province'].' '.$r_ForwardingHistory['CountryTitle'].'
+mgmt_trespasser_del.php:                            '.StringOutDB($r_ForwardingHistory['PEC']).'
+mgmt_trespasser_del.php:                            '.StringOutDB($r_DomicileHistory['Address']).'
+mgmt_trespasser_del.php:                            '.StringOutDB($r_DomicileHistory['City']).' '.$r_DomicileHistory['Province'].' '.$r_DomicileHistory['CountryTitle'].'
+mgmt_trespasser_del.php:                            '.StringOutDB($r_DomicileHistory['PEC']).'
+mgmt_trespasser_del.php:                            '.StringOutDB($r_DwellingHistory['Address']).'
+mgmt_trespasser_del.php:                            '.StringOutDB($r_DwellingHistory['City']).' '.$r_DwellingHistory['Province'].' '.$r_DwellingHistory['CountryTitle'].'
+mgmt_trespasser_del.php:                            '.StringOutDB($r_DwellingHistory['PEC']).'
+mgmt_trespasser_del.php:        	<div class="table_caption_H col-sm-3"'.$str_Style.'>' . StringOutDB($table_row['VehiclePlate']) .'</div>
+mgmt_trespasser.php:                <div class="table_caption_H col-sm-3">' . StringOutDB($r_Trespasser['TrespasserFullName']) . '</div>
+mgmt_trespasser_upd_exe.php:                "Nominative" => StringOutDB($r_Forwarding['Nominative']),
+mgmt_trespasser_upd_exe.php:                "Address" => StringOutDB($r_Forwarding['Address']),
+mgmt_trespasser_upd_exe.php:                "StreetNumber" => StringOutDB($r_Forwarding['StreetNumber']),
+mgmt_trespasser_upd_exe.php:                "Ladder" => StringOutDB($r_Forwarding['Ladder']),
+mgmt_trespasser_upd_exe.php:                "Indoor" => StringOutDB($r_Forwarding['Indoor']),
+mgmt_trespasser_upd_exe.php:                "Plan" => StringOutDB($r_Forwarding['Plan']),
+mgmt_trespasser_upd_exe.php:                "ZIP" => StringOutDB($r_Forwarding['ZIP']),
+mgmt_trespasser_upd_exe.php:                "City" => StringOutDB($r_Forwarding['City']),
+mgmt_trespasser_upd_exe.php:                "CityId" => StringOutDB($r_Forwarding['CityId']),
+mgmt_trespasser_upd_exe.php:                "CountryId" => StringOutDB($r_Forwarding['CountryId']),
+mgmt_trespasser_upd_exe.php:                "Mail" => StringOutDB($r_Forwarding['Mail']),
+mgmt_trespasser_upd_exe.php:                "Phone" => StringOutDB($r_Forwarding['Phone']),
+mgmt_trespasser_upd_exe.php:                "Phone2" => StringOutDB($r_Forwarding['Phone2']),
+mgmt_trespasser_upd_exe.php:                "Fax" => StringOutDB($r_Forwarding['Fax']),
+mgmt_trespasser_upd_exe.php:                "PEC" => StringOutDB($r_Forwarding['PEC']),
+mgmt_trespasser_upd_exe.php:                "Notes" => StringOutDB($r_Forwarding['Notes']),
+mgmt_trespasser_upd_exe.php:                "Address" => StringOutDB($r_Domicile['Address']),
+mgmt_trespasser_upd_exe.php:                "StreetNumber" => StringOutDB($r_Domicile['StreetNumber']),
+mgmt_trespasser_upd_exe.php:                "Ladder" => StringOutDB($r_Domicile['Ladder']),
+mgmt_trespasser_upd_exe.php:                "Indoor" => StringOutDB($r_Domicile['Indoor']),
+mgmt_trespasser_upd_exe.php:                "Plan" => StringOutDB($r_Domicile['Plan']),
+mgmt_trespasser_upd_exe.php:                "ZIP" => StringOutDB($r_Domicile['ZIP']),
+mgmt_trespasser_upd_exe.php:                "City" => StringOutDB($r_Domicile['City']),
+mgmt_trespasser_upd_exe.php:                "CityId" => StringOutDB($r_Domicile['CityId']),
+mgmt_trespasser_upd_exe.php:                "CountryId" => StringOutDB($r_Domicile['CountryId']),
+mgmt_trespasser_upd_exe.php:                "Mail" => StringOutDB($r_Domicile['Mail']),
+mgmt_trespasser_upd_exe.php:                "Phone" => StringOutDB($r_Domicile['Phone']),
+mgmt_trespasser_upd_exe.php:                "Phone2" => StringOutDB($r_Domicile['Phone2']),
+mgmt_trespasser_upd_exe.php:                "Fax" => StringOutDB($r_Domicile['Fax']),
+mgmt_trespasser_upd_exe.php:                "PEC" => StringOutDB($r_Domicile['PEC']),
+mgmt_trespasser_upd_exe.php:                "Notes" => StringOutDB($r_Domicile['Notes']),
+mgmt_trespasser_upd_exe.php:                "Address" => StringOutDB($r_Dwelling['Address']),
+mgmt_trespasser_upd_exe.php:                "StreetNumber" => StringOutDB($r_Dwelling['StreetNumber']),
+mgmt_trespasser_upd_exe.php:                "Ladder" => StringOutDB($r_Dwelling['Ladder']),
+mgmt_trespasser_upd_exe.php:                "Indoor" => StringOutDB($r_Dwelling['Indoor']),
+mgmt_trespasser_upd_exe.php:                "Plan" => StringOutDB($r_Dwelling['Plan']),
+mgmt_trespasser_upd_exe.php:                "ZIP" => StringOutDB($r_Dwelling['ZIP']),
+mgmt_trespasser_upd_exe.php:                "City" => StringOutDB($r_Dwelling['City']),
+mgmt_trespasser_upd_exe.php:                "CityId" => StringOutDB($r_Dwelling['CityId']),
+mgmt_trespasser_upd_exe.php:                "CountryId" => StringOutDB($r_Dwelling['CountryId']),
+mgmt_trespasser_upd_exe.php:                "Mail" => StringOutDB($r_Dwelling['Mail']),
+mgmt_trespasser_upd_exe.php:                "Phone" => StringOutDB($r_Dwelling['Phone']),
+mgmt_trespasser_upd_exe.php:                "Phone2" => StringOutDB($r_Dwelling['Phone2']),
+mgmt_trespasser_upd_exe.php:                "Fax" => StringOutDB($r_Dwelling['Fax']),
+mgmt_trespasser_upd_exe.php:                "PEC" => StringOutDB($r_Dwelling['PEC']),
+mgmt_trespasser_upd_exe.php:                "Notes" => StringOutDB($r_Dwelling['Notes']),
+mgmt_trespasser_upd.php:                    '.StringOutDB($r_TrespasserHistory['Address']).'
+mgmt_trespasser_upd.php:                    '.StringOutDB($r_TrespasserHistory['City']).' '.$r_TrespasserHistory['Province'].' '.StringOutDB($r_TrespasserHistory['CountryTitle']).'
+mgmt_trespasser_upd.php:                            '.StringOutDB($r_ForwardingHistory['Address']).'
+mgmt_trespasser_upd.php:                            '.StringOutDB($r_ForwardingHistory['City']).' '.$r_ForwardingHistory['Province'].' '.$r_ForwardingHistory['CountryTitle'].'
+mgmt_trespasser_upd.php:                            '.StringOutDB($r_ForwardingHistory['PEC']).'
+mgmt_trespasser_upd.php:                            '.StringOutDB($r_DomicileHistory['Address']).'
+mgmt_trespasser_upd.php:                            '.StringOutDB($r_DomicileHistory['City']).' '.$r_DomicileHistory['Province'].' '.$r_DomicileHistory['CountryTitle'].'
+mgmt_trespasser_upd.php:                            '.StringOutDB($r_DomicileHistory['PEC']).'
+mgmt_trespasser_upd.php:                            '.StringOutDB($r_DwellingHistory['Address']).'
+mgmt_trespasser_upd.php:                            '.StringOutDB($r_DwellingHistory['City']).' '.$r_DwellingHistory['Province'].' '.$r_DwellingHistory['CountryTitle'].'
+mgmt_trespasser_upd.php:                            '.StringOutDB($r_DwellingHistory['PEC']).'
+mgmt_trespasser_viw.php:                    '.StringOutDB($r_TrespasserHistory['Address']).'
+mgmt_trespasser_viw.php:                    '.StringOutDB($r_TrespasserHistory['City']).' '.$r_TrespasserHistory['Province'].' '.StringOutDB($r_TrespasserHistory['CountryTitle']).'
+mgmt_trespasser_viw.php:                            '.StringOutDB($r_ForwardingHistory['Address']).'
+mgmt_trespasser_viw.php:                            '.StringOutDB($r_ForwardingHistory['City']).' '.$r_ForwardingHistory['Province'].' '.$r_ForwardingHistory['CountryTitle'].'
+mgmt_trespasser_viw.php:                            '.StringOutDB($r_ForwardingHistory['PEC']).'
+mgmt_trespasser_viw.php:                            '.StringOutDB($r_DomicileHistory['Address']).'
+mgmt_trespasser_viw.php:                            '.StringOutDB($r_DomicileHistory['City']).' '.$r_DomicileHistory['Province'].' '.$r_DomicileHistory['CountryTitle'].'
+mgmt_trespasser_viw.php:                            '.StringOutDB($r_DomicileHistory['PEC']).'
+mgmt_trespasser_viw.php:                            '.StringOutDB($r_DwellingHistory['Address']).'
+mgmt_trespasser_viw.php:                            '.StringOutDB($r_DwellingHistory['City']).' '.$r_DwellingHistory['Province'].' '.$r_DwellingHistory['CountryTitle'].'
+mgmt_trespasser_viw.php:                            '.StringOutDB($r_DwellingHistory['PEC']).'
+mgmt_trespasser_viw.php:        	<div class="table_caption_H col-sm-3"'.$str_Style.'>' . StringOutDB($table_row['VehiclePlate']) .'</div>
+mgmt_validation_upd.php:        				<input type="text" class="find_list form-control frm_field_string frm_field_required" name="FineAddress" id="Address" value="' . StringOutDB($table_row['Address']) . '" style="width:22rem">	
+mgmt_validation_upd.php:        				<input type="text" class="form-control frm_field_string frm_field_required" name="VehiclePlate" id="VehiclePlate" style="width:10rem; text-transform:uppercase" value="' . StringOutDB($table_row['VehiclePlate']) . '">
+mgmt_variable_upd.php:                        	<div><?php echo StringOutDB($row['Id']) ?></div>
+mgmt_variable_upd.php:                        	<div><?php echo StringOutDB($r_typetitle['Title']) ?></div>
+mgmt_variable_upd.php:    				    echo '<li class="list-group-item"><b>'.StringOutDB($r_Keyword['Title']).'</b> -> '.StringOutDB($r_Keyword['Description']).'</li>';
+mgmt_violation_act.php:	        '. $r_Fine['ControllerCode'].' - '.StringOutDB($r_Fine['ControllerName']) .'
+mgmt_violation_act.php:        				<span id="span_ReasonDescription" style="height:6rem;width:40rem;font-size:1.1rem;">' . StringOutDB($str_ReasonDescription) . '</span>
+mgmt_violation_del.php:        				'.$table_row['ControllerCode'].' - '.StringOutDB($table_row['ControllerName']).'
+mgmt_violation_del.php:        				<span id="span_ReasonDescription" style="height:6rem;width:40rem;font-size:1.1rem;">' . StringOutDB($str_ReasonDescription) . '</span>
+mgmt_violation_exp.php:        				'.$table_row['ControllerCode'].' - '.StringOutDB($table_row['ControllerName']).'
+mgmt_violation_exp.php:        				<span id="span_ReasonDescription" style="height:6rem;width:40rem;font-size:1.1rem;">' . StringOutDB($str_ReasonDescription) . '</span>
+mgmt_violation.php:        $str_FineData = $a_FineTypeId[$r_Violation['FineTypeId']].' '. DateOutDB($r_Violation['FineDate']) .' - ' . TimeOutDB($r_Violation['FineTime']).' <span style="position:absolute; right:0.5rem;">'.StringOutDB($r_Violation['VehiclePlate']).' '.$str_VehicleType.'</span>';
+mgmt_violation.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser1) .'</div>
+mgmt_violation.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser2) .'</div>
+mgmt_violation_trespasser.php:$obj_Field->WriteCol(9, 'BoxRowLabel', StringOutDB($str_ArticleDescription),'style="height:6rem;"');
+mgmt_violation_trespasser.php:$obj_Field->WriteColCtn(9, StringOutDB($str_ReasonDescription));
+mgmt_violation_trespasser.php:$obj_Field->WriteColCtn(9,  StringOutDB($r_Fine['ViolationTitle']));
+mgmt_violation_trespasser.php:$obj_Field->WriteColCtn(4,  substr($r_Fine['ControllerCode'] . ' - ' . StringOutDB($r_Fine['ControllerName']),0,35));
+mgmt_violation_type.php:                <div class="table_caption_H col-sm-6">' . StringOutDB($r_ViolationType['Title']).'</div>
+mgmt_violation_type_upd.php:    $resultNational .= '<option value='.$r_FormNational['FormTypeId'].'>'.StringOutDB($r_FormNational['TypeTitle']).'</option>';
+mgmt_violation_type_upd.php:    $resultForeign .= '<option value='.$r_FormForeign['FormTypeId'].'>'.StringOutDB($r_FormForeign['TypeTitle']).'</option>';
+mgmt_violation_type_upd.php:                <input value="'.StringOutDB($r_ViolationType['Title']).'" name="Title" type="text" class="form-control frm_field_string frm_field_required">
+mgmt_violation_type_upd.php:                <textarea name="Description" class="form-control frm_field_string" style="width:40rem;height:4rem">'.StringOutDB($r_ViolationType['Description']).'</textarea>
+mgmt_violation_upd.php:        				        <option value="'.$table_row['ReasonId'].'">'.StringOutDB($str_ReasonDescription).'</option>';
+mgmt_violation_upd.php:                                                    ' . StringOutDB($all_reason['Code'] . " " . $all_reason['TitleIta']) . '
+mgmt_violation_upd.php:        				<input type="text" class="form-control frm_field_string" name="Reason_Text" id="Reason_Text" value="' . StringOutDB($str_ReasonDescription) . '"> 
+mgmt_violation_upd.php:        				<input type="text" class="find_list form-control frm_field_string frm_field_required" name="FineAddress" id="Address" value="' . StringOutDB($table_row['Address']) . '" style="width:22rem">	
+mgmt_violation_upd.php:        				<input type="text" class="form-control frm_field_string frm_field_required" name="VehiclePlate" id="VehiclePlate" style="width:10rem; text-transform:uppercase" value="' . StringOutDB($table_row['VehiclePlate']) . '">
+mgmt_violation_upd.php:        				<span id="span_ViolationTitle">' . StringOutDB($table_row['ViolationTitle']) . '</span>
+mgmt_violation_viw_.php:	        '. $table_row['ControllerCode'].' - '.StringOutDB($table_row['ControllerName']) .'
+mgmt_violation_viw_.php:        				<span id="span_ReasonDescription" style="height:6rem;width:40rem;font-size:1.1rem;">' . StringOutDB($str_ReasonDescription) . '</span>
+mgmt_violation_viw.php:	        '. $row_acce['Code'].' - '.StringOutDB($row_acce['Name']) .'
+mgmt_violation_viw.php:	        '. $table_row['ControllerCode'].' - '.StringOutDB($table_row['ControllerName']) .'
+mgmt_violation_viw.php:            			<span id="span_Article" style="font-size:1.1rem;">' . StringOutDB($str_ArticleDescription) . '</span>
+mgmt_violation_viw.php:                        <span id="span_Article" style="font-size:1.1rem;">' . StringOutDB($AdditionalDescriptionIta ). '</span>
+mgmt_violation_viw.php:        				<span id="span_ViolationTitle">' . StringOutDB($table_row['ViolationTitle']) . '</span>
+mgmt_violation_viw.php:        				<span id="span_ReasonDescription" style="height:6rem;width:40rem;font-size:1.1rem;">' . StringOutDB($str_ReasonDescription) . '</span>
+mgmt_warning.php:        $str_FineData = $a_FineTypeId[$r_Warning['FineTypeId']].' '. DateOutDB($r_Warning['FineDate']) .' - ' . TimeOutDB($r_Warning['FineTime']).' <span style="position:absolute; right:0.5rem;">'.StringOutDB($r_Warning['VehiclePlate']).' '.$str_VehicleType.'</span>';
+mgmt_warning.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser1) .'</div>
+mgmt_warning.php:			<div class="table_caption_H col-sm-3">' . StringOutDB($str_Trespasser2) .'</div>
+mgmt_warning_upd.php:        				        <option value="'.$table_row['ReasonId'].'">'.StringOutDB($str_ReasonDescription).'</option>';
+mgmt_warning_upd.php:        				<input type="text" class="form-control frm_field_string" name="Reason_Text" id="Reason_Text" value="' . StringOutDB($str_ReasonDescription) . '"> 
+mgmt_warning_upd.php:        				<input type="text" class="find_list form-control frm_field_string frm_field_required" name="FineAddress" id="Address" value="' . StringOutDB($table_row['Address']) . '">	
+mgmt_warning_upd.php:        				<input type="text" class="form-control frm_field_string frm_field_required" name="VehiclePlate" id="VehiclePlate" style="width:10rem; text-transform:uppercase" value="' . StringOutDB($table_row['VehiclePlate']) . '">
+stat_fine.php:                        ' . StringOutDB($r_Row['TotArticle']) . '
+stat_fine.php:                        ' . StringOutDB($r_Row['TotArticle']) . '
+tbl_article_del.php:                        <textarea class="frm_field_required frm_field_string"  name="DescriptionIta" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionIta']).'</textarea>
+tbl_article_del.php:                        <textarea class="frm_field_required frm_field_string"  name="DescriptionEng" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionEng']).'</textarea>
+tbl_article_del.php:                        <textarea class="frm_field_required frm_field_string" name="DescriptionGer" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionGer']).'</textarea>
+tbl_article_del.php:                        <textarea class="frm_field_required frm_field_string"  name="DescriptionSpa" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionSpa']).'</textarea>
+tbl_article_del.php:                        <textarea class="frm_field_required frm_field_string"  name="DescriptionFre" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionFre']).'</textarea>
+tbl_article_del.php:                        <textarea class="frm_field_str" name="Note" style="height:6rem; width:80rem;">'.StringOutDB($article['Note']).'</textarea>
+tbl_article_dpc_.php:                        <textarea class="frm_field_required frm_field_string"  name="DescriptionIta" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionIta']).'</textarea>
+tbl_article_dpc_.php:                        <textarea class="frm_field_required frm_field_string"  name="DescriptionEng" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionEng']).'</textarea>
+tbl_article_dpc_.php:                        <textarea class="frm_field_required frm_field_string" name="DescriptionGer" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionGer']).'</textarea>
+tbl_article_dpc_.php:                        <textarea class="frm_field_required frm_field_string"  name="DescriptionSpa" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionSpa']).'</textarea>
+tbl_article_dpc_.php:                        <textarea class="frm_field_required frm_field_string"  name="DescriptionFre" style="height:6rem; width:80rem;">'.StringOutDB($article['DescriptionFre']).'</textarea>
+tbl_article_dpc_.php:                        <textarea class="frm_field_string"  name="AdditionalTextIta" style="height:6rem; width:80rem;">'.StringOutDB($article['AdditionalTextIta']).'</textarea>
+tbl_article_dpc.php:                <textarea class="frm_field_required frm_field_string" name="Description'. $a_Lan[$i] .'" style="height:5.8rem; width:80rem;">' . StringOutDB($r_Article['ArticleDescription' . $a_Lan[$i]]) . '</textarea>
+tbl_article_dpc.php:                <textarea class="form-control frm_field_string" name="AdditionalTextIta" style="height:6rem; width:80rem;">'.StringOutDB($r_Article['AdditionalTextIta']).'</textarea>
+tbl_article_dpc.php:                <textarea class="form-control frm_field_string" name="Note" style="height:6rem; width:80rem;">'.StringOutDB($r_Article['Note']).'</textarea>
+tbl_article.php:            <div class="table_caption_H col-sm-11">' . StringOutDB(substr($article['ArticleDescriptionIta'],0,150)) .'...</div>
+tbl_article_upd.php:                <textarea class="frm_field_required frm_field_string" name="Description'. $a_Lan[$i] .'" style="height:5.8rem; width:80rem;">' . StringOutDB($r_Article['ArticleDescription' . $a_Lan[$i]]) . '</textarea>
+tbl_article_upd.php:                <textarea class="frm_field_string" name="AdditionalTextIta" style="height:6rem; width:80rem;">'.StringOutDB($r_Article['AdditionalTextIta']).'</textarea>
+tbl_article_upd.php:                <textarea class="frm_field_string" name="Note" style="height:6rem; width:80rem;">'.StringOutDB($r_Article['Note']).'</textarea>
+tbl_article_viw.php:                ' . StringOutDB($r_Article['ArticleDescription' . $a_Lan[$i]]) . '
+tbl_article_viw.php:                ' . StringOutDB($r_Article['AdditionalTextIta']) . '
+tbl_article_viw.php:                ' . StringOutDB($r_Article['Note']) . '
+tbl_customer_upd_20200716-1657-fm.php:                        <input class="form-control frm_field_string frm_field_required" name="ManagerAddress" id="ManagerAddress" type="text" value="'.StringOutDB($r_CustomerParameter['ManagerAddress']).'">
+tbl_customer_upd_20200716-1657-fm.php:                        <input class="form-control frm_field_string frm_field_required" name="ManagerCity" id="ManagerCity" type="text" value="'.StringOutDB($r_CustomerParameter['ManagerCity']).'">
+tbl_customer_upd_20200716-1657-fm.php:                        <input  class="form-control frm_field_string" name="ManagerInfo" id="ManagerInfo" type="text" value="'.StringOutDB($r_CustomerParameter['ManagerInfo']).'" style="width:28rem">
+tbl_customer_upd.php:                        <input class="form-control frm_field_string frm_field_required" name="ManagerAddress" id="ManagerAddress" type="text" value="'.StringOutDB($r_CustomerParameter['ManagerAddress']).'">
+tbl_customer_upd.php:                        <input class="form-control frm_field_string frm_field_required" name="ManagerCity" id="ManagerCity" type="text" value="'.StringOutDB($r_CustomerParameter['ManagerCity']).'">
+tbl_customer_upd.php:                        <input  class="form-control frm_field_string" name="ManagerInfo" id="ManagerInfo" type="text" value="'.StringOutDB($r_CustomerParameter['ManagerInfo']).'" style="width:28rem">
+tbl_detector_upd.php:                <input type="text" name="Title'. $a_Lan[$i] .'" id="Title'. $a_Lan[$i] .'" class="form-control frm_field_string frm_field_required" value="'. StringOutDB($r_Detector['Title'. $a_Lan[$i]] ).'">
+tbl_detector_upd.php:                    <textarea name="DetectorRatificationText['. $r_DetectorRatification['Id'] .']" id="DetectorRatificationText" class="form-control frm_field_string frm_field_required"  style="height:6rem; width:70rem;">'. StringOutDB($r_DetectorRatification['Ratification']) .'</textarea>
+tbl_detector_upd.php:                <textarea rows="4" name="Ratification" id="Ratification" class="form-control frm_field_string ">'. StringOutDB($r_Detector['Ratification']) .'</textarea>
+tbl_detector_viw.php:                '. StringOutDB($r_Detector['Title'. $a_Lan[$i]] ).'
+tbl_detector_viw.php:                    '. StringOutDB($r_DetectorRatification['Ratification']) .'
+tbl_detector_viw.php:                '. StringOutDB($str_DetectorType) .'
+tbl_form_add.php:        //     				    echo '<li class="list-group-item"><b>'.StringOutDB($r_Keyword['Title']).'</b> -> '.StringOutDB($r_Keyword['Description']).'</li>';
+tbl_form_add.php:        //     				    echo '<li class="list-group-item"><b>'.StringOutDB($r_Keyword['Title']).'</b> -> '.StringOutDB($r_Keyword['Description']).'</li>';
+tbl_form.php:                <div class="table_caption_H col-sm-3" '.$deleted.'>' . StringOutDB($r_Form['Title']) .'</div>
+tbl_form_upd.php:                        	<div><?php echo StringOutDB($row['Title']) ?></div>
+tbl_form_upd.php:        				    echo '<li class="list-group-item"><b>'.StringOutDB($r_Keyword['Title']).'</b> -> '.StringOutDB($r_Keyword['Description']).'</li>';
+tbl_form_upd.php://         				    echo '<li class="list-group-item"><b>'.StringOutDB($r_Variable['Id']).'</b> -> '.StringOutDB($r_Variable['Description']).'</li>';
+tbl_form_upd.php:        				    echo '<li class="list-group-item"><b>'.StringOutDB($Variable).'</b> -> ';
+tbl_form_upd.php:        				        echo '</br>'.StringOutDB($Value);

@@ -1,0 +1,1130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<content>
+	<word name="titoloLinkTras">
+		<ita>Dichiarazione Trasgressori</ita>
+		<eng>Offender Statement</eng>
+		<spa>Declaración del infractor</spa>
+		<ger>Tätererklärung</ger>
+		<fre>Déclaration du délinquant</fre>
+	</word>
+	<word name="Frase_1_Offenders">
+		<ita>Inserire Ente di Riferimento (Esempio: Como)</ita>
+		<eng>Enter the Reference Entity (Example: Como)</eng>
+		<spa>Introduzca la Entidad de Referencia (Ejemplo: Como)</spa>
+		<ger>Geben Sie die Referenzschuldner (Beispiel: Como)</ger>
+		<fre>Entrez l'Entité de Référence (Exemple: Como)</fre>
+	</word>
+	<word name="Frase_2_Offenders">
+		<ita>Inserire Numero Cronologico (Esempio: 123/2012/V o per esteri 123/2012/ES)</ita>
+		<eng>Insert Chronological Number (Example: 123/2012/V or 123/2012/ES)</eng>
+		<spa>Insertar número cronológico (Ejemplo: 123/2012/V or 123/2012/ES)</spa>
+		<ger>Legen laufende Nummer (Beispiel: 123/2012/V or 123/2012/ES)</ger>
+		<fre>Insérez Nombre chronologique (Exemple: 123/2012/V or 123/2012/ES)</fre>
+	</word>
+	<word name="Frase_3_Offenders">
+		<ita>Data violazione (dd/mm/yyyy)</ita>
+		<eng>Fine data (dd/mm/yyyy)</eng>
+		<spa>Fecha fina (dd/mm/yyyy)</spa>
+		<ger>Fein datum (dd/mm/yyyy)</ger>
+		<fre>Date d'amende (dd/mm/yyyy)</fre>
+	</word>
+	<word name="Frase_4_Offenders">
+		<ita>Ora Violazione</ita>
+		<eng>Fine time</eng>
+		<spa>Hora fina</spa>
+		<ger>Fein zeit</ger>
+		<fre>Temps d'amende</fre>
+	</word>
+	<word name="Frase_5_Offenders">
+		<ita>Targa Veicolo</ita>
+		<eng>License plate</eng>
+		<spa>Placa</spa>
+		<ger>Nummernschild</ger>
+		<fre>Plaque d'immatriculation</fre>
+	</word>
+	<word name="Accettazione">
+		<ita>Accetto</ita>
+		<eng>Agree</eng>
+		<spa>De acuerdo</spa>
+		<ger>Zustimmen</ger>
+		<fre>Accord</fre>
+	</word>
+	<word name="Submit">
+		<ita>Invia</ita>
+		<eng>Send</eng>
+		<spa>Enviar</spa>
+		<ger>Senden</ger>
+		<fre>Envoyer</fre>
+	</word>
+	<word name="BtnInformativa">
+		<ita>Informativa</ita>
+		<eng>Disclosures</eng>
+		<spa>Divulgar</spa>
+		<ger>Offenlegung</ger>
+		<fre>Divulgation</fre>
+	</word>
+	<word name="BtnSave">
+		<ita>Salva Dati</ita>
+		<eng>Save Data</eng>
+		<spa>Guardar datos</spa>
+		<ger>Daten speichern</ger>
+		<fre>Enregistrer des données</fre>
+	</word>
+	<word name="SelectTras_1">
+		<ita>dal destinatario del verbale il quale dichiara di essere anche il trasgressore</ita>
+		<eng>by the recipient of the report who declares to be also the transgressor</eng>
+		<spa>por el destinatario del informe que declara ser también el transgresor</spa>
+		<ger>durch den Empfänger der Meldung, der sich auch als Übertreter erklärt</ger>
+		<fre>par le destinataire du rapport qui déclare être également le contrevenant</fre>
+	</word>
+	<word name="SelectTras_2">
+		<ita>dal destinatario del verbale e dal trasgressore congiuntamente</ita>
+		<eng>jointly by the recipient of the report and the offender</eng>
+		<spa>por el destinatario del informe y el infractor conjuntamente</spa>
+		<ger>durch den Empfänger der Anzeige und den Täter gemeinsam</ger>
+		<fre>par le destinataire du rapport et le contrevenant conjointement</fre>
+	</word>
+	<word name="SelectTras_3">
+		<ita>solo dal destinatario del verbale che provvede a comunicare i dati del trasgressore ,(il trasgressore NON rende la dichiarazione in via diretta ed al trasgressore verrà notificatolo stesso verbale con ulteriore aggravio di oneri e spese)</ita>
+		<eng>only by the recipient of the report who communicates the data of the transgressor, (the transgressor does NOT make the declaration directly and the transgressor will be notified of the same report with a further increase in charges and expenses)</eng>
+		<spa>solo por el destinatario del informe quien comunica los datos del transgresor, (el transgresor NO hace la declaración directamente y el transgresor será notificado del mismo informe con un aumento adicional de cargos y gastos)</spa>
+		<ger>nur durch den Empfänger der Meldung, der die Daten des Übertreters mitteilt, (der Übertreter gibt die Erklärung NICHT direkt ab und der Übertreter wird über die gleiche Meldung mit einer weiteren Erhöhung der Gebühren und Aufwendungen informiert)</ger>
+		<fre>uniquement par le destinataire du rapport qui communique les données du transgresseur, (le transgresseur ne fait PAS la déclaration directement et le transgresseur sera informé du même rapport avec une nouvelle augmentation des frais et dépenses)</fre>
+	</word>
+	<word name="SelectTras_4">
+		<ita>solo dal trasgressore</ita>
+		<eng>only by the offender</eng>
+		<spa>solo por el delincuente</spa>
+		<ger>nur vom Täter</ger>
+		<fre>uniquement par le contrevenant</fre>
+	</word>
+	<word name="ModTr">
+		<ita>Modalità di trasmissione:</ita>
+		<eng>Transmission mode:</eng>
+		<spa>Método de transmisión:</spa>
+		<ger>Übertragungsmethode:</ger>
+		<fre>Mode de transmission:</fre>
+	</word>
+	<word name="SelectModTr_1">
+		<ita>Tramite mail</ita>
+		<eng>By mail</eng>
+		<spa>Por correo</spa>
+		<ger>Per Mail</ger>
+		<fre>Par mail</fre>
+	</word>
+	<word name="SelectModTr_2">
+		<ita>Mediane raccomandata A.R. cartacea / A mani (stampa solo il PDF)</ita>
+		<eng>Median recommended A.R. paper / By hands (print the PDF only)</eng>
+		<spa>Mediana recomendada de A.R. papel / Por las manos (imprima solo el PDF)</spa>
+		<ger>Median empfohlener A.R. Papier / Mit den Händen (Nur das PDF ausdrucken)</ger>
+		<fre>A.R. médian recommandé papier / A la main (imprimer uniquement le PDF)</fre>
+	</word>
+	<word name="SelectModTr_3">
+		<ita>Mediane raccomandata A.R. cartacea</ita>
+		<eng>Median recommended A.R. paper</eng>
+		<spa>Mediana recomendada de A.R. papel</spa>
+		<ger>Median empfohlener A.R. Papier</ger>
+		<fre>A.R. médian recommandé papier</fre>
+	</word>
+	<word name="SelectModTr_4">
+		<ita>Tramite PEC</ita>
+		<eng>By PEC</eng>
+		<spa>Por PEC</spa>
+		<ger>Von PEC</ger>
+		<fre>Par PEC</fre>
+	</word>
+	<word name="SelectModTr_5">
+		<ita>Tramite portale</ita>
+		<eng>Via portal</eng>
+		<spa>Vía portal</spa>
+		<ger>Über Portal</ger>
+		<fre>Par portail</fre>
+	</word>
+	<word name="BtnGeneratePdf">
+		<ita>Genera PDF</ita>
+		<eng>Generate PDF</eng>
+		<spa>Generar PDF</spa>
+		<ger>PDF erstellen</ger>
+		<fre>Générer un PDF</fre>
+	</word>
+	<word name="Polizia">
+		<ita>Polizia</ita>
+		<eng>Police</eng>
+		<spa>Policía</spa>
+		<ger>Polizei</ger>
+		<fre>Police</fre>
+	</word>
+	<word name="SelectPolizia_1">
+		<ita>Municipale</ita>
+		<eng>Municipal</eng>
+		<spa>Municipal</spa>
+		<ger>Kommunal</ger>
+		<fre>Municipal</fre>
+	</word>
+	<word name="SelectPolizia_2">
+		<ita>Locale</ita>
+		<eng>Local</eng>
+		<spa>Local</spa>
+		<ger>Lokal</ger>
+		<fre>Local</fre>
+	</word>
+	<word name="SelectPolizia_3">
+		<ita>Provinciale</ita>
+		<eng>Provincial</eng>
+		<spa>Provincial</spa>
+		<ger>Provinz</ger>
+		<fre>Provincial</fre>
+	</word>
+	<word name="Indirizzo">
+		<ita>Indirizzo:</ita>
+		<eng>Address:</eng>
+		<spa>Dirección:</spa>
+		<ger>Adresse:</ger>
+		<fre>Adresse:</fre>
+	</word>
+	<word name="Comune">
+		<ita>Comune</ita>
+		<eng>Common</eng>
+		<spa>Común</spa>
+		<ger>Gemeinsames</ger>
+		<fre>Commun</fre>
+	</word>
+	<word name="GiornoOra">
+		<ita>Giorno/Ora violazione</ita>
+		<eng>Day/Time violation</eng>
+		<spa>Violación de día/hora</spa>
+		<ger>Tag/Uhrzeit-Verletzung</ger>
+		<fre>Non-respect du jour/de l'heure</fre>
+	</word>
+	<word name="cronologico">
+		<ita>Cronologico</ita>
+		<eng>Chronological</eng>
+		<spa>Cronológico</spa>
+		<ger>Chronologisch</ger>
+		<fre>Chronologique</fre>
+	</word>
+	<word name="Provincia">
+		<ita>Provincia</ita>
+		<eng>Province</eng>
+		<spa>Provincia</spa>
+		<ger>Provinz</ger>
+		<fre>Province</fre>
+	</word>
+	<word name="Via">
+		<ita>Via</ita>
+		<eng>Street</eng>
+		<spa>Calle</spa>
+		<ger>Straße</ger>
+		<fre>Rue</fre>
+	</word>
+	<word name="CrNumberAbbrev">
+		<ita>Cron. N°</ita>
+		<eng>Cron. N°</eng>
+		<spa>Cron. N°</spa>
+		<ger>Cron. N°</ger>
+		<fre>Cron. N°</fre>
+	</word>
+	<word name="CrAnnoAbbrev">
+		<ita>Cron. An.</ita>
+		<eng>Cron. Ye.</eng>
+		<spa>Cron. año</spa>
+		<ger>Cron. Ja.</ger>
+		<fre>Cron. An.</fre>
+	</word>
+	<word name="Targa">
+		<ita>Targa</ita>
+		<eng>Plate</eng>
+		<spa>Lámina</spa>
+		<ger>Teller</ger>
+		<fre>Plaque</fre>
+	</word>
+	<word name="CrNumberPlace">
+		<ita>N° Cronologico</ita>
+		<eng>Chronological number</eng>
+		<spa>Número cronológico</spa>
+		<ger>Chronologische Nummer</ger>
+		<fre>Numéro chronologique</fre>
+	</word>
+	<word name="CrAnnoPlace">
+		<ita>Anno Cronologico</ita>
+		<eng>Chronological Year</eng>
+		<spa>Año cronológico</spa>
+		<ger>Chronologisches Jahr</ger>
+		<fre>Année chronologique</fre>
+	</word>
+	<word name="TargaPlace">
+		<ita>Targa veicolo</ita>
+		<eng>License plate</eng>
+		<spa>Placa</spa>
+		<ger>Nummernschild</ger>
+		<fre>Plaque d'immatriculation</fre>
+	</word>
+	<word name="DtUtente">
+		<ita>Dati Obbligato in solido</ita>
+		<eng>Data Jointly and severally obliged</eng>
+		<spa>Datos solidariamente obligados</spa>
+		<ger>Daten gesamtschuldnerisch verpflichtet</ger>
+		<fre>Données Conjointement et solidairement</fre>
+	</word>
+	<word name="Nome">
+		<ita>Nome</ita>
+		<eng>Name</eng>
+		<spa>Nombre de pila</spa>
+		<ger>Vorname</ger>
+		<fre>Prénom</fre>
+	</word>
+	<word name="NomePlace">
+		<ita>Nome utente</ita>
+		<eng>User name</eng>
+		<spa>Nombre de usuario</spa>
+		<ger>Nutzername</ger>
+		<fre>Nom d'utilisateur</fre>
+	</word>
+	<word name="CognomePlace">
+		<ita>Cognome utente</ita>
+		<eng>User surname</eng>
+		<spa>Apellido del usuario</spa>
+		<ger>Nachname des Benutzers</ger>
+		<fre>Nom de l'utilisateur</fre>
+	</word>
+	<word name="Cognome">
+		<ita>Cognome</ita>
+		<eng>Surname</eng>
+		<spa>Apellido</spa>
+		<ger>Familienname</ger>
+		<fre>Nom</fre>
+	</word>
+	<word name="NomePlaceTr">
+		<ita>Nome trasgressore</ita>
+		<eng>Offender name</eng>
+		<spa>Nombre del delincuente</spa>
+		<ger>Name des Täters</ger>
+		<fre>Nom du délinquant</fre>
+	</word>
+	<word name="CognomePlaceTr">
+		<ita>Cognome trasgressore</ita>
+		<eng>Surname offender</eng>
+		<spa>Apellido del delincuente</spa>
+		<ger>Nachname Täter</ger>
+		<fre>Nom de famille délinquant</fre>
+	</word>
+	<word name="Sesso">
+		<ita>Sesso</ita>
+		<eng>Generate</eng>
+		<spa>Escribe</spa>
+		<ger>Typ</ger>
+		<fre>Taper</fre>
+	</word>
+	<word name="Maschio">
+		<ita>Maschio</ita>
+		<eng>Man</eng>
+		<spa>Masculino</spa>
+		<ger>Männlich</ger>
+		<fre>Mâle</fre>
+	</word>
+	<word name="Femmina">
+		<ita>Femmina</ita>
+		<eng>Generate</eng>
+		<spa>Mujer</spa>
+		<ger>Weiblich</ger>
+		<fre>Femme</fre>
+	</word>
+	<word name="CodFiscaleAbbr">
+		<ita>CF</ita>
+		<eng>TC</eng>
+		<spa>CIF</spa>
+		<ger>ST.-NR.</ger>
+		<fre>CF</fre>
+	</word>
+	<word name="DataNascita">
+		<ita>Data nascita</ita>
+		<eng>Date of birth</eng>
+		<spa>Fecha de cumpleaños</spa>
+		<ger>Geburtsdatum</ger>
+		<fre>Date de naissance</fre>
+	</word>
+	<word name="DataNascitaTrasgressore">
+		<ita>Data nascita trasgressore</ita>
+		<eng>Offender's date of birth</eng>
+		<spa>Fecha de nacimiento del infractor</spa>
+		<ger>Geburtsdatum des Täters</ger>
+		<fre>Date de naissance du délinquant</fre>
+	</word>
+	<word name="CodFiscaleUtente">
+		<ita>Codice fiscale utente</ita>
+		<eng>User tax code</eng>
+		<spa>Código de impuestos del usuario</spa>
+		<ger>Benutzersteuerkennzeichen</ger>
+		<fre>Code fiscal de l'utilisateur</fre>
+	</word>
+	<word name="CodFiscaleTrasgressore">
+		<ita>Codice fiscale trasgressore</ita>
+		<eng>Tax code offender</eng>
+		<spa>Infractor del código fiscal</spa>
+		<ger>Täter der Abgabenordnung</ger>
+		<fre>Code des impôts contrevenant</fre>
+	</word>
+	<word name="Nato">
+		<ita>Nato in</ita>
+		<eng>Born in</eng>
+		<spa>Nacido en</spa>
+		<ger>Geboren in</ger>
+		<fre>Né en</fre>
+	</word>
+	<word name="PrecisazioneComune">
+		<ita>(da compilare solo se non presente in lista)</ita>
+		<eng>(to be filled in only if not present in the list)</eng>
+		<spa>(completar solo si no está en la lista)</spa>
+		<ger>(nur auszufüllen, wenn nicht in der Liste vorhanden)</ger>
+		<fre>(à remplir uniquement si non présent dans la liste)</fre>
+	</word>
+	<word name="ComuneUtente">
+		<ita>Comune utente</ita>
+		<eng>Municipality of the user</eng>
+		<spa>Municipio del usuario</spa>
+		<ger>Gemeinde des Nutzers</ger>
+		<fre>Commune de l'utilisateur</fre>
+	</word>
+	<word name="ComuneTrasgressore">
+		<ita>Comune Trasgressore</ita>
+		<eng>Common Offender</eng>
+		<spa>Delincuente común</spa>
+		<ger>Gemeinsamer Täter</ger>
+		<fre>Délinquant commun</fre>
+	</word>
+	<word name="ComuneDitta">
+		<ita>Comune ditta</ita>
+		<eng>Municipality of the company</eng>
+		<spa>Municipio de la empresa</spa>
+		<ger>Gemeinde des Unternehmens</ger>
+		<fre>Commune de l'entreprise</fre>
+	</word>
+	<word name="DataDichiarazione">
+		<ita>Comune utente</ita>
+		<eng>Declaration Date</eng>
+		<spa>Fecha de declaración</spa>
+		<ger>Erklärungsdatum</ger>
+		<fre>Date de déclaration</fre>
+	</word>
+	<word name="TitoloTrasgressori_1">
+		<ita>DICHIARAZIONE TRASGRESSORI</ita>
+		<eng>OFFENSE DECLARATION</eng>
+		<spa>DECLARACIÓN DE INFRACCIÓN</spa>
+		<ger>VERLETZUNGSERKLÄRUNG</ger>
+		<fre>DÉCLARATION D'INFRACTION</fre>
+	</word>
+	<word name="TitoloTrasgressori_2">
+		<ita>DICHIARAZIONE DATI DEL CONDUCENTE</ita>
+		<eng>DRIVER'S DATA DECLARATION</eng>
+		<spa>DECLARACIÓN DE DATOS DEL CONDUCTOR</spa>
+		<ger>FAHRERDATENERKLÄRUNG</ger>
+		<fre>DÉCLARATION DE DONNÉES DU CONDUCTEUR</fre>
+	</word>
+	<word name="TitoloResUtente">
+		<ita>Dati Residenza Obbligato in solido</ita>
+		<eng>Residence data Jointly and severally obliged</eng>
+		<spa>Datos de residencia Obligados solidariamente</spa>
+		<ger>Aufenthaltsdaten Gesamtschuldnerisch verpflichtet</ger>
+		<fre>Données de résidence Obligation conjointe et solidaire</fre>
+	</word>
+	<word name="ResidenteIn">
+		<ita>Residente in</ita>
+		<eng>Resident</eng>
+		<spa>Residente</spa>
+		<ger>Bewohner</ger>
+		<fre>Résident</fre>
+	</word>
+	<word name="VSP">
+		<ita>Via/Piazza</ita>
+		<eng>Street/Square</eng>
+		<spa>Calle/Plaza</spa>
+		<ger>Straße/Platz</ger>
+		<fre>Rue/Place</fre>
+	</word>
+	<word name="Numero">
+		<ita>N°</ita>
+		<eng>N°</eng>
+		<spa>N°</spa>
+		<ger>N°</ger>
+		<fre>N°</fre>
+	</word>
+	<word name="Interno">
+		<ita>int</ita>
+		<eng>Ind</eng>
+		<spa>Int</spa>
+		<ger>Ind</ger>
+		<fre>Int</fre>
+	</word>
+	<word name="Esponente">
+		<ita>Esp</ita>
+		<eng>Exp</eng>
+		<spa>Exp</spa>
+		<ger>Exp</ger>
+		<fre>Exp</fre>
+	</word>
+	<word name="NumeroPlace">
+		<ita>Numero indirizzo</ita>
+		<eng>Address number</eng>
+		<spa>Número de dirección</spa>
+		<ger>Adressnummer</ger>
+		<fre>Numéro d'adresse</fre>
+	</word>
+	<word name="InternoPlace">
+		<ita>Interno indirizzo</ita>
+		<eng>Internal address</eng>
+		<spa>Domicilio interno</spa>
+		<ger>Interne Adresse</ger>
+		<fre>Adresse interne</fre>
+	</word>
+	<word name="EsponentePlace">
+		<ita>Esponente indirizzo</ita>
+		<eng>Address exponent</eng>
+		<spa>Exponente de dirección</spa>
+		<ger>Adressexponent</ger>
+		<fre>Exposant d'adresse</fre>
+	</word>
+	<word name="AbbrTelefono">
+		<ita>Tel</ita>
+		<eng>Tel</eng>
+		<spa>Tel</spa>
+		<ger>Tel</ger>
+		<fre>Tel</fre>
+	</word>
+	<word name="TelPlace">
+		<ita>Num. telefono</ita>
+		<eng>Telephone number</eng>
+		<spa>Núm. de teléfono</spa>
+		<ger>Telefonnummer</ger>
+		<fre>Num. de téléphone</fre>
+	</word>
+	<word name="EMail">
+		<ita>E-Mail</ita>
+		<eng>E-Mail</eng>
+		<spa>E-Mail</spa>
+		<ger>E-Mail</ger>
+		<fre>E-Mail</fre>
+	</word>
+	<word name="EMailPlace">
+		<ita>Indirizo e-mail</ita>
+		<eng>Email address</eng>
+		<spa>Dirección de correo electrónico</spa>
+		<ger>E-Mail-Addresse</ger>
+		<fre>Adresse e-mail</fre>
+	</word>
+	<word name="TitoloDatiP">
+		<ita>Dati Patente Obbligato in solido</ita>
+		<eng>Driving license data Jointly and severally obliged</eng>
+		<spa>Datos del permiso de conducir Obligado solidariamente</spa>
+		<ger>Führerscheindaten Gesamtschuldnerisch verpflichtet</ger>
+		<fre>Données du permis de conduire Conjointement et solidairement</fre>
+	</word>
+	<word name="TipoPat">
+		<ita>Tipo patente</ita>
+		<eng>Driving license type</eng>
+		<spa>Tipo de carnet de conducir</spa>
+		<ger>Führerscheintyp</ger>
+		<fre>Type de permis de conduire</fre>
+	</word>
+	<word name="DataPrimoRilascioUt">
+		<ita>Data di primo rilascio</ita>
+		<eng>Date of first release</eng>
+		<spa>Fecha del primer lanzamiento</spa>
+		<ger>Datum der Erstveröffentlichung</ger>
+		<fre>Date de première sortie</fre>
+	</word>
+	<word name="SelectTipoPat_1">
+		<ita>Patente</ita>
+		<eng>License</eng>
+		<spa>Licencia</spa>
+		<ger>Lizenz</ger>
+		<fre>Licence</fre>
+	</word>
+	<word name="SelectTipoPat_2">
+		<ita>Patente professionale</ita>
+		<eng>Professional license</eng>
+		<spa>Licencia profesional</spa>
+		<ger>Professionelle Lizenz</ger>
+		<fre>Licence Professionnelle</fre>
+	</word>
+	<word name="SelectTipoPat_3">
+		<ita>Patente militare</ita>
+		<eng>Military license</eng>
+		<spa>Licencia militar</spa>
+		<ger>Militärlizenz</ger>
+		<fre>Licence militaire</fre>
+	</word>
+	<word name="SelectTipoPat_4">
+		<ita>Foglio rosa</ita>
+		<eng>Pink sheet</eng>
+		<spa>Hoja rosa</spa>
+		<ger>Rosa Blatt</ger>
+		<fre>Drap rose</fre>
+	</word>
+	<word name="CatAbr">
+		<ita>Cat</ita>
+		<eng>Cat</eng>
+		<spa>Cat</spa>
+		<ger>kat</ger>
+		<fre>Cat</fre>
+	</word>
+	<word name="Categoria">
+		<ita>Categoria</ita>
+		<eng>Category</eng>
+		<spa>Categoría</spa>
+		<ger>Kategorie</ger>
+		<fre>Catégorie</fre>
+	</word>
+	<word name="DataRilascio">
+		<ita>Data Rilascio</ita>
+		<eng>Release date</eng>
+		<spa>Fecha de lanzamiento</spa>
+		<ger>Veröffentlichungsdatum</ger>
+		<fre>Date de sortie</fre>
+	</word>
+	<word name="NumPat">
+		<ita>Numero Patente</ita>
+		<eng>License number</eng>
+		<spa>Número de licencia</spa>
+		<ger>Amtliches Kennzeichen</ger>
+		<fre>Numéro de licence</fre>
+	</word>
+	<word name="DatePlace">
+		<ita>dd/mm/YYYY</ita>
+		<eng>dd/mm/YYYY</eng>
+		<spa>dd/mm/YYYY</spa>
+		<ger>dd/mm/YYYY</ger>
+		<fre>dd/mm/YYYY</fre>
+	</word>
+	<word name="AutoritaR">
+		<ita>Autorità rilascio</ita>
+		<eng>Authority release</eng>
+		<spa>Liberación de autoridad</spa>
+		<ger>Autoritätsfreigabe</ger>
+		<fre>Libération d'autorité</fre>
+	</word>
+	<word name="AutoritaRPlace">
+		<ita>Rilasciata da</ita>
+		<eng>Released by</eng>
+		<spa>Publicado por</spa>
+		<ger>Veröffentlicht von</ger>
+		<fre>Produit par</fre>
+	</word>
+	<word name="DataVal">
+		<ita>Data validità</ita>
+		<eng>Validity date</eng>
+		<spa>Fecha de validez</spa>
+		<ger>Gültigkeitsdatum</ger>
+		<fre>Date de validité</fre>
+	</word>
+	<word name="DataValPlace">
+		<ita>Fino al ... dd/mm/YYYY</ita>
+		<eng>Until the ... dd/mm/YYYY</eng>
+		<spa>Hasta el ... dd/mm/YYYY</spa>
+		<ger>Bis zum ... dd/mm/YYYY</ger>
+		<fre>Jusqu'à ce que le ... dd/mm/YYYY</fre>
+	</word>
+	<word name="CheckDittaProp">
+		<ita>Attesta di essere</ita>
+		<eng>Proof that you are</eng>
+		<spa>Prueba de que eres</spa>
+		<ger>Beweis, dass du es bist</ger>
+		<fre>Preuve que tu es</fre>
+	</word>
+	<word name="CheckDittaProp_1">
+		<ita>proprietario del veicolo</ita>
+		<eng>vehicle owner</eng>
+		<spa>propietario del vehículo</spa>
+		<ger>Fahrzeugbesitzer</ger>
+		<fre>propriétaire du véhicule</fre>
+	</word>
+	<word name="CheckDittaProp_2">
+		<ita>legale rappresentante della ditta</ita>
+		<eng>legal representative of the company</eng>
+		<spa>representante legal de la empresa</spa>
+		<ger>gesetzlicher Vertreter des Unternehmens</ger>
+		<fre>représentant légal de la société</fre>
+	</word>
+	<word name="CheckDittaProp_3">
+		<ita>ditta di noleggio/leasing</ita>
+		<eng>rental/leasing company</eng>
+		<spa>empresa de alquiler/leasing</spa>
+		<ger>Vermietung/Leasinggesellschaft</ger>
+		<fre>société de location/leasing</fre>
+	</word>
+	<word name="Sede">
+		<ita>Sede</ita>
+		<eng>Site</eng>
+		<spa>Sitio</spa>
+		<ger>Seite</ger>
+		<fre>Site</fre>
+	</word>
+	<word name="AllegaFile">
+		<ita>Allegare la dichiarazione firmata scaricata dal sito, patente o documento d'identità del dichiarante, e OBBLIGATORIAMENTE patente del trasgressore, (a meno che non sia presente solo il dichiarante), sia dalla parte anteriore che posteriore.</ita>
+		<eng>Attach the signed declaration downloaded from the site, the declarant's license or identity document, and MANDATORY the offender's license, (unless only the declarant is present), both from the front and back.</eng>
+		<spa>Adjunte la declaración firmada descargada del sitio, la licencia o documento de identidad del declarante y OBLIGATORIO la licencia del infractor (a menos que solo el declarante esté presente), tanto del frente como del reverso.</spa>
+		<ger>Fügen Sie die von der Website heruntergeladene unterzeichnete Erklärung, die Lizenz oder das Ausweisdokument des Anmelders und OBLIGATORISCH die Lizenz des Täters (sofern nicht nur der Anmelder anwesend ist) bei, sowohl von der Vorder- als auch von der Rückseite.</ger>
+		<fre>Joindre la déclaration signée téléchargée sur le site, le permis du déclarant ou pièce d'identité, et OBLIGATOIREMENT le permis du contrevenant, (sauf si seul le déclarant est présent), recto et verso.</fre>
+	</word>
+	<word name="AllegaFile_1">
+		<ita>Seguire le istruzioni di compilazione riportate sul pdf scaricato.</ita>
+		<eng>Follow the compilation instructions on the downloaded pdf.</eng>
+		<spa>Siga las instrucciones de compilación en el pdf descargado.</spa>
+		<ger>Folgen Sie den Kompilierungsanweisungen im heruntergeladenen PDF.</ger>
+		<fre>Suivez les instructions de compilation sur le pdf téléchargé.</fre>
+	</word>
+	<word name="caratteristicheFile">
+		<ita>File consentiti .jpg .jpeg .pdf - dimensione massima complessiva di tutti i file 2MB</ita>
+		<eng>Allowed files .jpg .jpeg .pdf - maximum overall size of all files 2MB</eng>
+		<spa>Archivos permitidos .jpg .jpeg .pdf: tamaño total máximo de todos los archivos 2 MB</spa>
+		<ger>Erlaubte Dateien .jpg .jpeg .pdf - maximale Gesamtgröße aller Dateien 2MB</ger>
+		<fre>Fichiers autorisés .jpg .jpeg .pdf - taille globale maximale de tous les fichiers 2 MB</fre>
+	</word>
+	<word name="informazioniDrag">
+		<ita>Trascina qui</ita>
+		<eng>Drag here</eng>
+		<spa>Arrastre aquí</spa>
+		<ger>Hierher ziehen</ger>
+		<fre>Faites glisser ici</fre>
+	</word>
+	<word name="Firma">
+		<ita>Firma</ita>
+		<eng>Signature</eng>
+		<spa>Firma</spa>
+		<ger>Unterschrift</ger>
+		<fre>Signature</fre>
+	</word>
+	<word name="TitoloTrasgressore">
+		<ita>Dati Trasgressore</ita>
+		<eng>Offender Data</eng>
+		<spa>Datos del infractor</spa>
+		<ger>Täterdaten</ger>
+		<fre>Données sur le délinquant</fre>
+	</word>
+	<word name="TitoloTrasgressore">
+		<ita>Dati Trasgressore</ita>
+		<eng>Offender Data</eng>
+		<spa>Datos del infractor</spa>
+		<ger>Täterdaten</ger>
+		<fre>Données sur le délinquant</fre>
+	</word>
+	<word name="TitoloResidenzaTrasgressore">
+		<ita>Dati Residenza Trasgressore</ita>
+		<eng>Transgressor Residence Data</eng>
+		<spa>Datos de residencia del transgresor</spa>
+		<ger>Wohnsitzdaten des Übertreters</ger>
+		<fre>Données de résidence du transgresseur</fre>
+	</word>
+	<word name="TitoloDatiPatenteTrasgressore">
+		<ita>Dati Patente Trasgressore</ita>
+		<eng>Driving license data</eng>
+		<spa>Datos del permiso de conducir</spa>
+		<ger>Führerscheindaten</ger>
+		<fre>Données de résidence du transgresseur</fre>
+	</word>
+	<word name="TitoloDatiDitta">
+		<ita>Dati Ditta Utente</ita>
+		<eng>User Company Data</eng>
+		<spa>Datos de la empresa del usuario</spa>
+		<ger>Unternehmensdaten des Benutzers</ger>
+		<fre>Données de l'entreprise de l'utilisateur</fre>
+	</word>
+	<word name="SelectIntestazione">
+		<ita>La presente dichiarazione viene resa</ita>
+		<eng>This declaration is made</eng>
+		<spa>Esta declaracion esta hecha</spa>
+		<ger>Diese Erklärung wird abgegeben</ger>
+		<fre>Cette déclaration est faite</fre>
+	</word>
+	<word name="NomeDitta">
+		<ita>Nome</ita>
+		<eng>Name</eng>
+		<spa>Nombre de pila</spa>
+		<ger>Vorname</ger>
+		<fre>Prénom</fre>
+	</word>
+	<word name="NomeDittaPlace">
+		<ita>Nome ditta</ita>
+		<eng>Company name</eng>
+		<spa>Nombre de empresa</spa>
+		<ger>Name der Firma</ger>
+		<fre>Nom de la compagnie</fre>
+	</word>
+	<word name="PIDittaPlace">
+		<ita>P.I. ditta</ita>
+		<eng>Company VAT number</eng>
+		<spa>Número de IVA de la empresa</spa>
+		<ger>Umsatzsteuer-Identifikationsnummer des Unternehmens</ger>
+		<fre>Numéro de TVA de l'entreprise</fre>
+	</word>
+	<word name="PIDitta">
+		<ita>P.I.</ita>
+		<eng>VAT number</eng>
+		<spa>Número de valor agregado</spa>
+		<ger>Umsatzsteuer-Identifikationsnummer</ger>
+		<fre>numéro de TVA</fre>
+	</word>
+	<word name="raccomandata">
+		<ita>RACCOMANDATA TRAMITE PORTALE O A.R. O A MANI O PEC:</ita>
+		<eng>REGISTERED THROUGH PORTAL OR A.R. OR BY HAND OR PEC:</eng>
+		<spa>REGISTRADO A TRAVÉS DEL PORTAL O A.R. O A MANO O PEC:</spa>
+		<ger>REGISTRIERT DURCH PORTAL ODER A.R. ODER VON HAND ODER PEC:</ger>
+		<fre>ENREGISTRÉ VIA LE PORTAIL OU A.R. OU A LA MAIN OU PEC:</fre>
+	</word>
+	<word name="comuneDi">
+		<ita>Comune di</ita>
+		<eng>Municipality of</eng>
+		<spa>Municipalidad de</spa>
+		<ger>Gemeinde</ger>
+		<fre>Municipalité de</fre>
+	</word>
+	<word name="serviziDi">
+		<ita>Servizi di</ita>
+		<eng>Services of</eng>
+		<spa>Servicios de</spa>
+		<ger>Dienstleistungen von</ger>
+		<fre>Services de</fre>
+	</word>
+	<word name="oggetto">
+		<ita>OGGETTO</ita>
+		<eng>SUBJECT</eng>
+		<spa>ASUNTO</spa>
+		<ger>BETREFF</ger>
+		<fre>OBJET</fre>
+	</word>
+	<word name="oggetto_1">
+		<ita>comunicazione OBBLIGATORIA dei dati anagrafici e della patente di guida del conducente del veicolo al momento dell'accertamento della violazione al C.d.S.</ita>
+		<eng>Form for  notification of personal data and the offender's driver's license. The driver of the vehicle at the time of the determination of the violation must return this form completed</eng>
+		<spa>comunicación obligatoria de datos de carácter personal y la licencia de conducir del infractor, el conductor del vehículo en el momento de la determinación de la violación al Consejo de Seguridad</spa>
+		<ger>obbligatorische Mitteiulung der persönlichen Daten und der Führerschein Daten  des Übertreters, oder des Fahrers während der Verletzung der Straßenverkehrsordnung</ger>
+		<fre>Forme obligatoire à remplir avec des données personnelles et le permis de conduire du contrevenant que le conducteur du véhicule au moment de la détermination de la violation</fre>
+	</word>
+	<word name="oggetto_2">
+		<ita>DA RESTITUIRSI ENTRO 60 GIORNI DALLA NOTIFICA DEL VERBALE</ita>
+		<eng>signed within 60 days of receipt of the fine</eng>
+		<spa>a volver en el plazo de 60 días desde la notificación del acta de infracción del Código de circulación</spa>
+		<ger>SPÄTESTENS 60 TAGEN SEIT DER ZUSTELLUNG DER STRAFE WIEDER SCHICKEN.</ger>
+		<fre>renvoyer dans les 60 jours de la notification de l'acte de violation du code de la route</fre>
+	</word>
+	<word name="pdf_utente_1">
+		<ita>A seguito notifica di verbale di accertamento di violazione al C.d.S. Cron. N. </ita>
+		<eng>Up on notification of the fine on violations of the CDS. Cron. No </eng>
+		<spa>Dès la notification du rapport d'inspection sur les violations des CDS. Cron. </spa>
+		<ger>Nach der Zustellung der Strafe wegen einer Verletzung der Straßenverkehrsordnung Cron N° </ger>
+		<fre>Tras la notificación del informe de inspección sobre violaciónes de los CDS. Cron. n° </fre>
+	</word>
+	<word name="pdf_utente_2">
+		<ita>del</ita>
+		<eng>on</eng>
+		<spa>sur</spa>
+		<ger>begehende am</ger>
+		<fre>el</fre>
+	</word>
+	<word name="pdf_utente_3">
+		<ita>commessa con il veicolo targato</ita>
+		<eng>committed with the vehicle with plate</eng>
+		<spa>cometida con el vehículo con matrícula </spa>
+		<ger>mit dem zugelassenen Fahrzeug begangen</ger>
+		<fre>commise avec le véhicule à l'enregistrement</fre>
+	</word>
+	<word name="pdf_utente_4">
+		<ita>, il/la sottoscritto/a</ita>
+		<eng>The / the undersigned</eng>
+		<spa>El/la abajo firmante</spa>
+		<ger>der Unterzeichnete</ger>
+		<fre>Le / la soussigné</fre>
+	</word>
+	<word name="pdf_utente_5">
+		<ita>, nato/a in</ita>
+		<eng>, born in</eng>
+		<spa>, nacido/a en</spa>
+		<ger>, geboren in</ger>
+		<fre>, né en</fre>
+	</word>
+	<word name="pdf_utente_6">
+		<ita>il</ita>
+		<eng>date</eng>
+		<spa>los</spa>
+		<ger>am</ger>
+		<fre>le</fre>
+	</word>
+	<word name="pdf_utente_7">
+		<ita>residente in</ita>
+		<eng>Adresse</eng>
+		<spa>residente en el</spa>
+		<ger>ortsansässig</ger>
+		<fre>et résident</fre>
+	</word>
+	<word name="pdf_utente_8">
+		<ita>, titolare della patente di guida cat.</ita>
+		<eng>, Owner of a cat license.</eng>
+		<spa>, Titular de un gato permiso de conducir.</spa>
+		<ger>, Führerschein Klasse</ger>
+		<fre>, Propriétaire d'une licence de conduire Type</fre>
+	</word>
+	<word name="pdf_utente_9">
+		<ita>n°</ita>
+		<eng>No.</eng>
+		<spa>No.</spa>
+		<ger>Nr</ger>
+		<fre>N°</fre>
+	</word>
+	<word name="pdf_utente_10">
+		<ita>rilasciata in data</ita>
+		<eng>in data</eng>
+		<spa>en data</spa>
+		<ger>am</ger>
+		<fre>dans data</fre>
+	</word>
+	<word name="pdf_utente_11">
+		<ita>effettuato da</ita>
+		<eng>issued by</eng>
+		<spa>emitida por</spa>
+		<ger>ausgestellt von</ger>
+		<fre>délivré par</fre>
+	</word>
+	<word name="pdf_utente_12">
+		<ita>e valida fino al</ita>
+		<eng>valid until</eng>
+		<spa>válida hasta</spa>
+		<ger>gultig bis</ger>
+		<fre>valable jusqu'au</fre>
+	</word>
+	<word name="pdf_utente_13">
+		<ita>(che si allega in copia) Tel.</ita>
+		<eng>(a copy of which is attached) Tel.</eng>
+		<spa>(una copia del cual se adjunta) Tel.</spa>
+		<ger>(Bitte, eine Kopie als Anlage) Tel.</ger>
+		<fre>(dont une copie est jointe) Tél.</fre>
+	</word>
+	<word name="pdf_utente_14">
+		<ita>, in qualità di</ita>
+		<eng>, As</eng>
+		<spa>, como</spa>
+		<ger>, als</ger>
+		<fre>, comme</fre>
+	</word>
+	<word name="pdf_utente_15">
+		<ita>proprietario del veicolo.</ita>
+		<eng>Owner of the vehicle.</eng>
+		<spa>Propietario del vehículo.</spa>
+		<ger>Fahrzeughalter.</ger>
+		<fre>Propriétaire du véhicule.</fre>
+	</word>
+	<word name="pdf_utente_16">
+		<ita>legale rappresentante della ditta denominata</ita>
+		<eng>The legal representative of the company called</eng>
+		<spa>representante legal de la empresa denominada</spa>
+		<ger>Vertreter der Firma</ger>
+		<fre>Le représentant légal de la société appelée</fre>
+	</word>
+	<word name="pdf_utente_17">
+		<ita>con sede in</ita>
+		<eng>based in</eng>
+		<spa>con sede en</spa>
+		<ger>Sitz in</ger>
+		<fre>siège social</fre>
+	</word>
+	<word name="pdf_utente_18">
+		<ita>nel comune di</ita>
+		<eng>Street/Park</eng>
+		<spa>Calle/Plaza</spa>
+		<ger>Straße</ger>
+		<fre>Rue/Parc</fre>
+	</word>
+	<word name="pdf_utente_19">
+		<ita>Tel.</ita>
+		<eng>Tel No.</eng>
+		<spa>Tel N º</spa>
+		<ger>Tel.</ger>
+		<fre>Tel n °</fre>
+	</word>
+	<word name="pdf_utente_20">
+		<ita>Consapevole delle sanzioni penali comminate in caso di dichiarazioni non veritiere e falsità negli atti richiamate dall'art.76 del D.P.R. 445 del 28 Dicembre 2000, sotto la propria responsabilità dichiara che il trasgressore, conducente del veicolo, al momento dell'accertamento della violazione era:</ita>
+		<eng>aware of the penalties imposed for false statements and false documents, referred to in art. 76 of Presidential Decree 445 of December 28, 2000, declares under sole responsibility that the driver of the vehicle at the time of the determination of the violation was:</eng>
+		<spa>conocimiento de las sanciones impuestas en caso de declaraciones falsas y documentos falsos, que se refiere el art. 76 del Decreto Presidencial 445 de 28 de diciembre de 2000, declara bajo su propia responsabilidad  que el conductor del vehículo en el momento de la determinación de la violación fue:</spa>
+		<ger>bewusst der  Buße, wenn Sie eine falsche Meldung tun (art.76 D.P.R 445 28 Dezember 2000), angeben Sie, dass der Übertreter, der der Fahrzeug während der Verletzung der Straßenverkehrsordnung führten, war:</ger>
+		<fre>connaissance des sanctions imposées pour de fausses déclarations et de faux documents, visés à l'art. 76 du décret présidentiel 445 du 28 Décembre 2000, déclare sous sa seule responsabilité que le conducteur du véhicule au moment de la détermination de la violation était:</fre>
+	</word>
+	<word name="pdf_utente_21">
+		<ita>se stesso.</ita>
+		<eng>himself.</eng>
+		<spa>a sí mismo.</spa>
+		<ger>er selbst.</ger>
+		<fre>Lui-même.</fre>
+	</word>
+	<word name="pdf_utente_22">
+		<ita>e con data di PRIMO RILASCIO</ita>
+		<eng>and with the FIRST RELEASE date</eng>
+		<spa>y con fecha de PRIMER LANZAMIENTO</spa>
+		<ger>und mit FIRST RELEASE Datum</ger>
+		<fre>et avec la date de PREMIÈRE LIBÉRATION</fre>
+	</word>
+	<word name="pdf_utente_23">
+		<ita>a</ita>
+		<eng>to</eng>
+		<spa>para</spa>
+		<ger>zu</ger>
+		<fre>à</fre>
+	</word>
+	<word name="firma_trasgressore">
+		<ita>Firma trasgressore</ita>
+		<eng>Signature of the Driver</eng>
+		<spa>Firma del Conducteur</spa>
+		<ger>Unterschrift Fahrer</ger>
+		<fre>Signature du contrefacteur</fre>
+	</word>
+	<word name="firma_obbligato">
+		<ita>Firma obbligato</ita>
+		<eng>Signature required</eng>
+		<spa>Firma requerida</spa>
+		<ger>Unterschrift benötigt</ger>
+		<fre>Signature requise</fre>
+	</word>
+	<word name="avvertenze">
+		<ita>AVVERTENZE IMPORTANTI</ita>
+		<eng>IMPORTANT NOTICE</eng>
+		<spa>AVISO IMPORTANTE</spa>
+		<ger>WICHTIGE MITTEILUNG</ger>
+		<fre>AVIS IMPORTANT</fre>
+	</word>
+	<word name="avvertenze_testo">
+		<ita>Nel caso in cui non si proceda alla corretta compilazione della presente comunicazione, ovvero non si ottemperi all’obbligo di comunicare i dati anagrafici e della patente del trasgressore ENTRO 60 GIORNI DALLA NOTIFICA DEL VERBALE , si procederà ai sensi dell’art. 126-bis del Codice della Strada, e quindi alla notifica di un nuovo verbale con irrogazione della conseguente sanzione amministrativa. Alla presente dichiarazione deve essere allegata la fotocopia della patente di guida (riproduzione sia della parte anteriore sia della parte posteriore), del proprietario del veicolo, responsabile in solido dichiarante (obbligatorio), e dell’effettivo trasgressore, (sempre se intende sottoscriverla), sulla quale deve essere scritta la seguente frase “ Io sottoscritto/a ......nato/a.....il....... residente in.......... via.......n°....... DICHIARO che la fotocopia del presente documento è conforme all’originale in mio possesso - Firma ........luogo e data ...........”. Indicare Prefettura di ..., oppure DTTSIS di ..., oppure Motorizzazione civile di ..., ovvero altra autorità che ha rilasciato il documento in caso di patente di guida rilasciata da uno stato estero.</ita>
+		<eng>In the event that no action is taken to correct the compilation of this notice, or does not comply with the obligation to communicate personal data and the violator's license within 60 days of notification of oral, will proceed according to Art. 126 bis of the Highway Code, and after notification of a new record with the consequent application of administrative sanctions. This declaration must be accompanied by a photocopy of driving license (playback of the front and rear), the owner of the vehicle, jointly and severally liable for registration (required), and the actual infringer, (again, if it intends to subscribe) in which the following sentence is written: "I, the undersigned / a born ...... / ..... to ....... resident ...... . ... on .. ......... No ....... ..... DECLARE that a photocopy of this document is consistent with the original in my possession - the place and date Signature ........ ........ ... ". Indicate the Prefecture of ..., or the DTTSIS of ..., or the Civil Motorization of ..., or other authority that issued the document in the case of a driving license issued by a foreign state.</eng>
+		<spa>En el caso de que no se toman medidas para corregir la compilación de este aviso, o no cumple con la obligación de comunicar los datos personales y la licencia del infractor dentro de los 60 días de la notificación de comunicación oral, se procederá de acuerdo con el art. 126 bis del Código de la Circulación, y luego de la notificación de un nuevo registro con la consiguiente aplicación de sanciones administrativas. Con esta declaración debe ir acompañada de una fotocopia del permiso de conducir (reproducción de la parte delantera y trasera), el propietario del vehículo, de forma conjunta y de registro solidariamente responsables (necesario), y el infractor real, (de nuevo, si se propone suscribir) en el que se escribirá la siguiente frase: "Yo, el abajo firmante / a nacido ...... / ..... al ....... residente de......... en .. .........No. ..... ....... DECLARAR que una fotocopia de este documento es coherente con el original en mi poder - el lugar y fecha Firma ........ ........ ... ". Indicar la Prefectura de ..., o el DTTSIS de ..., o la Motorización Civil de ..., u otra autoridad que expidió el documento en el caso de una licencia de conducir expedida por un estado extranjero.</spa>
+		<ger>Wenn Sie diese Angabe in 60 Tagen seit der Mitteilung der Strafe  nicht ausfüllen und wiedersenden, es wird eine neue Mitteilung mit Verwaltungsstrafe senden (Art.126 Bis). Mit dieser Angabe sollen Sie eine Kopie der Fahrschein (Frontseite und Rückseite) der Fahrzeughalter und der Übertreter beifügen, mit dieser Satz: ”Ich, Herr/Frau_________________geboren in_______________am_____________wohnhaft _____________Straße_____________nr_____erkläre, dass diese Kopie originalgetreu ist. Unterschrift_____Ort___Datum”. Geben Sie im Falle eines von einem ausländischen Staat ausgestellten Führerscheins die Präfektur von ... oder das DTTSIS von ... oder die Zivilmotorisierung von ... oder eine andere Behörde an, die das Dokument ausgestellt hat.</ger>
+		<fre>Dans le cas où ce formulaire n'est pas rempli et retourné, ou ne se conforme pas à l'obligation de communiquer des données personnelles et le permis du contrevenant dans les 60 jours de la notification de ce rapport, se déroulera conformément à l'art. 126 bis du code de la route, et après notification d'un nouvel amende pour infraction avec l'application conséquente des sanctions administratives. Cette déclaration doit être accompagnée d'une photocopie de licence (la lecture de l'avant et à l'arrière), le propriétaire du véhicule, conjointement et solidairement responsable de l'inscription (obligatoire), et le contrefacteur réelle, (conduire, si son intention de souscrire) dans lequel la phrase suivante est écrit: "je, soussigné / a né ...... / ....... ..... pour résident ...... . ... sur .. ......... Non ....... ..... déclarer qu'une photocopie de ce document est conforme à l'original en ma possession - le lieu et la date de signature ........ ........ ... ". Indiquer la Préfecture de ..., ou la DTTSIS de ..., ou la Motorisation Civile de ..., ou toute autre autorité qui a délivré le document dans le cas d'un permis de conduire délivré par un Etat étranger.</fre>
+	</word>
+	<word name="istruzioni">
+		<ita>ISTRUZIONI PER LA COMPILAZIONE</ita>
+		<eng>COMPILATION INSTRUCTIONS</eng>
+		<spa>INSTRUCCIONES DE COMPILACIÓN</spa>
+		<ger>ZUSAMMENSTELLUNGSANLEITUNG</ger>
+		<fre>INSTRUCTIONS DE COMPILATION</fre>
+	</word>
+	<word name="istruzioni_testo_1">
+		<ita>Nel caso in cui il proprietario del veicolo (obbligato in solido),fosse stato alla guida del veicolo al momento della commessa violazione, ai fini dell'appliczione delle conseguenze indicate nel verbale (decurtazione dei punti e/o sospensione della patente di guida), questi dovrà compilare la dichiarazione indicando i propri dati anagrafici e quelli della patente di guida, allegando un documento d'identità valido (si consiglia fronte retro della patente di guida, al fine di poter sopperire ad eventuali mancanze nella compilazione della dichiarazione). La fotocopia del documento d'identità dovrà recare inoltre la seguente dichiarazione "Io sottoscritto/a ... nato/a a .... il ..... residente in ....... via ..... n° ...... DICHIARO che il presente documento è copia dell'originale in mio possesso - Firma ..... luogo e data ....."</ita>
+		<eng>In the event that the owner of the vehicle (jointly and severally obliged), had been driving the vehicle at the time of the committed violation, for the purposes of applying the consequences indicated in the report (deduction of points and / or suspension of the driving license), the latter must complete the declaration indicating their personal data and those of the driving license, attaching a valid identity document (we recommend the front and back of the driving license, in order to be able to make up for any shortcomings in filling in the declaration). The photocopy of the identity document must also bear the following declaration "I, the undersigned ... born in .... on ..... resident in ....... via ..... n ° ...... I DECLARE that this document is a copy of the original in my possession - Signature ..... place and date ..... "</eng>
+		<spa>En el caso de que el propietario del vehículo (solidariamente obligado), hubiera estado conduciendo el vehículo en el momento de la infracción cometida, a los efectos de aplicar las consecuencias indicadas en el informe (deducción de puntos y / o suspensión de la carnet de conducir), estos últimos deberán cumplimentar la declaración indicando sus datos personales y los del carnet de conducir, adjuntando un documento de identidad válido (recomendamos el anverso y el reverso del carnet de conducir, para poder subsanar las carencias en cumplimentando la declaración). La fotocopia del documento de identidad también debe llevar la siguiente declaración "Yo, el abajo firmante ... nacido en .... el ..... residente en ....... vía ..... n °. ..... DECLARO que este documento es una copia del original que tengo en mi poder - Firma ..... lugar y fecha ..... "</spa>
+		<ger>Für den Fall, dass der Eigentümer des Fahrzeugs (gesamtschuldnerisch verpflichtet) das Fahrzeug zum Zeitpunkt des begangenen Verstoßes gelenkt hat, um die im Bericht angegebenen Konsequenzen (Punkteabzug und / oder Aussetzung des Führerschein), diese müssen die Erklärung unter Angabe ihrer persönlichen Daten und der des Führerscheins unter Beifügung eines gültigen Ausweises ausfüllen (wir empfehlen Vorder- und Rückseite des Führerscheins, um eventuelle Mängel ausgleichen zu können) Ausfüllen der Erklärung). Die Fotokopie des Personalausweises muss außerdem die folgende Erklärung tragen: "Ich, der/die Unterzeichnete … geboren in …. am ….. wohnhaft in ….. über ….. n°. ..... ICH ERKLÄRE, dass dieses Dokument eine Kopie des Originals in meinem Besitz ist - Unterschrift ..... Ort und Datum ..... "</ger>
+		<fre>Dans le cas où le propriétaire du véhicule (conjointement et solidairement), conduisait le véhicule au moment de l'infraction commise, aux fins d'appliquer les conséquences indiquées au procès-verbal (déduction de points et/ou suspension du permis de conduire), ces derniers doivent remplir la déclaration indiquant leurs données personnelles et celles du permis de conduire, en y joignant une pièce d'identité en cours de validité (nous recommandons le recto et le verso du permis de conduire, afin de pouvoir pallier d'éventuelles insuffisances de remplir la déclaration). La photocopie de la pièce d'identité doit également porter la déclaration suivante "Je soussigné ... né à .... le ..... résidant à ....... via ..... n° . ..... JE DÉCLARE que ce document est une copie de l'original en ma possession - Signature ..... lieu et date ..... "</fre>
+	</word>
+	<word name="istruzioni_testo_2">
+		<ita>Nel caso in cui il proprietario del veicolo (obbligato in solido),non fosse stato alla guida del veicolo al momento della commessa violazione, ai fini dell'applicazione delle conseguenze indicate nel verbale (decurtazione dei punti e/o sospensione della patente di guida), questi dovrà compilare la dichiarazione indicando anche i dati anagrafici e quelli della patente di guida dell'effettivo trasgressore. Se il trasgressore procederà alla firma congiunta della dichiarazione completa dei dati anagrafici e della patente di guida, di copia di un documento di identità (si consiglia fronte retro della patente di guida), integrato della prevista dichiarazione di conformità, il verbale si considererà notificato anche al trasgressore dichiarato. Nel caso in cui l'effettivo trasgressore non voglia sottoscrivere la seguente dichiarazione, o non voglia presentarne egli stesso una propria citando i riferimenti del verbale notificato, si dovrà procedere alla notifica del verbale anche all'effettivo trasgressore, come dichiarato, con ulteriore aggravio di spese a carico delle parti inadempienti.</ita>
+		<eng>In the event that the owner of the vehicle (jointly and severally obliged), had not been driving the vehicle at the time of the committed violation, for the purposes of applying the consequences indicated in the report (deduction of points and / or suspension of the driving license) , the latter must complete the declaration indicating the personal data and those of the driving license of the actual transgressor. If the transgressor will proceed to the joint signature of the complete declaration of personal data and driving license, a copy of an identity document (front and back of the driving license is recommended), integrated with the required declaration of conformity, the report will also be considered notified to the declared transgressor. In the event that the actual transgressor does not want to sign the following declaration, or does not want to present his own by citing the references of the notified report, the actual transgressor must also be notified of the report, as declared, with a further increase of expenses to be borne by the defaulting parties.</eng>
+		<spa>En el caso de que el propietario del vehículo (solidariamente obligado), no hubiera conducido el vehículo en el momento de la infracción cometida, a los efectos de aplicar las consecuencias señaladas en el informe (deducción de puntos y / o suspensión de el carnet de conducir), deberá completar la declaración indicando también los datos personales y los del carnet de conducir del real infractor. Si el transgresor procederá a la firma conjunta de la declaración completa de datos personales y carnet de conducir, copia de un documento de identidad (se recomienda anverso y reverso del carnet de conducir), integrado con la declaración de conformidad esperada, el informe también Se considerará notificado al transgresor declarado. En el caso de que el transgresor real no quiera firmar la siguiente declaración, o no quiera presentar la suya propia citando las referencias del informe notificado, el transgresor real también debe ser notificado del informe, según lo declarado, con una nueva. aumento de gastos a cargo de los incumplidores.</spa>
+		<ger>Für den Fall, dass der Eigentümer des Fahrzeugs (gesamtschuldnerisch verpflichtet) das Fahrzeug zum Zeitpunkt des begangenen Verstoßes nicht gelenkt hat, um die im Bericht angegebenen Konsequenzen (Punkteabzug und / oder Sperrung von des Führerscheins) muss er die Erklärung ausfüllen, in der auch die persönlichen Daten und die des Führerscheins des tatsächlichen Übertreters angegeben sind. Wenn der Übertreter die vollständige Erklärung der persönlichen Daten und des Führerscheins, eine Kopie eines Ausweises (Vorder- und Rückseite des Führerscheins wird empfohlen) zusammen mit der erwarteten Konformitätserklärung unterschreibt, wird der Bericht auch gelten als dem erklärten Übertreter mitgeteilt. Für den Fall, dass der tatsächliche Übertreter die nachfolgende Erklärung nicht unterzeichnen oder seine eigene nicht unter Angabe der Fundstellen der angezeigten Meldung vorlegen möchte, ist der tatsächliche Übertreter auch über die Meldung, wie erklärt, mit einer weiteren Erhöhung der von den säumigen Parteien zu tragenden Aufwendungen.</ger>
+		<fre>Dans le cas où le propriétaire du véhicule (conjointement et solidairement), ne conduisait pas le véhicule au moment de l'infraction commise, aux fins d'appliquer les conséquences indiquées au procès-verbal (déduction de points et/ou suspension de le permis de conduire), il doit remplir la déclaration en indiquant également les données personnelles et celles du permis de conduire du contrevenant réel. Si le transgresseur procédera à la signature conjointe de la déclaration complète de données personnelles et du permis de conduire, une copie d'une pièce d'identité (recto et verso du permis de conduire est recommandé), intégrée à la déclaration de conformité attendue, le constat sera également être considérée comme notifiée au transgresseur déclaré. Dans le cas où le contrevenant réel ne veut pas signer la déclaration suivante, ou ne veut pas présenter la sienne en citant les références du rapport notifié, le contrevenant réel doit également être informé du rapport, tel que déclaré, avec une autre augmentation des dépenses à la charge des parties défaillantes.</fre>
+	</word>
+	<word name="istruzioni_testo_3">
+		<ita>IMPORTANTE - Come documento d'identità si consiglia di allegare copia fronte retro della patente di guida, al fine di sopperire ad eventuali mancanze nella compilazione della dichiarazione. Le fotocopie dei documenti d'identità dovranno recare inoltre la seguente dichiarazione "Io sottoscritto/a ..... nato/a a ......il ..... residente in ...... via ..... N° ..... DICHIARO che il presente documento è copia dell'originale in mio possesso - Firma ...... luogo e data ......" </ita>
+		<eng>IMPORTANT - As an identity document, it is advisable to attach a copy of the front and back of the driving license, in order to make up for any shortcomings in completing the declaration. Photocopies of identity documents must also bear the following declaration "I, the undersigned ..... born in ...... on ..... resident in ...... via ... .. N ° ..... I DECLARE that this document is a copy of the original in my possession - Signature ...... place and date ...... "</eng>
+		<spa>IMPORTANTE - Como documento de identidad es recomendable adjuntar copia del anverso y reverso del carnet de conducir, para suplir las deficiencias en la cumplimentación de la declaración. Las fotocopias de los documentos de identidad también deben llevar la siguiente declaración "Yo, el abajo firmante ..... nacido en ...... el ..... residente en ...... vía ... .. N ° ..... DECLARO que este documento es una copia del original que tengo en mi poder - Firma ...... lugar y fecha ...... "</spa>
+		<ger>WICHTIG - Als Ausweisdokument empfiehlt es sich, eine Kopie der Vorder- und Rückseite des Führerscheins beizufügen, um eventuelle Mängel beim Ausfüllen der Erklärung auszugleichen. Fotokopien von Ausweisdokumenten müssen außerdem die folgende Erklärung tragen "Ich, der/die Unterzeichnete ..... geboren in ...... am ..... wohnhaft in ...... über ... .. N ° ..... ICH ERKLÄRE, dass dieses Dokument eine Kopie des Originals in meinem Besitz ist - Unterschrift ...... Ort und Datum ...... "</ger>
+		<fre>IMPORTANT - En tant que pièce d'identité, il est conseillé de joindre une copie recto-verso du permis de conduire, afin de pallier d'éventuelles insuffisances dans le remplissage de la déclaration. Les photocopies des pièces d'identité doivent également porter la déclaration suivante "Je soussigné ..... né à ...... le ..... résidant à ...... via ... .. N° ..... JE DÉCLARE que ce document est une copie de l'original en ma possession - Signature ...... lieu et date ...... "</fre>
+	</word>
+	<word name="istruzioni_testo_4">
+		<ita>Le dichiarazioni, per poter essere considerate valide, dovranno essere sempre presentate con allegato un documento d'identità valido.</ita>
+		<eng>The declarations, in order to be considered valid, must always be presented with a valid identity document attached.</eng>
+		<spa>Para que se consideren válidas, las declaraciones deben presentarse siempre con un documento de identidad válido adjunto.</spa>
+		<ger>Um als gültig zu gelten, müssen die Erklärungen immer mit einem beigefügten gültigen Ausweis vorgelegt werden.</ger>
+		<fre>Pour être considérées comme valables, les déclarations doivent toujours être accompagnées d'une pièce d'identité en cours de validité.</fre>
+	</word>
+	<word name="istruzioni_testo_5">
+		<ita>Le dichiarazioni devono essere firmate e restituite all'ente accertatore, entro 60 giorni dalla notifica del verbale.</ita>
+		<eng>The declarations must be signed and returned to the investigating body within 60 days of notification of the report.</eng>
+		<spa>Las declaraciones deben ser firmadas y devueltas al organismo investigador dentro de los 60 días siguientes a la notificación del informe.</spa>
+		<ger>Die Erklärungen sind zu unterzeichnen und innerhalb von 60 Tagen nach Zustellung der Meldung an die Untersuchungsstelle zurückzusenden.</ger>
+		<fre>Les déclarations doivent être signées et retournées à l'organisme d'enquête dans les 60 jours suivant la notification du rapport.</fre>
+	</word>
+	<word name="pdf_trasgressore_1">
+		<ita>il Sig./la Sig.ra</ita>
+		<eng>Mr./Ms </eng>
+		<spa>El Sr./Sra</spa>
+		<ger>Herr/Frau</ger>
+		<fre>Monsieur/Madame</fre>
+	</word>
+	<word name="pdf_trasgressore_2">
+		<ita>nato a</ita>
+		<eng>born/aa</eng>
+		<spa>nacido/aa</spa>
+		<ger>geboren in</ger>
+		<fre>né a</fre>
+	</word>
+	<word name="pdf_trasgressore_3">
+		<ita>il</ita>
+		<eng>the</eng>
+		<spa>los</spa>
+		<ger>am</ger>
+		<fre>le</fre>
+	</word>
+	<word name="pdf_trasgressore_4">
+		<ita>da</ita>
+		<eng>from</eng>
+		<spa>de</spa>
+		<ger>von</ger>
+		<fre>de</fre>
+	</word>
+	<word name="data">
+		<ita>Data</ita>
+		<eng>Date</eng>
+		<spa>Fecha</spa>
+		<ger>Datum</ger>
+		<fre>Date</fre>
+	</word>
+	<word name="resocontoDic">
+		<ita>RESOCONTO DICHIARAZIONE</ita>
+		<eng>REPORT DECLARATION</eng>
+		<spa>DECLARACIÓN DEL INFORME</spa>
+		<ger>BERICHTERKLÄRUNG</ger>
+		<fre>DÉCLARATION DU RAPPORT</fre>
+	</word>
+	<word name="obbligato">
+		<ita>Obbligato in solido</ita>
+		<eng>Jointly and severally obliged</eng>
+		<spa>Obligado solidariamente</spa>
+		<ger>Gesamtschuldnerisch verpflichtet</ger>
+		<fre>Conjointement et solidairement</fre>
+	</word>
+	<word name="trasgressore_pdf">
+		<ita>Trasgressore</ita>
+		<eng>Offender</eng>
+		<spa>Delincuente</spa>
+		<ger>Täter</ger>
+		<fre>Délinquant</fre>
+	</word>
+	<word name="errore_0">
+		<ita>E' necessario caricare i file</ita>
+		<eng>It is necessary to upload the files</eng>
+		<spa>Es necesario subir los archivos</spa>
+		<ger>Es ist notwendig, die Dateien hochzuladen</ger>
+		<fre>Il est nécessaire de télécharger les fichiers</fre>
+	</word>
+	<word name="errore_1">
+		<ita>I file devono avere l'estensione .pdf o .jpg</ita>
+		<eng>Files must have the extension .pdf or .jpg</eng>
+		<spa>Los archivos deben tener la extensión .pdf o .jpg</spa>
+		<ger>Dateien müssen die Erweiterung .pdf oder .jpg haben</ger>
+		<fre>Les fichiers doivent avoir l'extension .pdf ou .jpg</fre>
+	</word>
+	<word name="errore_2">
+		<ita>La dimensione massima, complessiva di tutti i file, non può superare i 2 MB</ita>
+		<eng>The maximum overall size of all files cannot exceed 2MB</eng>
+		<spa>El tamaño total máximo de todos los archivos no puede exceder los 2 MB</spa>
+		<ger>Die maximale Gesamtgröße aller Dateien darf 2 MB nicht überschreiten</ger>
+		<fre>La taille globale maximale de tous les fichiers ne peut pas dépasser 2 Mo</fre>
+	</word>
+	<word name="StatoR">
+		<ita>Stato rilascio</ita>
+		<eng>Release status</eng>
+		<spa>Estado de lanzamiento</spa>
+		<ger>Freigabestatus</ger>
+		<fre>État de la version</fre>
+	</word>
+	<word name="StatoRPlace">
+		<ita>Stato rilascio patente</ita>
+		<eng>License issue status</eng>
+		<spa>Estado de emisión de licencia</spa>
+		<ger>Status der Lizenzausgabe</ger>
+		<fre>État du problème de licence</fre>
+	</word>
+</content>

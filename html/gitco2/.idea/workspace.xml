@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="691e4942-f35b-4c6c-98d2-184779913a82" name="Merge from trunk" comment="Merged from trunk&#10;Adeguamento stampa decurtazione [from revision 3,999]">
+      <change beforePath="$PROJECT_DIR$" beforeDir="true" afterPath="$PROJECT_DIR$" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/traffic_law" beforeDir="true" afterPath="$PROJECT_DIR$/traffic_law" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/traffic_law/cls" beforeDir="true" afterPath="$PROJECT_DIR$/traffic_law/cls" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/traffic_law/cls/cls_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_law/cls/cls_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_law/frm_upload_licensepoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_law/frm_upload_licensepoint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_law/inc" beforeDir="true" afterPath="$PROJECT_DIR$/traffic_law/inc" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/traffic_law/inc/views.php" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_law/inc/views.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_law/prn_upload_licensepoint_exe.php" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_law/prn_upload_licensepoint_exe.php" afterDir="false" />
+    </list>
+    <list id="25d983f6-c2d1-4961-915f-c5aa9862aac5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/traffic_law/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/traffic_law/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/shuchkin/simplexlsx" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/composer" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/mpdf/mpdf" />
+      <path value="$PROJECT_DIR$/traffic_law/vendor/setasign/fpdi" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1sWq2GSd0s1yyWtuXTOHuXMZWI6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="209" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="209" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="210" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="209" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="210" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="210" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="210" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="210" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="209" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="210" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="209" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="209" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/traffic_law/external" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/traffic_law/external" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+    <option name="runUnderTerminal" value="true" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="false" />
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25d983f6-c2d1-4961-915f-c5aa9862aac5" name="Default Changelist" comment="" />
+      <created>1620998485702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620998485702</updated>
+      <workItem from="1621346758441" duration="1622000" />
+      <workItem from="1621431939952" duration="755000" />
+      <workItem from="1621492171686" duration="7475000" />
+      <workItem from="1621516442408" duration="4159000" />
+      <workItem from="1622028138951" duration="1528000" />
+      <workItem from="1622033357868" duration="713000" />
+      <workItem from="1622102576634" duration="3520000" />
+    </task>
+    <task id="LOCAL-00001" summary="Verbali\Elenco verbali: filtro da/a data notifica">
+      <created>1620998998624</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620998998624</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Verbali\Elenco verbali: filtro da/a data notifica">
+      <created>1621240046786</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621240046786</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Correzione paginazione elenco verbali: filtro anno corrente">
+      <created>1621421673095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621421673095</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Correzioni per decurtazione punti">
+      <created>1621844887248</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621844887248</updated>
+    </task>
+    <task id="LOCAL-00005" summary="COMUNICAZIONI 126-BIS - modifiche 24/05/2021 parte 1">
+      <created>1622029646200</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622029646200</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Correzione stampa decurtazione punti">
+      <created>1622033885173</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622033885173</updated>
+    </task>
+    <task id="LOCAL-00007" summary="import da trunk">
+      <created>1622103302238</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622103302238</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Merged from trunk&#10;Esposizione parametro per decurtaizone punti [from revision 3,995]">
+      <created>1622105571194</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622105571194</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManager.ChangeBrowser.svn">
+    <option name="DATE_BEFORE" />
+    <option name="DATE_AFTER" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Verbali\Elenco verbali: filtro da/a data notifica" />
+    <MESSAGE value="Correzione paginazione elenco verbali: filtro anno corrente" />
+    <MESSAGE value="Correzioni per decurtazione punti" />
+    <MESSAGE value="COMUNICAZIONI 126-BIS - modifiche 24/05/2021 parte 1" />
+    <MESSAGE value="Correzione stampa decurtazione punti" />
+    <MESSAGE value="aggiunto svnignore" />
+    <MESSAGE value="import da trunk" />
+    <MESSAGE value="Merged from trunk&#10;Esposizione parametro per decurtaizone punti [from revision 3,995]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged from trunk&#10;Esposizione parametro per decurtaizone punti [from revision 3,995]" />
+  </component>
+</project>

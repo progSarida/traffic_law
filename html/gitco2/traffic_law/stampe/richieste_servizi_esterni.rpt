@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<inet:Report xmlns:inet="http://www.inetsoftware.de" major_version="8" minor_version="0" major_xml_version="7" minor_xml_version="0" count="3" id="0">
+    <Datasource dll="traffic_law_configuration.dll">
+      <DataSourceConfiguration name="traffic_law">
+        <property name="supportsOrderBy" value="true"/>
+        <property name="prepStmtCacheSize" value="25"/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="cacheCallableStmts" value="false"/>
+        <property name="socketTimeout" value="0"/>
+        <property name="useGmtMillisForDatetimes" value="false"/>
+        <property name="locatorFetchBufferSize" value="1048576"/>
+        <property name="useFastIntParsing" value="true"/>
+        <property name="quotesLowerCase" value="false"/>
+        <property name="supportsParenthesesForJoin" value="true"/>
+        <property name="defaultFetchSize" value="0"/>
+        <property name="useCompression" value="false"/>
+        <property name="host" value="idea"/>
+        <property name="savePassword" value="true"/>
+        <property name="metadataCacheSize" value="50"/>
+        <property name="zeroDateTimeBehavior" value="exception"/>
+        <property name="emptyStringsConvertToZero" value="true"/>
+        <property name="maxRows" value="-1"/>
+        <property name="paranoid" value="false"/>
+        <property name="driverLibrary" value=""/>
+        <property name="connectionCollation" value=""/>
+        <property name="serverTimezone" value=""/>
+        <property name="blobSendChunkSize" value="1048576"/>
+        <property name="dynamicCalendars" value="false"/>
+        <property name="prepStmtCacheSqlLimit" value="256"/>
+        <property name="sessionVariables" value=""/>
+        <property name="useCursorFetch" value="false"/>
+        <property name="clobCharacterEncoding" value=""/>
+        <property name="emulateLocators" value="false"/>
+        <property name="aliasToken" value=""/>
+        <property name="useReadAheadInput" value="true"/>
+        <property name="identifierQuoteString" value=""/>
+        <property name="database" value="traffic_law"/>
+        <property name="noTimezoneConversionForTimeType" value="false"/>
+        <property name="useSSL" value="false"/>
+        <property name="autoDeserialize" value="false"/>
+        <property name="requireSSL" value="false"/>
+        <property name="useTimezone" value="false"/>
+        <property name="connectTimeout" value="0"/>
+        <property name="supportsSQL92" value="true"/>
+        <property name="supportsWhere" value="true"/>
+        <property name="characterEncoding" value=""/>
+        <property name="port" value="3306"/>
+        <property name="url" value="jdbc:mysql://{host}:{port}/{database}"/>
+        <property name="databaseClassName" value=""/>
+        <property name="useUnicode" value="true"/>
+        <property name="password" value="00D581AABF3B47CF2342B807A274B5CCE8DA8EF389275CCE2B4DB20EAA32A7CCD485C4A6308179B223ECC657439AE08BD0"/>
+        <property name="user" value="davide"/>
+      </DataSourceConfiguration>
+      <Tablesource alias="customer" databaseIdentifier="customer">
+        <Column name="CityId" type="11" />
+        <Column name="Blazon" type="11" />
+        <Column name="ManagerAdditionalName" type="11" />
+        <Column name="ManagerName" type="11" />
+        <Column name="ManagerSector" type="11" />
+        <Column name="ManagerTaxCode" type="11" />
+        <Column name="ManagerVAT" type="11" />
+        <Column name="ManagerCity" type="11" />
+        <Column name="ManagerProvince" type="11" />
+        <Column name="ManagerAddress" type="11" />
+        <Column name="ManagerZIP" type="11" />
+        <Column name="ManagerCountry" type="11" />
+        <Column name="ManagerPhone" type="11" />
+        <Column name="ManagerFax" type="11" />
+        <Column name="ManagerMail" type="11" />
+        <Column name="ManagerPEC" type="11" />
+        <Column name="ManagerWeb" type="11" />
+        <Column name="ManagerInfo" type="11" />
+        <Column name="ManagerOfficeInfo" type="11" />
+        <Column name="ManagerProcessName" type="11" />
+        <Column name="ManagerDataEntryName" type="11" />
+        <Column name="ManagerSignName" type="11" />
+        <Column name="NationalBankOwner" type="11" />
+        <Column name="NationalBankName" type="11" />
+        <Column name="NationalBankAccount" type="11" />
+        <Column name="NationalBankIban" type="11" />
+        <Column name="NationalBankSwift" type="11" />
+        <Column name="NationalBankMgmt" type="8" />
+        <Column name="NationalReminderBankOwner" type="11" />
+        <Column name="NationalReminderBankName" type="11" />
+        <Column name="NationalReminderBankAccount" type="11" />
+        <Column name="NationalReminderBankSwift" type="11" />
+        <Column name="NationalReminderBankIban" type="11" />
+        <Column name="ForeignBankOwner" type="11" />
+        <Column name="ForeignBankName" type="11" />
+        <Column name="ForeignBankAccount" type="11" />
+        <Column name="ForeignBankIban" type="11" />
+        <Column name="ForeignBankSwift" type="11" />
+        <Column name="ForeignBankMgmt" type="8" />
+        <Column name="ForeignReminderBankOwner" type="11" />
+        <Column name="ForeignReminderBankName" type="11" />
+        <Column name="ForeignReminderBankAccount" type="11" />
+        <Column name="ForeignReminderBankSwift" type="11" />
+        <Column name="ForeignReminderBankIban" type="11" />
+        <Column name="Reference" type="11" />
+        <Column name="LumpSum" type="8" />
+        <Column name="PDFRefPrint" type="8" />
+        <Column name="FifthField" type="6" />
+        <Column name="DigitalSignature" type="8" />
+        <Column name="ExternalRegistration" type="8" />
+        <Column name="NationalAnticipateCost" type="8" />
+        <Column name="ForeignAnticipateCost" type="8" />
+        <Column name="ReturnPlace" type="11" />
+        <Column name="CityUnion" type="8" />
+        <Column name="FinePaymentSpecificationType" type="6" description="Da capitolato: gestione somme riscosse 1)prima copre sanzione  - 2) prima copre notifica 3) prima copre la ricerca" />
+        <Column name="FinePDFList" type="8" />
+        <Column name="ChiefControllerList" type="8" />
+        <Column name="Validation" type="8" />
+        <Column name="MCTCUserName" type="11" />
+        <Column name="MCTCPassword" type="11" />
+        <Column name="MCTCDate" type="9" />
+        <Column name="NationalMod23LSubject" type="11" />
+        <Column name="NationalMod23LCustomerName" type="11" />
+        <Column name="NationalMod23LCustomerSubject" type="11" />
+        <Column name="NationalMod23LCustomerAddress" type="11" />
+        <Column name="NationalMod23LCustomerCity" type="11" />
+        <Column name="ForeignMod23LSubject" type="11" />
+        <Column name="ForeignMod23LCustomerName" type="11" />
+        <Column name="ForeignMod23LCustomerSubject" type="11" />
+        <Column name="ForeignMod23LCustomerAddress" type="11" />
+        <Column name="ForeignMod23LCustomerCity" type="11" />
+        <Column name="LicensePointOffice" type="11" />
+        <Column name="LicensePointCode" type="11" />
+        <Column name="LicensePointFtpUser" type="11" />
+        <Column name="LicensePointFtpPassword" type="11" />
+        <Column name="LicensePointPaymentCompletion" type="8" />
+        <Column name="PagoPAPayment" type="8" />
+        <Column name="PagoPAPaymentForeign" type="8" />
+        <Column name="PagoPAPaymentNoticeNational" type="8" />
+        <Column name="PagoPAPaymentNoticeNationalPEC" type="8" />
+        <Column name="PagoPAPaymentNoticeForeign" type="8" />
+        <Column name="PagoPAAlias" type="11" />
+        <Column name="PagoPaIban" type="11" />
+        <Column name="PagoPAAuxCode" type="8" />
+        <Column name="PagoPAApplicationCode" type="11" />
+        <Column name="PagoPACPPOwner" type="11" />
+        <Column name="PagoPAPaymentSubject" type="11" />
+        <Column name="PagoPACBILL" type="11" />
+        <Column name="PagoPAPaymentInfo" type="11" />
+        <Column name="ReminderAdditionalFee" type="8" />
+        <Column name="RegularPostalFine" type="8" />
+        <Column name="PatronalFeast" type="9" />
+        <Column name="NationalReminderHeaderSarida" type="8" />
+        <Column name="ForeignReminderHeaderSarida" type="8" />
+        <Column name="FineNonDeliveryAddress" type="11" />
+        <Column name="FineNonDeliveryAddressForeign" type="11" />
+        <Column name="ReminderNonDeliveryAddress" type="11" />
+        <Column name="ReminderNonDeliveryAddressForeign" type="11" />
+        <Column name="ReminderEmail" type="11" />
+        <Column name="ReminderOfficeInfo" type="11" />
+        <Column name="ReminderPhone" type="11" />
+        <Column name="ElaborationDaysNational" type="6" />
+        <Column name="ElaborationDaysForeign" type="6" />
+        <Column name="PaymentDaysNational" type="6" />
+        <Column name="PaymentDaysForeign" type="6" />
+        <Column name="EnableForeignKindSending" type="8" />
+        <Column name="EnableKindOldProcedure" type="8" />
+        <Column name="PagoPAService" type="6" />
+        <Column name="IpaCode" type="11" />
+        <Column name="PagoPAPassword" type="11" />
+        <Column name="EnableINIPECDigitalSignature" type="8" />
+        <Column name="EnableINIPECNotificationSignature" type="8" />
+        <Column name="EnableINIPECNotification" type="8" />
+        <Column name="EnableINIPECProtocol" type="8" />
+        <Column name="SondrioSottoservizio" type="11" />
+        <Column name="SondrioServizio" type="11" />
+        <Column name="EnableSignAll" type="8" />
+        <Column name="ManagePEC" type="8" />
+        <Column name="LicensePointFtpPasswordExpiration" type="9" />
+        <Column name="LicensePointFtpServer" type="11" />
+        <Column name="LicensePointDecurtationDays" type="6" />
+        <Column name="NationalKindFineSendFee" type="6" />
+        <Column name="IsIuvCodiceAvviso" type="8" />
+        <Column name="NationalPrinter" type="6" />
+        <Column name="ForeignPrinter" type="6" />
+        <Column name="NationalPrinterReminder" type="6" />
+        <Column name="ForeignPrinterReminder" type="6" />
+        <Column name="DisableKindPagoPAProcessing" type="8" />
+        <Column name="RoleConcessionaire" type="11" />
+        <Column name="RoleOfficialResponsible" type="11" />
+        <Column name="RoleProcedureResponsible" type="11" />
+        <Column name="RolePrintDate" type="9" />
+        <Column name="RoleMinExpiredInstallments" type="8" />
+        <Column name="RoleCityCode" type="11" />
+        <Column name="PrefectCommunicationSigner" type="6" />
+        <Column name="ApplyInstallmentRates" type="6" />
+        <Column name="InstallmentRatesMinimumAmount" type="6" />
+        <Column name="InstallmentMethod" type="8" description="0 = Libera, 1 = Impianto legislativo" />
+        <Column name="InstallmentYearlyIncomeLimit" type="6" description="Limite max reddito annuale" />
+        <Column name="InstallmentAdditionalIncomePerFamilyMember" type="6" description="Aumento limite reddito per familiare" />
+        <Column name="InstallmentMinimumFeeLimit" type="6" description="Limite minimo del dovuto per accedere alla rateizzazione" />
+        <Column name="InstallmentFeeLimit1" type="6" description="Limite max rate tipo 1" />
+        <Column name="InstallmentRateLimit1" type="6" description="Limite max rate tipo 1" />
+        <Column name="InstallmentFeeLimit2" type="6" description="Limite max rate tipo 2" />
+        <Column name="InstallmentRateLimit2" type="6" description="Limite max rate tipo 2" />
+        <Column name="InstallmentFeeLimit3" type="6" description="Limite max rate tipo 3" />
+        <Column name="InstallmentRateLimit3" type="6" description="Limite max rate tipo 3" />
+        <Column name="InstallmentFreeRateLimit" type="6" description="Limite max rateizzazione libera" />
+        <Column name="PagoPAPaymentNoticeNationalInstallment" type="8" />
+        <Column name="PagoPAPaymentNoticeForeignInstallment" type="8" />
+        <Column name="InstallmentControllerApproval" type="8" />
+        <Column name="InstallmentPaymentSpecificationType" type="8" />
+        <Column name="DaysAfterCADNotification" type="6" />
+        <Column name="DaysAfterNOCADNotification" type="6" />
+        <Column name="ent_codice" type="6" />
+      </Tablesource>
+      <Tablesource alias="richieste_servizi_esterni" databaseIdentifier="richieste_servizi_esterni">
+        <Column name="rse_codice" type="6" />
+        <Column name="rse_ente" type="11" />
+        <Column name="rse_ute_richiesta" type="11" />
+        <Column name="rse_ute_risposta" type="11" />
+        <Column name="rse_utente_servizio" type="11" />
+        <Column name="rse_data_richiesta" type="9" />
+        <Column name="rse_ora_richiesta" type="10" />
+        <Column name="rse_tipo" type="6" />
+        <Column name="rse_id_richiesta" type="11" />
+        <Column name="rse_id_risposta" type="11" />
+        <Column name="rse_esito" type="11" />
+        <Column name="rse_cod_errore" type="11" />
+        <Column name="rse_desc_errore" type="11" />
+      </Tablesource>
+      <Tablesource alias="dettaglio_richieste_servizi_est" databaseIdentifier="dettaglio_richieste_servizi_est">
+        <Column name="der_cod_richiesta" type="6" />
+        <Column name="der_progressivo" type="6" />
+        <Column name="der_oggetto" type="11" />
+        <Column name="der_risposta" type="11" />
+      </Tablesource>
+      <Tablesource alias="service" databaseIdentifier="service">
+        <Column name="Id" type="6" />
+        <Column name="Name" type="11" />
+        <Column name="Category" type="11" />
+        <Column name="RowLimit" type="6" />
+      </Tablesource>
+    </Datasource>
+  <Database>
+
+    <Join from="customer" to="richieste_servizi_esterni" type="inn">
+      <Link from="CityId" to="rse_ente" type="eq"/>
+    </Join>
+
+    <Join from="richieste_servizi_esterni" to="dettaglio_richieste_servizi_est" type="inn">
+      <Link from="rse_codice" to="der_cod_richiesta" type="eq"/>
+    </Join>
+
+    <Join from="richieste_servizi_esterni" to="service" type="inn">
+      <Link from="rse_tipo" to="Id" type="eq"/>
+    </Join>
+    <QueryChanges mask="0" count="2">
+      <Attribute name="queryChange" value="null"/>
+      <Attribute name="queryChange" value="null"/>
+    </QueryChanges>
+  </Database>
+  <FormulaFields count="2">
+    <Field type="FormulaField" valueType="6">
+      <Attribute name="name" value="rispostaPresente"/>
+      <Attribute name="shortName" value="risposta"/>
+      <Attribute name="formula type" value="0"/>
+      <Attribute name="basic syntax" value="false"/>
+      <![CDATA[if not isNull({dettaglio_richieste_servizi_est.der_risposta}) then 1 else 0]]>
+    </Field>
+    <Field type="FormulaField" valueType="11">
+      <Attribute name="name" value="codUtente"/>
+      <Attribute name="shortName" value="codUtente"/>
+      <Attribute name="formula type" value="0"/>
+      <Attribute name="basic syntax" value="false"/>
+      <![CDATA[if  {?codUtente} = "_null_" then "" else {?codUtente}]]>
+    </Field>
+  </FormulaFields>
+
+  <PromptFields count="4">
+    <Field type="PromptVarField" valueType="11">
+      <Attribute name="name" value="tipo"/>
+      <Attribute name="allow_multiple_values" value="false"/>
+      <Attribute name="discrete_or_range" value="0"/>
+      <Attribute name="allow editing" value="true"/>
+      <Attribute name="description_only" value="false"/>
+      <Attribute name="edit mask" value=""/>
+      <Attribute name="prompt_text" value="tipo"/>
+      <Attribute name="use_range" value="false"/>
+      <Attribute name="sort_type" value="0"/>
+    </Field>
+    <Field type="PromptVarField" valueType="9">
+      <Attribute name="name" value="daData"/>
+      <Attribute name="allow_multiple_values" value="false"/>
+      <Attribute name="discrete_or_range" value="0"/>
+      <Attribute name="allow editing" value="true"/>
+      <Attribute name="description_only" value="false"/>
+      <Attribute name="edit mask" value=""/>
+      <Attribute name="prompt_text" value="daData"/>
+      <Attribute name="use_range" value="false"/>
+      <Attribute name="sort_type" value="0"/>
+    </Field>
+    <Field type="PromptVarField" valueType="9">
+      <Attribute name="name" value="aData"/>
+      <Attribute name="allow_multiple_values" value="false"/>
+      <Attribute name="discrete_or_range" value="0"/>
+      <Attribute name="allow editing" value="true"/>
+      <Attribute name="description_only" value="false"/>
+      <Attribute name="edit mask" value=""/>
+      <Attribute name="prompt_text" value="aData"/>
+      <Attribute name="use_range" value="false"/>
+      <Attribute name="sort_type" value="0"/>
+    </Field>
+    <Field type="PromptVarField" valueType="11">
+      <Attribute name="name" value="codUtente"/>
+      <Attribute name="allow_multiple_values" value="false"/>
+      <Attribute name="discrete_or_range" value="0"/>
+      <Attribute name="allow editing" value="true"/>
+      <Attribute name="description_only" value="false"/>
+      <Attribute name="edit mask" value=""/>
+      <Attribute name="prompt_text" value="codUtente"/>
+      <Attribute name="use_range" value="false"/>
+      <Attribute name="sort_type" value="0"/>
+    </Field>
+  </PromptFields>
+
+  <SQLFields count="0">
+  </SQLFields>
+
+  <SummaryFields count="4">
+    <Field type="SummaryField" valueType="6">
+      <Attribute name="name" value="nRichieste"/>
+      <Reference name="id" type="DatabaseField" refname="dettaglio_richieste_servizi_est.der_progressivo"/>
+      <Attribute name="operation" value="6"/>
+      <Attribute name="summary_nth" value="0"/>
+      <Attribute name="summary_type" value="256"/>
+      <Attribute name="chartFieldSelect" value="2"/>
+      <Reference name="reset_field" type="DatabaseField" refname="dettaglio_richieste_servizi_est.der_cod_richiesta"/>
+      <Attribute name="group number type" value="0"/>
+      <Attribute name="show as percent value" value="false"/>
+      <Attribute name="execute on db" value="false"/>
+    </Field>
+    <Field type="SummaryField" valueType="6">
+      <Attribute name="name" value="nRisposte"/>
+      <Reference name="id" type="FormulaField" refname="@rispostaPresente"/>
+      <Attribute name="operation" value="0"/>
+      <Attribute name="summary_nth" value="0"/>
+      <Attribute name="summary_type" value="256"/>
+      <Attribute name="chartFieldSelect" value="2"/>
+      <Reference name="reset_field" type="DatabaseField" refname="dettaglio_richieste_servizi_est.der_cod_richiesta"/>
+      <Attribute name="group number type" value="0"/>
+      <Attribute name="show as percent value" value="false"/>
+      <Attribute name="execute on db" value="false"/>
+    </Field>
+    <Field type="SummaryField" valueType="6">
+      <Attribute name="name" value="totRichieste"/>
+      <Reference name="id" type="DatabaseField" refname="dettaglio_richieste_servizi_est.der_progressivo"/>
+      <Attribute name="operation" value="6"/>
+      <Attribute name="summary_nth" value="0"/>
+      <Attribute name="summary_type" value="256"/>
+      <Attribute name="chartFieldSelect" value="2"/>
+      <Reference name="reset_field" type="DatabaseField" refname="richieste_servizi_esterni.rse_tipo"/>
+      <Attribute name="group number type" value="0"/>
+      <Attribute name="show as percent value" value="false"/>
+      <Attribute name="execute on db" value="false"/>
+    </Field>
+    <Field type="SummaryField" valueType="6">
+      <Attribute name="name" value="totRisposte"/>
+      <Reference name="id" type="FormulaField" refname="@rispostaPresente"/>
+      <Attribute name="operation" value="0"/>
+      <Attribute name="summary_nth" value="0"/>
+      <Attribute name="summary_type" value="256"/>
+      <Attribute name="chartFieldSelect" value="2"/>
+      <Reference name="reset_field" type="DatabaseField" refname="richieste_servizi_esterni.rse_tipo"/>
+      <Attribute name="group number type" value="0"/>
+      <Attribute name="show as percent value" value="false"/>
+      <Attribute name="execute on db" value="false"/>
+    </Field>
+  </SummaryFields>
+
+  <SortFields count="3">
+    <Field type="SortField" valueType="11">
+      <Attribute name="name" value="richieste_servizi_esterni.rse_ente"/>
+      <Attribute name="shortName" value="rse_ente"/>
+      <Reference name="id" type="DatabaseField" refname="richieste_servizi_esterni.rse_ente"/>
+      <Attribute name="operation" value="0"/>
+    </Field>
+    <Field type="SortField" valueType="6">
+      <Attribute name="name" value="richieste_servizi_esterni.rse_tipo"/>
+      <Attribute name="shortName" value="rse_tipo"/>
+      <Reference name="id" type="DatabaseField" refname="richieste_servizi_esterni.rse_tipo"/>
+      <Attribute name="operation" value="0"/>
+    </Field>
+    <Field type="SortField" valueType="6">
+      <Attribute name="name" value="dettaglio_richieste_servizi_est.der_cod_richiesta"/>
+      <Attribute name="shortName" value="der_cod_richiesta"/>
+      <Reference name="id" type="DatabaseField" refname="dettaglio_richieste_servizi_est.der_cod_richiesta"/>
+      <Attribute name="operation" value="1"/>
+    </Field>
+  </SortFields>
+
+  <GroupNameFields count="0">
+  </GroupNameFields>
+
+  <Field type="FormulaField" id="-1" valueType="8">
+    <Attribute name="name" value="Record_Selection"/>
+    <Attribute name="formula type" value="1"/>
+    <Attribute name="basic syntax" value="false"/>
+    <![CDATA[( {service.Category}  =  {?tipo})
+and
+({richieste_servizi_esterni.rse_esito} <> 'N' or isnull({richieste_servizi_esterni.rse_esito}))
+and
+(  {richieste_servizi_esterni.rse_utente_servizio}  =  {?codUtente} OR {?codUtente} = '_null_')
+and
+( {richieste_servizi_esterni.rse_data_richiesta}   >=  {?daData})
+and  
+( {richieste_servizi_esterni.rse_data_richiesta}   <=  {?aData})]]>
+  </Field>
+  <Field type="FormulaField" id="-2" valueType="11">
+    <Attribute name="name" value=""/>
+    <Attribute name="formula type" value="2"/>
+    <Attribute name="basic syntax" value="false"/>
+    <![CDATA[{richieste_servizi_esterni.rse_ente}]]>
+  </Field>
+  <ReportProperties>
+    <Attribute name="page width" value="16839"/>
+    <Attribute name="page height" value="11907"/>
+    <Attribute name="page orientation" value="2"/>
+    <Attribute name="page margin left" value="720"/>
+    <Attribute name="page margin right" value="720"/>
+    <Attribute name="page margin top" value="720"/>
+    <Attribute name="page margin bottom" value="720"/>
+    <Attribute name="report title" value="Report1"/>
+    <Attribute name="report last saved" value="13 Nov 2024 09:30:07 GMT"/>
+    <Attribute name="report created" value="31 Oct 2024 14:33:43 GMT"/>
+    <Attribute name="mailing label type 1" value=""/>
+    <Attribute name="mailing label type 2" value=""/>
+    <Attribute name="format with multiple columns" value="false"/>
+    <Attribute name="mailing label width" value="0"/>
+    <Attribute name="mailing label height" value="0"/>
+    <Attribute name="mailing label distance vertical" value="0"/>
+    <Attribute name="mailing label distance horizontal" value="0"/>
+    <Attribute name="across then down" value="false"/>
+    <Attribute name="format groups with multiple columns" value="false"/>
+    <Attribute name="distinct" value="false"/>
+    <Attribute name="convert date time" value="0"/>
+    <Attribute name="suppress if no rows" value="false"/>
+    <Attribute name="convert null values to default" value="false"/>
+    <Attribute name="hide PageFooter inside ReportHeader" value="false"/>
+    <Attribute name="form print" value="false"/>
+    <Attribute name="printing enabled" value="true"/>
+    <Attribute name="clipboard enabled" value="true"/>
+    <Attribute name="export enabled" value="true"/>
+    <Attribute name="group tree visible" value="true"/>
+  </ReportProperties>
+  <AreaPair type="PageAreaPair" id="0">
+    <Area type="PageHeader" count="1">
+      <Section type="PageHeader" count="13" width="15399" height="1065" id="0">
+        <Element type="Text" count="1" x_position="0" y_position="450" width="2415" height="615">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Codice utente del servizio]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Text" count="1" x_position="2400" y_position="450" width="3915" height="615">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Ente]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Text" count="1" x_position="11550" y_position="450" width="1965" height="615">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Tot. Richieste]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Text" count="1" x_position="6300" y_position="450" width="2865" height="615">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Data richiesta]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Text" count="1" x_position="13500" y_position="450" width="1815" height="615">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Tot. Risposte]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Line" x2_position="11550" y2_position="1050" x_position="11550" y_position="450" width="0" height="0">
+        </Element>
+        <Element type="Line" x2_position="9150" y2_position="1050" x_position="9150" y_position="450" width="0" height="0">
+        </Element>
+        <Element type="Text" count="1" x_position="0" y_position="0" width="15300" height="300">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="2">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font size" value="200"/>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Ente: ]]>
+            </Element>
+            <Element type="FieldPart">
+              <FontProperties>
+                <Attribute name="font size" value="200"/>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+              <Reference name="field" type="DatabaseField" refname="customer.ManagerName"/>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Line" x2_position="13500" y2_position="1050" x_position="13500" y_position="450" width="0" height="600">
+        </Element>
+        <Element type="Box" x2_position="15315" y2_position="1065" x_position="0" y_position="450" width="0" height="0">
+          <BoxProperties>
+            <Attribute name="close border on page break" value="true"/>
+          </BoxProperties>
+        </Element>
+        <Element type="Line" x2_position="2400" y2_position="1050" x_position="2400" y_position="450" width="0" height="600">
+        </Element>
+        <Element type="Line" x2_position="6300" y2_position="1050" x_position="6300" y_position="450" width="0" height="600">
+        </Element>
+        <Element type="Text" count="1" x_position="9150" y_position="450" width="2415" height="615">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Ora richiesta]]>
+            </Element>
+          </Element>
+        </Element>
+      </Section>
+    </Area>
+    <Area type="PageFooter" count="1">
+      <Section type="PageFooter" count="1" width="15399" height="800" id="1">
+        <Element type="Text" count="1" x_position="11250" y_position="450" width="4050" height="300">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="3"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="4">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="3"/>
+            </CommonProperties>
+            <Element type="TextPart">
+            <![CDATA[Pagina ]]>
+            </Element>
+            <Element type="FieldPart">
+              <NumberProperties>
+                <Attribute name="negative type" value="0"/>
+                <Attribute name="use thousand seperators" value="false"/>
+                <Attribute name="use leading zero" value="false"/>
+                <Attribute name="n decimal places" value="0"/>
+                <Attribute name="rounding type" value="0"/>
+                <Attribute name="thousand seperators symbol" value="."/>
+                <Attribute name="decimal seperators symbol" value=","/>
+                <Attribute name="currency symbol" value="€"/>
+                <Attribute name="allow field clipping" value="false"/>
+              </NumberProperties>
+              <Reference name="field" type="SpecialVarField" id="17"/>
+            </Element>
+            <Element type="TextPart">
+            <![CDATA[ di ]]>
+            </Element>
+            <Element type="FieldPart">
+              <NumberProperties>
+                <Attribute name="negative type" value="0"/>
+                <Attribute name="use thousand seperators" value="false"/>
+                <Attribute name="use leading zero" value="false"/>
+                <Attribute name="n decimal places" value="0"/>
+                <Attribute name="rounding type" value="0"/>
+                <Attribute name="thousand seperators symbol" value="."/>
+                <Attribute name="decimal seperators symbol" value=","/>
+                <Attribute name="currency symbol" value="€"/>
+                <Attribute name="allow field clipping" value="false"/>
+              </NumberProperties>
+              <Reference name="field" type="SpecialVarField" id="15"/>
+            </Element>
+          </Element>
+        </Element>
+      </Section>
+    </Area>
+  </AreaPair>
+
+  <AreaPair type="ReportAreaPair" id="0">
+    <Area type="ReportHeader" count="1">
+      <Section type="ReportHeader" count="12" width="15399" height="4515" id="2">
+        <Element type="Text" count="1" x_position="0" y_position="2550" width="6015" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="1"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="1"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font size" value="220"/>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[OPZIONI SELEZIONATE AL MOMENTO DELLA STAMPA]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Box" x2_position="5415" y2_position="3600" x_position="0" y_position="3000" width="0" height="0">
+          <BoxProperties>
+            <Attribute name="close border on page break" value="true"/>
+          </BoxProperties>
+        </Element>
+        <Element type="Text" count="1" x_position="4050" y_position="3000" width="1365" height="300">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[A data]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Text" count="1" x_position="2700" y_position="3000" width="1350" height="300">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Da data]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Text" count="1" x_position="0" y_position="3000" width="2715" height="300">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Codice utente del servizio]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Line" x2_position="5415" y2_position="3300" x_position="0" y_position="3300" width="0" height="0">
+        </Element>
+        <Element type="Text" count="3" x_position="0" y_position="0" width="15315" height="1680">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="3">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font size" value="320"/>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Elenco di richieste effetuate per servizi: ]]>
+            </Element>
+            <Element type="FieldPart">
+              <FontProperties>
+                <Attribute name="font size" value="320"/>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+              <Reference name="field" type="DatabaseField" refname="service.Category"/>
+            </Element>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font size" value="320"/>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[]]>
+            </Element>
+          </Element>
+          <Element type="Paragraph" count="2">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font size" value="200"/>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Data di stampa: ]]>
+            </Element>
+            <Element type="FieldPart">
+              <FontProperties>
+                <Attribute name="font size" value="200"/>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+              <DateProperties>
+                <Attribute name="date windows default type" value="0"/>
+                <Attribute name="month type" value="0"/>
+                <Attribute name="day type" value="0"/>
+                <Attribute name="day of week type" value="0"/>
+                <Attribute name="date era type" value="0"/>
+                <Attribute name="date calendar type" value="0"/>
+              </DateProperties>
+              <Reference name="field" type="SpecialVarField" id="0"/>
+            </Element>
+          </Element>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font size" value="200"/>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[]]>
+            </Element>
+          </Element>
+        </Element>
+        <Element type="Line" x2_position="2700" y2_position="3600" x_position="2700" y_position="3000" width="0" height="600">
+        </Element>
+        <Element type="Line" x2_position="4050" y2_position="3600" x_position="4050" y_position="3000" width="0" height="600">
+        </Element>
+        <Element type="FieldElement" x_position="150" y_position="3300" width="2565" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="1"/>
+          </CommonProperties>
+          <Reference name="field" type="FormulaField" refname="@codUtente"/>
+        </Element>
+        <Element type="FieldElement" x_position="2700" y_position="3300" width="1365" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Reference name="field" type="PromptVarField" refname="?daData"/>
+        </Element>
+        <Element type="FieldElement" x_position="4050" y_position="3300" width="1365" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Reference name="field" type="PromptVarField" refname="?aData"/>
+        </Element>
+      </Section>
+    </Area>
+    <Area type="ReportFooter" count="1">
+      <Section type="ReportFooter" count="0" width="15399" height="800" id="3">
+        <SectionProperties>
+          <Attribute name="print at bottom of page" value="true"/>
+        </SectionProperties>
+      </Section>
+    </Area>
+  </AreaPair>
+
+  <AreaPair type="DetailArea" id="1">
+    <Area type="Detail" count="3">
+      <Section type="Detail" count="2" width="15399" height="315" id="4">
+        <SectionProperties>
+          <Attribute name="suppress" value="true"/>
+          <PropertyFormula valueType="-1" propertyType="suppress">
+            <Attribute name="name" value="suppress"/>
+            <Attribute name="basic syntax" value="false"/>
+            <![CDATA[Previous (  {richieste_servizi_esterni.rse_tipo}  ) =  {richieste_servizi_esterni.rse_tipo}]]>
+          </PropertyFormula>
+        </SectionProperties>
+        <Element type="Box" x2_position="15315" y2_position="315" x_position="0" y_position="0" width="0" height="0">
+          <BoxProperties>
+            <Attribute name="close border on page break" value="true"/>
+          </BoxProperties>
+        </Element>
+        <Element type="FieldElement" x_position="150" y_position="0" width="15165" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <FontProperties>
+            <Attribute name="font style" value="1"/>
+          </FontProperties>
+          <Reference name="field" type="DatabaseField" refname="service.Name"/>
+        </Element>
+      </Section>
+      <Section type="Detail" count="12" width="15399" height="315" id="5">
+        <SectionProperties>
+          <Attribute name="suppress" value="true"/>
+          <PropertyFormula valueType="-1" propertyType="suppress">
+            <Attribute name="name" value="suppress"/>
+            <Attribute name="basic syntax" value="false"/>
+            <![CDATA[not OnLastRecord and (Next (  {dettaglio_richieste_servizi_est.der_cod_richiesta}  ) = {dettaglio_richieste_servizi_est.der_cod_richiesta} )]]>
+          </PropertyFormula>
+        </SectionProperties>
+        <Element type="FieldElement" x_position="150" y_position="0" width="2265" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="1"/>
+          </CommonProperties>
+          <Reference name="field" type="DatabaseField" refname="richieste_servizi_esterni.rse_utente_servizio"/>
+        </Element>
+        <Element type="FieldElement" x_position="2550" y_position="0" width="3765" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="1"/>
+          </CommonProperties>
+          <Reference name="field" type="DatabaseField" refname="customer.ManagerName"/>
+        </Element>
+        <Element type="Box" x2_position="15315" y2_position="315" x_position="0" y_position="0" width="0" height="0">
+          <BoxProperties>
+            <Attribute name="close border on page break" value="true"/>
+          </BoxProperties>
+        </Element>
+        <Element type="Line" x2_position="2400" y2_position="300" x_position="2400" y_position="0" width="0" height="300">
+        </Element>
+        <Element type="Line" x2_position="6300" y2_position="300" x_position="6300" y_position="0" width="0" height="300">
+        </Element>
+        <Element type="Line" x2_position="11550" y2_position="300" x_position="11550" y_position="0" width="0" height="300">
+        </Element>
+        <Element type="Line" x2_position="13500" y2_position="300" x_position="13500" y_position="0" width="0" height="300">
+        </Element>
+        <Element type="FieldElement" x_position="11550" y_position="0" width="1815" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="3"/>
+          </CommonProperties>
+          <NumberProperties>
+            <Attribute name="use system default format" value="false"/>
+            <Attribute name="n decimal places" value="0"/>
+            <Attribute name="rounding type" value="11"/>
+            <Attribute name="thousand seperators symbol" value="."/>
+            <Attribute name="decimal seperators symbol" value=","/>
+            <Attribute name="currency symbol" value="€"/>
+          </NumberProperties>
+          <Reference name="field" type="SummaryField" refname="#nRichieste"/>
+        </Element>
+        <Element type="FieldElement" x_position="13500" y_position="0" width="1665" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="3"/>
+          </CommonProperties>
+          <NumberProperties>
+            <Attribute name="use system default format" value="false"/>
+            <Attribute name="n decimal places" value="0"/>
+            <Attribute name="rounding type" value="11"/>
+            <Attribute name="thousand seperators symbol" value="."/>
+            <Attribute name="decimal seperators symbol" value=","/>
+            <Attribute name="currency symbol" value="€"/>
+          </NumberProperties>
+          <Reference name="field" type="SummaryField" refname="#nRisposte"/>
+        </Element>
+        <Element type="FieldElement" x_position="9150" y_position="0" width="2415" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <TimeProperties>
+            <Attribute name="use system default format" value="false"/>
+            <Attribute name="time base" value="1"/>
+            <Attribute name="second type" value="2"/>
+            <Attribute name="am string" value=""/>
+            <Attribute name="pm string" value=" PM"/>
+          </TimeProperties>
+          <Reference name="field" type="DatabaseField" refname="richieste_servizi_esterni.rse_ora_richiesta"/>
+        </Element>
+        <Element type="Line" x2_position="9150" y2_position="300" x_position="9150" y_position="0" width="0" height="300">
+        </Element>
+        <Element type="FieldElement" x_position="6300" y_position="0" width="2865" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Reference name="field" type="DatabaseField" refname="richieste_servizi_esterni.rse_data_richiesta"/>
+        </Element>
+      </Section>
+      <Section type="Detail" count="6" width="15399" height="465" id="6">
+        <SectionProperties>
+          <Attribute name="suppress" value="true"/>
+          <Attribute name="new page after" value="true"/>
+          <PropertyFormula valueType="-1" propertyType="new page after">
+            <Attribute name="name" value="new page after"/>
+            <Attribute name="basic syntax" value="false"/>
+            <![CDATA[Next ( {richieste_servizi_esterni.rse_ente} ) <>  {richieste_servizi_esterni.rse_ente}]]>
+          </PropertyFormula>
+          <PropertyFormula valueType="-1" propertyType="suppress">
+            <Attribute name="name" value="suppress"/>
+            <Attribute name="basic syntax" value="false"/>
+            <![CDATA[not OnLastRecord and (Next (  {richieste_servizi_esterni.rse_tipo}  ) =  {richieste_servizi_esterni.rse_tipo} ) and Next ( {richieste_servizi_esterni.rse_ente} ) =  {richieste_servizi_esterni.rse_ente}]]>
+          </PropertyFormula>
+        </SectionProperties>
+        <Element type="Line" x2_position="13500" y2_position="300" x_position="13500" y_position="0" width="0" height="0">
+        </Element>
+        <Element type="Line" x2_position="11550" y2_position="300" x_position="11550" y_position="0" width="0" height="0">
+        </Element>
+        <Element type="Box" x2_position="15315" y2_position="300" x_position="9150" y_position="0" width="0" height="0">
+          <BoxProperties>
+            <Attribute name="close border on page break" value="true"/>
+          </BoxProperties>
+        </Element>
+        <Element type="FieldElement" x_position="13500" y_position="0" width="1665" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="3"/>
+          </CommonProperties>
+          <NumberProperties>
+            <Attribute name="use system default format" value="false"/>
+            <Attribute name="n decimal places" value="0"/>
+            <Attribute name="rounding type" value="11"/>
+            <Attribute name="thousand seperators symbol" value="."/>
+            <Attribute name="decimal seperators symbol" value=","/>
+            <Attribute name="currency symbol" value="€"/>
+          </NumberProperties>
+          <Reference name="field" type="SummaryField" refname="#totRisposte"/>
+        </Element>
+        <Element type="FieldElement" x_position="11550" y_position="0" width="1815" height="315">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="3"/>
+          </CommonProperties>
+          <NumberProperties>
+            <Attribute name="use system default format" value="false"/>
+            <Attribute name="n decimal places" value="0"/>
+            <Attribute name="rounding type" value="11"/>
+            <Attribute name="thousand seperators symbol" value="."/>
+            <Attribute name="decimal seperators symbol" value=","/>
+            <Attribute name="currency symbol" value="€"/>
+          </NumberProperties>
+          <Reference name="field" type="SummaryField" refname="#totRichieste"/>
+        </Element>
+        <Element type="Text" count="1" x_position="9150" y_position="0" width="2415" height="300">
+          <CommonProperties>
+            <Attribute name="horizontal align" value="2"/>
+          </CommonProperties>
+          <Element type="Paragraph" count="1">
+            <CommonProperties>
+              <Attribute name="horizontal align" value="2"/>
+            </CommonProperties>
+            <Element type="TextPart">
+              <FontProperties>
+                <Attribute name="font style" value="1"/>
+              </FontProperties>
+            <![CDATA[Totali]]>
+            </Element>
+          </Element>
+        </Element>
+      </Section>
+    </Area>
+  </AreaPair>
+
+</inet:Report>

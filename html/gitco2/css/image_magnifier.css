@@ -1,0 +1,11 @@
+div.image-magnify div.thumbnail {
+	cursor: move;
+}
+
+div.image-magnify div.popup {
+	display: none;
+}
+
+div.image-magnify div {
+	background-repeat: no-repeat;
+}

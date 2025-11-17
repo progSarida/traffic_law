@@ -1,0 +1,7 @@
+.navbar-brand-extended{ /* For Header Text "Sarida" */
+	color: #fff !important;
+	font-size: 24px;
+}
+#bottomGap{ /* UserSetting.php Bottom Gap */
+	margin-bottom:200px !important;
+}
